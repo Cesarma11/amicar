@@ -19,45 +19,9 @@
 </head>
 <body>
 
- 
- <!-- *********************************************VENTANA EMERGENTE -->
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <h1>Bienvenido Autoescuela Am¡car</h1>
-      <h2>TENEMOS PISTAS PROPIAS!!</h2>
-      <button class="close">Cerrar</button>
-    </div>
-  </div>
-
-  <script>
-    const modal = document.getElementById("myModal");
-    const closeBtn = document.querySelector(".close");
-
-    // Abrir ventana al cargar la página
-    window.addEventListener("load", () => {
-      modal.style.display = "flex";
-    });
-
-    // Cerrar ventana con el botón
-    closeBtn.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-
-    // Cerrar si se hace clic fuera del contenido
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-      }
-    });
-  </script>
-
-<!-- **************************************FIN ESPACIO VENTANA EMERGENTE-->
-
-
       <!-- Header -->
     <header>
-      <img
-        src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/>
+      <a href="index.html"><img src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/></a>
       <!-- <h1>Autoescuela am¡car</h1>-->
       <nav>
         <div class="dropdown">       
@@ -70,3 +34,28 @@
         <img src="./image/l practicas.png" alt="" style="width:5%; margin-left: 300px; margin-top:10px; " />
       </nav>
     </header>
+
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <table border="1" style=" width: 100%; height:500px; border-collapse: collapse; table-layout: fixed; margin-top:none;"><!--divide el ancho de manera uniforme */--> 
+  
+          <tr>
+         
+                
+            <td>
+                <a href="autoescuela.html">AUTOESCUELA</a>
+            </td>
+            <td>
+                <a href="">FORMACION</a>              
+            </td>
+            <td>
+                <a href="">CURSOS GRATUITOS y ayudas</a>              
+            </td>
+
+          </tr>
+
+        </table>
+        </section>
+
+</body>
+</html>

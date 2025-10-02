@@ -1,0 +1,36 @@
+<?php 
+include_once "./php/cabecera.php"
+?>
+<table>
+    <tr>
+        <td>    
+            <fieldset style=" margin-left:100px;  margin-top:300px; width: 500px; border:none; ">
+                <h2>SOBRE NOSOTROS</h2>
+                <br><br>            
+                <h3>Forma parte de la familia Amicar</h3>
+                <br><br>
+                <label for=""> 60 años de experiencia. ¿Es lo que nos avala?</label>
+                <br>
+                <label for="" style="display:block; text-align:justify; width:500px;">Creemos que la palabra que nos define por excelencia es: CAMBIOS. Y estos cambios representan una evolución.
+                    <strong>60 años de evolución</strong>. Amicar es un centro que ha ido formando parte de las familias como un bien heredado:
+                    de bisabuelos, a abuelos, de abuelos a padres, y de padres a hijos, nietos, sobrinos… 
+                    Hemos sido imagen del pasado y hemos crecido poco a poco hasta lo que somos en el presente y lo que seremos en el futuro:
+                    tu centro de formación de confianza.
+                </label>
+                <br><br>
+                <label for="" style="display:block; text-align:justify; width:500px;">
+                Aun así, no sabemos echar el freno y queremos seguir avanzando e inculcando nuestras enseñanzas para crecer juntos. Pero toda carrera es mejor si se hace acompañado.
+                </label>
+                <br><br>
+                <label for="">¿Te unes de copiloto? </label>                
+            </fieldset>
+        </td>
+        <td>
+            <fieldset style="margin-left:300px; width:500px; border:none; ">
+                <img src="./image/nosotros.jpeg" alt="" width="90%" style="margin-top:300px;"  >
+            </fieldset>
+        </td>
+    </tr>
+</table>
+</body>
+</html>

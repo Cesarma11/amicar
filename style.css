@@ -45,24 +45,10 @@ nav a:hover {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ***********************************************HERO  parte media de la pantalla
+/* ***********************************************HERO  parte media de la pantalla*/
 .hero {
   height: 100vh; /* abarca todo el alto de pantalla */
-  /*background: url("./image/fotoAutoescuela2.png") no-repeat center center/cover;
+  /*background: url("./image/fotoAutoescuela2.png") no-repeat center center/cover;*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -78,15 +64,15 @@ nav a:hover {
   inset: 0;
   opacity: 0.2;
   background-color:#F5B027 ;
-  /*background: rgba(0, 0, 0, 0.5);
+  /*background: rgba(0, 0, 0, 0.5);*/
 }
 
 .hero-content {
   position: relative;
-  /*color: #fff;
+  /*color: #fff;*/
   color: black;
   z-index: 1;
-  /*max-width: 600px;
+  /*max-width: 600px;*/
 }
 
 .hero-content h2 {
@@ -127,54 +113,6 @@ nav a:hover {
 .btn-white:hover {
   background: #ddd;
 }
-
-*/
-
-/* Tabla por defecto (escritorio) */
-.hero table {
-  width: 100%;
-  height: 500px;
-  border-collapse: collapse;
-  table-layout: fixed;
-  margin-top: 500px;
-}
-
-.hero td {
-  background-size: cover;
-  background-position: center;
-  border: 1px solid black; /* para que se vean los cuadros */
-  text-align: center;
-  vertical-align: middle;
-}
-
-/* Responsive para tablet/móvil */
-@media (max-width: 1024px) { /* tablet */
-  .hero table, .hero tr, .hero td {
-    display: block; /* convierte filas y celdas en bloques */
-    width: 100%;
-    height: 200px; /* ajusta la altura */
-  }
-
-  .hero td {
-    margin-bottom: 10px; /* espacio entre cuadros */
-  }
-}
-
-@media (max-width: 768px) { /* móvil */
-  .hero td {
-    height: 150px; /* altura más pequeña */
-  }
-
-  .hero td h1 {
-    font-size: 1rem; /* tamaño del texto más pequeño */
-  }
-}
-
-
-
-
-
-
 
 /* SECCIONES */
 .section1 {

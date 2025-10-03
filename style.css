@@ -51,7 +51,12 @@ nav a:hover {
 
 
 
-/*
+
+
+
+
+
+
 
 
 /* ***********************************************HERO  parte media de la pantalla
@@ -78,7 +83,7 @@ nav a:hover {
 
 .hero-content {
   position: relative;
-  /*color: #fff;*/
+  /*color: #fff;
   color: black;
   z-index: 1;
   /*max-width: 600px;
@@ -125,63 +130,45 @@ nav a:hover {
 
 */
 
-
-
-.hero-grid {
-  display: flex;
-  gap: 10px;
+/* Tabla por defecto (escritorio) */
+.hero table {
   width: 100%;
-  height: 500px; /* alto fijo en escritorio */
+  height: 500px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-top: 250px;
 }
 
-.hero-item {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.hero td {
   background-size: cover;
   background-position: center;
-  text-decoration: none;
-  color: black;
-  border: 2px solid #000; /* 🔹 ahora sí se ven los cuadros */
-  border-radius: 8px;     /* opcional, bordes redondeados */
-  overflow: hidden;
-}
-
-.hero-item h1 {
-  background: rgba(255,255,255,0.7);
-  padding: 10px 15px;
-  border-radius: 6px;
-  font-size: 1.5rem;
+  border: 1px solid black; /* para que se vean los cuadros */
   text-align: center;
+  vertical-align: middle;
 }
 
-/* 🔹 Responsive: en móvil se apilan */
-@media (max-width: 768px) {
-  .hero-grid {
-    flex-direction: column;
-    height: auto;
+/* Responsive para tablet/móvil */
+@media (max-width: 1024px) { /* tablet */
+  .hero table, .hero tr, .hero td {
+    display: block; /* convierte filas y celdas en bloques */
+    width: 100%;
+    height: 200px; /* ajusta la altura */
   }
 
-  .hero-item {
-    height: 200px; /* cada cuadro más pequeño en móvil */
-  }
-
-  .hero-item h1 {
-    font-size: 1.2rem;
+  .hero td {
+    margin-bottom: 10px; /* espacio entre cuadros */
   }
 }
 
+@media (max-width: 768px) { /* móvil */
+  .hero td {
+    height: 150px; /* altura más pequeña */
+  }
 
-
-
-
-
-
-
-
-
-
+  .hero td h1 {
+    font-size: 1rem; /* tamaño del texto más pequeño */
+  }
+}
 
 
 
@@ -237,6 +224,16 @@ footer {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+
+
+
+
+
+
+
+
 
 /* ********************ESPACIO VENTANA EMERGENTE INICIO DE PAGINA ***********************+++++
  /* Fondo de la ventana emergente */
@@ -296,6 +293,5 @@ footer {
 }
 
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************
-
 
 

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMICAR</title>
+    <link rel="icon" href="./image/L.ico" />
+    <link rel="stylesheet" href="style.css" />
+    <!--ESTILOS DEL CELDAS DE INFORMACION-->
+    <style>
+      td {
+        /*border: 1px solid #000;*/
+        width: 50%; /* cada celda ocupa la mitad*/
+        /*text-align: center;
+        vertical-align: middle;*/
+        vertical-align: top;
+        margin-top: 20px;
+        text-align: left;
+      }
+      input{
+        width: 100%;
+        background-color:white;
+      }
+      img.contac{
+        width: 10%;
+        margin-left: 200px;
+      }
+    </style>
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+      <a href="index.html"><img src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/></a>
+      <!-- <h1>Autoescuela am¡car</h1>-->
+      <nav>
+        <div class="dropdown">       
+        <a href="index.html">Inicio</a>
+        <a href="nosotros.php">Quienes Somos</a>
+        <a href="#">CAMPUS VIRTUAL</a>
+        <a href="#">NOTICIAS</a>
+        <a href="#">CONTACTO</a>
+        <a href="#">TIENDA</a>
+        </div>
+        <img src="./image/l practicas.png" alt="" style="width:5%; margin-left: 300px; margin-top:10px; " />
+      </nav>
+    </header>
+    <section >
+        <fieldset style="margin-top: 140px; background-color:aquamarine" >
+            <table style=" width: 100%; height:200px;  table-layout: fixed;  padding-top:50px; border:none;" >
+                <tr>
+                    <td style="text-align: center; border:none; height:80px;" ><h2>DEJANOS TUS DATOS</h2></td>
+                    <td style="text-align: center; border:none;height:80px;" ><h2>CONTACTANOS</h2></td>
+                </tr>
+                <tr>
+                    <td>
+                        <form action="">
+
+                                        <label for=""><h3>NOMBRE</h3></label>
+                                        <br>
+                                        <input type="text" name="nombre" id="">                                        
+                                        <br>
+                                        <label for=""><h3>EMAIL</h3></label>
+                                        <br>
+                                        <input type="email" name="email" id="">    
+                                        <br>
+                                        <label for=""><h3>MENSAJE</h3></label>
+                                        <br>
+                                        <textarea name="mensaje" id="" style="width: 100%; height:200px;" ></textarea>                                        
+                                           
+                        </form>
+                    </td>
+                    <td>
+
+                        <label for="" style="text-align: center;" ><h2>TELEFONO</h2></label>
+                        <img class="contac" src="./image/telefono.png"  alt=""> 666123123                       
+                        <br>
+
+                        <label for="" style="text-align: center;" ><h2>EMAIL</h2></label>
+                        <img class="contac" src="./image/email.png" walt=""> info@amicar.es                       
+                        <br>
+
+                        <label for="" style="text-align: center;" ><h2>WHATSAPP</h2></label>
+                        <img class="contac"  src="./image/wassap.png" alt=""> 6666123123                     
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </section>
+
+    <h2></h2>
+</body>
+</html>

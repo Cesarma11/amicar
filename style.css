@@ -44,10 +44,71 @@ nav a:hover {
     font-size: 25px;
 }
 
-/* ***********************************************HERO  parte media de la pantalla*/
+
+.hero-grid {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  height: 500px;
+}
+
+.hero-item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+.hero-item h1 {
+  background: rgba(255,255,255,0.7);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 1.5rem;
+}
+
+/* 🔹 Responsive: en móvil las columnas pasan a ocupar toda la fila */
+@media (max-width: 768px) {
+  .hero-grid {
+    flex-direction: column;
+    height: auto; /* que crezca con el contenido */
+  }
+
+  .hero-item {
+    height: 200px; /* o lo que quieras */
+  }
+
+  .hero-item h1 {
+    font-size: 1.2rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***********************************************HERO  parte media de la pantalla
 .hero {
   height: 100vh; /* abarca todo el alto de pantalla */
-  /*background: url("./image/fotoAutoescuela2.png") no-repeat center center/cover;*/
+  /*background: url("./image/fotoAutoescuela2.png") no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,15 +124,15 @@ nav a:hover {
   inset: 0;
   opacity: 0.2;
   background-color:#F5B027 ;
-  /*background: rgba(0, 0, 0, 0.5);*/
+  /*background: rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
   position: relative;
-  /*color: #fff;*/
+  /*color: #fff;
   color: black;
   z-index: 1;
-  /*max-width: 600px;*/
+  /*max-width: 600px;
 }
 
 .hero-content h2 {
@@ -112,6 +173,28 @@ nav a:hover {
 .btn-white:hover {
   background: #ddd;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* SECCIONES */
 .section1 {

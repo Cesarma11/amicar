@@ -25,6 +25,22 @@
         width: 10%;
         margin-left: 200px;
       }
+  /* Estilos iniciales del botón */
+  .boton {
+    padding: 10px 10px;
+    background-color: #007bff; /* Azul */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; /* Indica que es interactivo */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
+  }
+
+  /* Estilos al pasar el ratón (hover) */
+  .boton:hover {
+    background-color: #0056b3; /* Azul más oscuro */
+    transform: scale(1.05); /* Agrandar ligeramente el botón */
+  }
     </style>
 
 </head>
@@ -46,7 +62,7 @@
       </nav>
     </header>
     <section >
-        <fieldset style="margin-top: 140px; background-color:aquamarine" >
+        <fieldset style="margin-top: 120px; background-color:aquamarine" >
             <table style=" width: 100%; height:200px;  table-layout: fixed;  padding-top:50px; border:none;" >
                 <tr>
                     <td style="text-align: center; border:none; height:80px;" ><h2>DEJANOS TUS DATOS</h2></td>
@@ -66,7 +82,9 @@
                                         <br>
                                         <label for=""><h3>MENSAJE</h3></label>
                                         <br>
-                                        <textarea name="mensaje" id="" style="width: 100%; height:200px;" ></textarea>                                        
+                                        <textarea name="mensaje" id="" style="width: 100%; height:200px;" ></textarea> 
+                                        <br> <br>
+                                        <button class="boton" ><input type="submit" value="ENVIAR"></button>                                      
                                            
                         </form>
                     </td>

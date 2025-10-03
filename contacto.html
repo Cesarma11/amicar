@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="style.css" />
     <!--ESTILOS DEL CELDAS DE INFORMACION-->
     <style>
-      td {
+      .td {
         /*border: 1px solid #000;*/
         width: 50%; /* cada celda ocupa la mitad*/
         /*text-align: center;
@@ -16,32 +16,59 @@
         vertical-align: top;
         margin-top: 20px;
         text-align: left;
+        text-align: center;
+         border:none;
+         height:80px;
+        }
+      .td1 {
+        /*border: 1px solid #000;*/
+        width: 50%; /* cada celda ocupa la mitad*/
+        /*text-align: center;
+        vertical-align: middle;*/
+        vertical-align: top;
+        margin-top: 20px;
+        text-align: left;
+        /*text-align: center;*/
+      }
+      label{
+       text-align: left;
       }
       input{
         width: 100%;
         background-color:white;
       }
       img.contac{
-        width: 10%;
+        width: 6%;
+        display: flex; /* Coloca los elementos internos en fila */
+        align-items: center; /* Centra verticalmente la imagen y el texto */
         margin-left: 200px;
       }
-  /* Estilos iniciales del botón */
-  .boton {
-    padding: 10px 10px;
-    background-color: #007bff; /* Azul */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer; /* Indica que es interactivo */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
-  }
 
-  /* Estilos al pasar el ratón (hover) */
-  .boton:hover {
-    background-color: #0056b3; /* Azul más oscuro */
-    transform: scale(1.05); /* Agrandar ligeramente el botón */
-  }
-    </style>
+    /* Estilos iniciales del botón */
+    .boton {
+        padding: 10px 10px;
+        background-color: #007bff; /* Azul */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer; /* Indica que es interactivo */
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Suaviza la transición */
+    }
+
+    /* Estilos al pasar el ratón (hover) */
+    .boton:hover {
+        background-color: #0056b3; /* Azul más oscuro */
+        transform: scale(1.05); /* Agrandar ligeramente el botón */
+    }
+
+    div{
+        display: flex; 
+        border:none; 
+        margin:auto;
+        justify-content: center; /* Centra horizontalmente */
+        align-items: center; /* Centra verticalmente */
+    }
+</style>
 
 </head>
 <body>
@@ -65,47 +92,81 @@
         <fieldset style="margin-top: 120px; background-color:aquamarine" >
             <table style=" width: 100%; height:200px;  table-layout: fixed;  padding-top:50px; border:none;" >
                 <tr>
-                    <td style="text-align: center; border:none; height:80px;" ><h2>DEJANOS TUS DATOS</h2></td>
-                    <td style="text-align: center; border:none;height:80px;" ><h2>CONTACTANOS</h2></td>
+                    <th class="td" ><h2>DEJANOS TUS DATOS</h2></th>
+                    <th class="td"><h2>CONTACTANOS</h2></th>
                 </tr>
                 <tr>
-                    <td>
+                    <td class="td1" >
                         <form action="">
-
-                                        <label for=""><h3>NOMBRE</h3></label>
-                                        <br>
-                                        <input type="text" name="nombre" id="">                                        
-                                        <br>
-                                        <label for=""><h3>EMAIL</h3></label>
-                                        <br>
-                                        <input type="email" name="email" id="">    
-                                        <br>
-                                        <label for=""><h3>MENSAJE</h3></label>
-                                        <br>
-                                        <textarea name="mensaje" id="" style="width: 100%; height:200px;" ></textarea> 
-                                        <br> <br>
-                                        <button class="boton" ><input type="submit" value="ENVIAR"></button>                                      
+                            <label for=""><h3>NOMBRE</h3></label>
+                            <br>
+                            <input type="text" name="nombre" id="">                                        
+                            <br>
+                            <label for=""><h3>EMAIL</h3></label>
+                            <br>
+                            <input type="email" name="email" id="">    
+                            <br>
+                            <label for=""><h3>MENSAJE</h3></label>
+                            <br>
+                            <textarea name="mensaje" id="" style="width: 100%; height:200px;" ></textarea> 
+                            <br> <br>
+                            <button class="boton" ><input type="submit" value="ENVIAR"></button>                                      
                                            
                         </form>
                     </td>
                     <td>
+                        <table>
+                            <tr>
+                                <td colspan="4" style="height: 80px;" >
+                                    <div>
+                                        <img src="./image/telefono.png" alt="imagen teléfono" style=" width:6%; border:none;">
+                                        <h2>TELEFONOS</h2>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><h4>AMICAR O BARCO</h4></td>
+                                <td><h4>AMICAR A RUA</h4></td>
+                                <td><h4>AMICAR VIANA DO BOLO</h4></td>
+                                <td><h4>AMICAR PONFERRADA</h4></td>
+                            </tr>
+                            <tr>
+                                <td><h4>698 17 66 95 </h4></td>
+                                <td><h4>988 68 57 20</h4></td>
+                                <td><h4>665 84 77 34</h4></td>
+                                <td><h4>600 83 63 06</h4></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4" style="height: 80px;" >
+                                    <div>
+                                        <img src="./image/email.png" alt="imagen Email" style=" width:6%; border:none;">
+                                        <h2>EMAIL</h2>
+                                    </div>                                                                        
+                                </td>
 
-                        <label for="" style="text-align: center;" ><h2>TELEFONO</h2></label>
-                        <img class="contac" src="./image/telefono.png"  alt=""> 666123123                       
-                        <br>
+                            </tr> 
+                            <tr>
+                                <td colspan="4">
+                                    <h4>info@amicar.es</h4>
+                                </td>                                
+                            </tr>                               
 
-                        <label for="" style="text-align: center;" ><h2>EMAIL</h2></label>
-                        <img class="contac" src="./image/email.png" walt=""> info@amicar.es                       
-                        <br>
 
-                        <label for="" style="text-align: center;" ><h2>WHATSAPP</h2></label>
-                        <img class="contac"  src="./image/wassap.png" alt=""> 6666123123                     
-                    </td>
-                </tr>
-            </table>
+                            <td colspan="4" >
+                                <div>
+                                    <img src="./image/wassap.png" alt="imagen whatsapp" style=" width:6%; border:none;">
+                                    <h2>WHATSAPP</h2>
+                                </div>                                     
+                                
+
+                            </td>
+                            </tr>
+                        </table>
+
         </fieldset>
     </section>
 
     <h2></h2>
 </body>
 </html>
+

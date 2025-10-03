@@ -6,15 +6,22 @@
     <title>AMICAR</title>
     <link rel="icon" href="./image/L.ico" />
     <link rel="stylesheet" href="style.css" />
+    
+    <!--ESTILOS DEL CELDAS DE INFORMACION-->
     <style>
+      td {
+        border: 1px solid #000;
+        width: 33.33%; /* cada celda ocupa un tercio */
+        text-align: center;
+        vertical-align: middle;
+      }
+      td:hover {
+        background-color: #0056b3; /* Azul más oscuro */
+        transform: scale(1.1); /* Agrandar ligeramente el botón */
+        cursor: url('./image/volante.png'), pointer; /* 'pointer' es el cursor de enlace predeterminado */
 
-  td {
-    border: 1px solid #000;
-    width: 33.33%; /* cada celda ocupa un tercio */
-    text-align: center;
-    vertical-align: middle;
-  }
-</style>
+}
+    </style>
 
 </head>
 <body>
@@ -26,7 +33,7 @@
       <nav>
         <div class="dropdown">       
         <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Quienes Somos</a>
+        <a href="nosotros.php">Quienes Somos</a>
         <a href="#">CAMPUS VIRTUAL</a>
         <a href="#">NOTICIAS</a>
         <a href="contacto.html">CONTACTO</a>
@@ -43,15 +50,16 @@
           <tr>
          
                 
-            <td>
-                <a href="autoescuela.html">AUTOESCUELA</a>
+            <td style="background-image: url('image/autoescuela3.png'); background-size: cover;" >
+                <a href="autoescuela.html"><h1 style="color: black;" >AUTOESCUELAS</h1></a>
             </td>
-            <td>
-                <a href="">FORMACION</a>              
+            <td style="background-image: url('image/formacion2.png'); background-size: cover;"  >
+                <a href=""><h1 style="color: black;" >FORMACION</h1></a>              
             </td>
-            <td>
-                <a href="">CURSOS GRATUITOS y ayudas</a>              
+            <td style="background-image: url('image/cursos.png'); background-size: 65%;"  >
+                <a href=""><h1 style="color: black;" >CURSOS GRATUITOS y ayudas</h1></a>              
             </td>
+
 
           </tr>
 
@@ -60,6 +68,3 @@
 
 </body>
 </html>
-
-
-

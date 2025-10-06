@@ -354,95 +354,6 @@ footer {
  /* Fondo de la ventana emergente */
 /* Fondo del modal (overlay) */
 
-/* MODAL BASE */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: url('./image/Pistas.jpg');   
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-/* CONTENIDO DEL MODAL */
-.modal-content {
-  background: #fff;
-  padding: 15px;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 600px;
-  width: 100%;
-  max-height: 90vh;   /* nunca excede la altura de la pantalla */
-  overflow-y: auto;   /* scroll interno si el contenido es grande */
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-  opacity: 0;
-  transform: translateY(-50px) scale(0.8);
-  transition: all 0.5s ease;
-}
-
-/* ABRIR MODAL */
-.modal.show .modal-content {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-/* BOTÓN CERRAR */
-.close {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-/* HOVER BOTÓN */
-.close:hover {
-  background: #0056b3;
-}
-
-/* ---------------- MEDIA QUERIES ---------------- */
-
-/* Tablet */
-@media (max-width: 1024px) {
-  .modal-content {
-    max-width: 500px;
-    padding: 15px;
-    font-size: 16px;
-  }
-  .modal {
-    background-size: 80%;
-  }
-}
-
-/* Móvil */
-@media (max-width: 768px) {
-  .modal-content {
-    max-width: 95%;
-    max-height: 85vh;  /* reduce altura máxima para ver todo */
-    padding: 12px;
-    font-size: 14px;
-  }
-  .modal {
-    background-size: 60%; /* imagen más pequeña para que quepa */
-    padding: 5px;
-  }
-}
-
-/*
 .modal {
   display: none; 
   position: fixed;
@@ -452,51 +363,28 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.7);
+  display: flex;
   justify-content: center;
-  align-items: center;
-  /*background-color: black; /* Fondo semi-transparente 
+  align-items: center; /* ⚠ esto se cambia en móvil */
   background-image: url('./image/Pistas.jpg');   
-  background-repeat: no-repeat; /* Evita que la imagen se repita 
-  background-size: 70%; /* Ajusta la imagen para que cubra todo el área 
-  background-position: center; /* Centra la imagen en el fondo 
-  opacity: 1; /* 0.0 es totalmente transparente, 1.0 es totalmente visible 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
-/* Contenido del modal 
-.modal-content {
-  margin-bottom: 20px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  text-align: center;
-  max-width: 600px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-  opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.4s ease;
-}
+/* Móvil: alinear al inicio para que el botón cerrar siempre se vea */
+@media (max-width: 768px) {
+  .modal {
+    align-items: flex-start; /* coloca el modal al top */
+    padding-top: 20px;       /* espacio superior */
+  }
 
-/* Estado visible (cuando se abre) 
-.modal.show .modal-content {
-  opacity: 1;
-  transform: scale(1);
-}
-
-/* Botón 
-.close {
-  margin-top: 15px;
-  padding: 10px 20px;
-  background: #007bff;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.close:hover {
-  background: #0056b3;
+  .modal-content {
+    max-height: 90vh;   /* nunca más alto que el viewport */
+    overflow-y: auto;   /* scroll interno si es necesario */
+  }
 }
 
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
-
-

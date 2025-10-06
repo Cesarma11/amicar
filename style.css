@@ -5,47 +5,165 @@
   box-sizing: border-box;
 }
 
+/* Espacio general debajo del header (para escritorio) */
 body {
+  margin: 0;
+  padding-top: 40px; /* Ajusta a la altura de tu header */
   font-family: Arial, sans-serif;
   background-color: #f5f5f5;
   color: #333;
 }
 
+/* Si el header es más alto en tablet */
+@media (max-width: 1024px) {
+  body {
+    padding-top: 120px;
+  }
+}
+
+/* Si el header es aún más alto en móvil */
+@media (max-width: 768px) {
+  body {
+    padding-top: 140px;
+  }
+}
+
+
+
 /* HEADER */
+/* --- ESTILO BASE (PC) --- */
 header {
+    height: 200px; /* por ejemplo */
   background: url("./image/banner8.png") no-repeat center;
+  background-size: cover;
   padding: 15px 40px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* título izquierda, enlaces derecha */
   align-items: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: fixed;
   width: 100%;
   opacity: 1;
   top: 0;
-  z-index: 10;
+  z-index: 999;
 }
 
-nav h1{
-    text-align: center; /* alineamos al centro el texto 'AUTOESCUELA AMICAR' DEL BANNER INICIAL */
-    color: #c62828;
-    font-size: 48px;
+nav h1 {
+  text-align: center;
+  color: #c62828;
+  font-size: 48px;
+  margin: 0;
 }
-nav a {/* LE DAMOS CSS A LOS ENLACES DEL BANNER */
+
+nav a {
   margin-left: 20px;
   text-decoration: none;
   color: #444;
   font-weight: bold;
+  transition: 0.2s;
 }
 
 nav a:hover {
-    color: #c62828;
-    transform: scale(1.1); /* Agrandar ligeramente el botón */
-    font-size: 25px;
+  color: #c62828;
+  transform: scale(1.1);
+  font-size: 25px;
 }
 
+/* --- TABLET --- */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
 
+  nav h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
 
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 18px;
+    margin: 5px;
+  }
+
+  nav a:hover {
+    font-size: 19px;
+  }
+}
+
+/* --- MÓVIL --- */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav h1 {
+    font-size: 28px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 16px;
+    margin: 3px;
+  }
+
+  nav a:hover {
+    font-size: 17px;
+  }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar h1 {
+    font-size: 28px;
+  }
+
+  /* 🔹 Mostrar botón solo en móvil */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* 🔹 Ocultar enlaces por defecto */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: rgba(255,255,255,0.95);
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 10px 0;
+    font-size: 18px;
+  }
+
+  /* 🔹 Mostrar menú al activar */
+  .nav-links.active {
+    display: flex;
+  }
+}
 
 
 
@@ -65,7 +183,9 @@ nav a:hover {
   position: relative;
   margin-top: 100px;
   margin-left: auto;
+  z-index: 1;  /* el header está por encima, pero no bloquea */
 }
+
 
 .hero::before {
   content: "";
@@ -74,6 +194,8 @@ nav a:hover {
   opacity: 0.2;
   background-color:#F5B027 ;
   /*background: rgba(0, 0, 0, 0.5);*/
+  pointer-events: none; /* 🔹 esta línea es para hacer efectivo en enlace al pulsar sobre el en responsive */
+  
 }
 
 .hero-content {
@@ -95,6 +217,39 @@ nav a:hover {
 .hero-content p {
   font-size: 18px;
   margin-bottom: 30px;
+}
+/* --- Asegurar que los enlaces de la tabla sean clicables en móvil --- */
+
+/* 1️⃣ Asegura que las celdas y enlaces sean relativos y visibles */
+.hero-content table td {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content table td a {
+  display: block;            /* hace que el enlace cubra toda la celda */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;                /* por encima del ::before */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 2️⃣ Asegura que el header no tape el hero 
+header {
+  z-index: 9999;             /* el header está por encima, pero no bloquea 
+}
+
+.hero {
+  z-index: 1;                /* el hero queda debajo del header 
+}
+*/
+/* 3️⃣ Si algún overlay interfiere, fuerza el paso del clic */
+.hero,
+.hero-content,
+.hero-content * {
+  pointer-events: auto;      /* reactiva los clics en todos los hijos */
 }
 
 /* ************************************************* FIN DEL HERO (parte media de la pantalla debajo del banner )********************/
@@ -141,26 +296,6 @@ nav a:hover {
 }
 
 /* ************************************************* FIN DEL HERO (parte media de la pantalla debajo del banner )********************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .btn {
@@ -296,9 +431,6 @@ footer {
 }
 
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************
-
-
-
 
 
 

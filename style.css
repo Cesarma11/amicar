@@ -355,48 +355,48 @@ footer {
 /* Fondo del modal (overlay) */
 
 /* MODAL BASE */
-/* MODAL BASE */
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 9999;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px; 
+  padding: 10px;
   box-sizing: border-box;
 }
 
 /* CONTENIDO DEL MODAL */
 .modal-content {
   background: #fff;
-  padding: 20px;
   border-radius: 12px;
-  text-align: center;
+  padding: 15px;
   width: 90%;
   max-width: 500px;
-  max-height: 90vh;
-  overflow-y: auto;       /* scroll si es necesario */
+  max-height: 90vh;      /* nunca más alto que la pantalla */
+  overflow-y: auto;      /* scroll interno si hace falta */
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  text-align: center;
   opacity: 0;
   transform: scale(0.8) translateY(-20px);
   transition: all 0.4s ease;
   position: relative;
   z-index: 2;
+  margin: auto;          /* centrado horizontal y vertical */
 }
 
 /* IMAGEN DENTRO DEL MODAL */
 .modal-content img {
   width: 100%;
   height: auto;
-  max-height: 40vh;  /* la imagen no ocupará más del 40% de la altura de la pantalla */
+  max-height: 30vh;       /* no empuja el contenido fuera de pantalla */
   object-fit: cover;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   border-radius: 8px;
 }
 
@@ -408,7 +408,7 @@ footer {
 
 /* BOTÓN CERRAR */
 .close {
-  margin-top: 15px;
+  margin-top: 10px;
   padding: 10px 20px;
   background: #007bff;
   color: white;
@@ -428,11 +428,10 @@ footer {
 @media (max-width: 1024px) {
   .modal-content {
     max-width: 400px;
-    padding: 18px;
-    font-size: 16px;
+    padding: 15px;
   }
   .modal-content img {
-    max-height: 30vh;
+    max-height: 25vh;
   }
 }
 
@@ -440,15 +439,17 @@ footer {
 @media (max-width: 768px) {
   .modal-content {
     max-width: 95%;
-    padding: 15px;
-    font-size: 14px;
+    max-height: 85vh;      /* reduce altura máxima para que todo quepa */
+    padding: 12px;
   }
   .modal-content img {
-    max-height: 25vh;  /* asegura que la imagen no haga que el botón se salga */
+    max-height: 20vh;      /* asegura que la imagen no tape el botón */
   }
 }
 
 
+
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
+
 
 

@@ -14,20 +14,19 @@ body {
   color: #333;
 }
 
-/* Si el header es más alto en tablet */
+/* RESPONSIVE TABLET */
 @media (max-width: 1024px) {
   body {
     padding-top: 120px;
   }
 }
 
-/* Si el header es aún más alto en móvil */
+/* RESPONSIVE MOVIL */
 @media (max-width: 768px) {
   body {
     padding-top: 140px;
   }
 }
-
 
 
 /* HEADER */
@@ -69,7 +68,7 @@ nav a:hover {
   font-size: 25px;
 }
 
-/* --- TABLET --- */
+/* ---RESPONSIVE TABLET --- */
 @media (max-width: 1024px) {
   header {
     flex-direction: column;
@@ -98,7 +97,7 @@ nav a:hover {
   }
 }
 
-/* --- MÓVIL --- */
+/* --- RESPONSIVE MÓVIL --- */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -124,10 +123,7 @@ nav a:hover {
   nav a:hover {
     font-size: 17px;
   }
-}
 
-/* --- RESPONSIVE --- */
-@media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
   }
@@ -166,13 +162,7 @@ nav a:hover {
 }
 
 
-
-
-
-
-
-
-/* ***********************************************HERO  parte media de la pantalla*/
+/* ***********************************************HERO  parte media de la pantalla ********************************/
 .hero {
   height: 100vh; /* abarca todo el alto de pantalla */
   /*background: url("./image/fotoAutoescuela2.png") no-repeat center center/cover;*/
@@ -236,25 +226,12 @@ nav a:hover {
   color: inherit;
 }
 
-/* 2️⃣ Asegura que el header no tape el hero 
-header {
-  z-index: 9999;             /* el header está por encima, pero no bloquea 
-}
-
-.hero {
-  z-index: 1;                /* el hero queda debajo del header 
-}
-*/
-/* 3️⃣ Si algún overlay interfiere, fuerza el paso del clic */
+/* 2️⃣ Si algún overlay interfiere, fuerza el paso del clic */
 .hero,
 .hero-content,
 .hero-content * {
   pointer-events: auto;      /* reactiva los clics en todos los hijos */
 }
-
-/* ************************************************* FIN DEL HERO (parte media de la pantalla debajo del banner )********************/
-
-
 
 /* Tabla por defecto (escritorio) */
 .hero table {
@@ -272,7 +249,7 @@ header {
   vertical-align: middle;
 }
 
-/* Responsive para tablet/móvil */
+/* RESPONSIVE PARA TABLET*/
 @media (max-width: 1024px) { /* tablet */
   .hero table, .hero tr, .hero td {
     display: block; /* convierte filas y celdas en bloques */
@@ -284,8 +261,8 @@ header {
     margin-bottom: 10px; /* espacio entre cuadros */
   }
 }
-
-@media (max-width: 768px) { /* móvil */
+/* RESPONSIVE PARA MOVIL */
+@media (max-width: 768px) { 
   .hero td {
     height: 150px; /* altura más pequeña */
   }
@@ -337,7 +314,6 @@ header {
   margin-top: 40px;
 }
 
-
 /* FOOTER */
 footer {
   background: #222;
@@ -373,9 +349,12 @@ footer {
   display: block;
 }
 
+
 /* ********************ESPACIO VENTANA EMERGENTE INICIO DE PAGINA ***********************+++++
  /* Fondo de la ventana emergente */
 /* Fondo del modal (overlay) */
+
+
 .modal {
   display: none; 
   position: fixed;
@@ -385,37 +364,37 @@ footer {
   width: 100%;
   height: 100%;
   background-color: rgba(0,0,0,0.7);
+  display: flex;
   justify-content: center;
   align-items: center;
-  /*background-color: black; /* Fondo semi-transparente */
   background-image: url('./image/Pistas.jpg');   
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-size: 70%; /* Ajusta la imagen para que cubra todo el área */
-  background-position: center; /* Centra la imagen en el fondo */
-  opacity: 1; /* 0.0 es totalmente transparente, 1.0 es totalmente visible */ 
+  background-repeat: no-repeat;
+  background-size: contain; /* que no se corte en móvil */
+  background-position: center;
 }
 
-/* Contenido del modal */
 .modal-content {
-  margin-bottom: 20px;
   background: #fff;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
   max-width: 600px;
+  width: 90%; /* ancho flexible */
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
   opacity: 0;
   transform: scale(0.8);
   transition: all 0.4s ease;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
-/* Estado visible (cuando se abre) */
+/* Cuando se abre */
 .modal.show .modal-content {
   opacity: 1;
   transform: scale(1);
 }
 
-/* Botón */
+/* Botón cerrar */
 .close {
   margin-top: 15px;
   padding: 10px 20px;
@@ -430,7 +409,97 @@ footer {
   background: #0056b3;
 }
 
-/* *************************FIN ESPACIO VENTANA EMERGENTE **************************************
+/* ------------------ MEDIA QUERIES ------------------ */
 
+/* Tablet */
+@media (max-width: 1024px) {
+  .modal-content {
+    max-width: 500px;
+    padding: 18px;
+  }
+  .modal {
+    background-size: 80%;
+  }
+}
+
+/* Móvil */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 90%;
+    padding: 15px;
+  }
+  .modal {
+    background-size: 60%; /* que no se salga de la pantalla */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  /*background-color: black; /* Fondo semi-transparente 
+  background-image: url('./image/Pistas.jpg');   
+  background-repeat: no-repeat; /* Evita que la imagen se repita 
+  background-size: 70%; /* Ajusta la imagen para que cubra todo el área 
+  background-position: center; /* Centra la imagen en el fondo 
+  opacity: 1; /* 0.0 es totalmente transparente, 1.0 es totalmente visible 
+}
+
+/* Contenido del modal 
+.modal-content {
+  margin-bottom: 20px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  max-width: 600px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+}
+
+/* Estado visible (cuando se abre) 
+.modal.show .modal-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Botón 
+.close {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: #0056b3;
+}
+
+/* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
 
 

@@ -355,6 +355,7 @@ footer {
 /* Fondo del modal (overlay) */
 
 
+/* ---------------- MODAL BASE ---------------- */
 .modal {
   display: none; 
   position: fixed;
@@ -369,29 +370,34 @@ footer {
   align-items: center;
   background-image: url('./image/Pistas.jpg');   
   background-repeat: no-repeat;
-  background-size: contain; /* que no se corte en móvil */
+  background-size: contain; 
   background-position: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
+/* Contenido del modal */
 .modal-content {
   background: #fff;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
   max-width: 600px;
-  width: 90%; /* ancho flexible */
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+
+  /* Animación inicial */
   opacity: 0;
-  transform: scale(0.8);
-  transition: all 0.4s ease;
-  overflow-wrap: break-word;
-  word-wrap: break-word;
+  transform: translateY(-50px) scale(0.8); /* empieza arriba y pequeño */
+  transition: all 0.5s ease;
 }
 
-/* Cuando se abre */
+/* Abrir modal */
 .modal.show .modal-content {
   opacity: 1;
-  transform: scale(1);
+  transform: translateY(0) scale(1); /* baja y crece */
 }
 
 /* Botón cerrar */
@@ -403,19 +409,21 @@ footer {
   border: none;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 .close:hover {
   background: #0056b3;
 }
 
-/* ------------------ MEDIA QUERIES ------------------ */
+/* ---------------- MEDIA QUERIES ---------------- */
 
 /* Tablet */
 @media (max-width: 1024px) {
   .modal-content {
     max-width: 500px;
     padding: 18px;
+    font-size: 16px;
   }
   .modal {
     background-size: 80%;
@@ -425,23 +433,15 @@ footer {
 /* Móvil */
 @media (max-width: 768px) {
   .modal-content {
-    max-width: 90%;
+    max-width: 95%;
     padding: 15px;
+    font-size: 14px;
   }
   .modal {
-    background-size: 60%; /* que no se salga de la pantalla */
+    background-size: 60%;
+    padding: 5px;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -501,5 +501,4 @@ footer {
 }
 
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
-
 

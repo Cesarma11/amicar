@@ -355,6 +355,7 @@ footer {
 /* Fondo del modal (overlay) */
 
 /* MODAL BASE */
+/* MODAL BASE */
 .modal {
   display: none; 
   position: fixed;
@@ -363,7 +364,7 @@ footer {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.7); /* fondo oscuro semi-transparente */
+  background-color: rgba(0,0,0,0.7);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -373,20 +374,30 @@ footer {
 
 /* CONTENIDO DEL MODAL */
 .modal-content {
-  background: #fff;              /* ventana blanca */
+  background: #fff;
   padding: 20px;
   border-radius: 12px;
   text-align: center;
-  width: 90%;                    /* adaptable al tamaño de pantalla */
-  max-width: 500px;              /* no demasiado grande */
-  max-height: 90vh;              /* nunca más alto que la pantalla */
-  overflow-y: auto;              /* scroll si el contenido es demasiado alto */
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;       /* scroll si es necesario */
   box-shadow: 0 5px 20px rgba(0,0,0,0.5);
   opacity: 0;
-  transform: scale(0.8) translateY(-20px); /* animación inicial */
+  transform: scale(0.8) translateY(-20px);
   transition: all 0.4s ease;
   position: relative;
   z-index: 2;
+}
+
+/* IMAGEN DENTRO DEL MODAL */
+.modal-content img {
+  width: 100%;
+  height: auto;
+  max-height: 40vh;  /* la imagen no ocupará más del 40% de la altura de la pantalla */
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }
 
 /* ABRIR MODAL */
@@ -412,21 +423,32 @@ footer {
 }
 
 /* ---------------- MEDIA QUERIES ---------------- */
+
+/* Tablet */
 @media (max-width: 1024px) {
   .modal-content {
     max-width: 400px;
     padding: 18px;
     font-size: 16px;
   }
+  .modal-content img {
+    max-height: 30vh;
+  }
 }
 
+/* Móvil */
 @media (max-width: 768px) {
   .modal-content {
     max-width: 95%;
     padding: 15px;
     font-size: 14px;
   }
+  .modal-content img {
+    max-height: 25vh;  /* asegura que la imagen no haga que el botón se salga */
+  }
 }
 
+
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
+
 

@@ -32,7 +32,7 @@ body {
 /* HEADER */
 /* --- ESTILO BASE (PC) --- */
 header {
-    height: 200px; /* por ejemplo */
+  height: 150px; 
   background: url("./image/banner8.png") no-repeat center;
   background-size: cover;
   padding: 15px 40px;
@@ -89,7 +89,7 @@ nav a:hover {
 
   nav a {
     font-size: 18px;
-    margin: 5px;
+    /*margin: 5px;*/
   }
 
   nav a:hover {
@@ -103,7 +103,10 @@ nav a:hover {
     flex-direction: column;
     padding: 10px;
   }
+  header a{
+    margin-right: 70%;
 
+  }
   nav h1 {
     font-size: 28px;
   }
@@ -111,7 +114,7 @@ nav a:hover {
   nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    /*justify-content: center;*/
     gap: 10px;
   }
 
@@ -305,6 +308,7 @@ nav a:hover {
 .section1 {
   padding: 80px 20px;
   text-align: center;
+  background-color: aquamarine;
 }
 
 .services {
@@ -325,8 +329,10 @@ footer {
 .dropdown {
   position: relative; /* Para que el contenido se posicione correctamente */
   display: inline-block;
-  margin-bottom: 70px;
+  margin-bottom: 100px;
 }
+
+
 
 .dropdown-content {
   display: none; /* Oculto inicialmente */
@@ -351,9 +357,7 @@ footer {
 
 
 /* ********************ESPACIO VENTANA EMERGENTE INICIO DE PAGINA ***********************+++++
- /* Fondo de la ventana emergente */
 /* Fondo del modal (overlay) */
-/* MODAL BASE */
 .modal {
   display: none;
   position: fixed;
@@ -413,7 +417,7 @@ footer {
   background: #0056b3;
 }
 
-/* ---------------- MEDIA QUERIES ---------------- */
+/* ---------------- RESPONSIVE ---------------- */
 
 /* Tablet */
 @media (max-width: 1024px) {
@@ -431,7 +435,7 @@ footer {
 @media (max-width: 768px) {
   .modal-content {
     max-width: 95%;
-    max-height: 85vh;  /* reduce altura máxima para ver todo */
+    max-height: 60vh;  /* reduce altura máxima para ver todo */
     padding: 12px;
     font-size: 14px;
   }
@@ -442,8 +446,6 @@ footer {
 }
 
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
-
-
 
 
 

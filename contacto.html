@@ -44,30 +44,65 @@
         justify-content: center; /* Centra horizontalmente */
         align-items: center; /* Centra verticalmente */
     }
+/* =================== BASE =================== */
+.section1 table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
 
-    /* 📱 Móviles y tablets */
-    @media (max-width: 1024px) {
-    table,
-    table tr,
-    table td {
-        display: block;
-        width: 100%;
-    }
+.section1 th, .section1 td {
+  padding: 10px;
+  vertical-align: top;
+}
 
-    table td {
-        height: 250px; /* todas las celdas mismo alto */
-        margin-bottom: 15px;
-    }
+/* =================== FORMULARIO =================== */
+.td1 input, .td1 textarea, .boton input[type="submit"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
 
-    }
+/* =================== RESPONSIVE =================== */
+@media (max-width: 1024px) {
+  /* Para tablets y móviles grandes */
+  .section1 table, .section1 tr, .section1 th, .section1 td {
+    display: block;
+    width: 100%;
+  }
 
-    /* 📱 Teléfonos pequeños */
-    @media (max-width: 790px) {
-    table td {
-        height: 200px; /* más pequeño aún, pero igual para todos */
-    }
+  .section1 th {
+    text-align: center;
+    margin-bottom: 15px;
+  }
 
-    }
+  .section1 td {
+    margin-bottom: 20px;
+  }
+
+  .section1 td1 input, .td1 textarea, .boton input[type="submit"] {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Para móviles pequeños */
+  .section1 th h2, .section1 td h2, .section1 td h3, .section1 td h4 {
+    font-size: 14px;
+  }
+
+  .section1 td1 input, .td1 textarea, .boton input[type="submit"] {
+    font-size: 14px;
+  }
+
+  .section1 img {
+    width: 20px; /* iconos más pequeños en móvil */
+  }
+}
+
+
+    
 
 
 </style>
@@ -179,5 +214,4 @@
     </section>
 </body>
 </html>
-
 

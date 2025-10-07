@@ -68,76 +68,6 @@
         justify-content: center; /* Centra horizontalmente */
         align-items: center; /* Centra verticalmente */
     }
-      /* modo responsive para movil,se ven las celdas apiladas una encima de la otra */
-/* =================== HERO BASE =================== */
-.hero {
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-
-.hero-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
-
-.hero-table td {
-  height: 80px;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  position: relative;
-}
-
-.hero-table td a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.35);
-  color: black;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-/* =================== RESPONSIVE =================== */
-
-/* 📱 Móviles y tablets */
-@media (max-width: 1024px) {
-  .hero-table,
-  .hero-table tr,
-  .hero-table td {
-    display: block;
-    width: 100%;
-  }
-
-  .hero-table td {
-    height: 250px; /* todas las celdas mismo alto */
-    margin-bottom: 15px;
-  }
-
-  .hero-table td a {
-    font-size: 1.5rem;
-  }
-}
-
-/* 📱 Teléfonos pequeños */
-@media (max-width: 790px) {
-  .hero-table td {
-    height: 200px; /* más pequeño aún, pero igual para todos */
-  }
-
-  .hero-table td a {
-    font-size: 1.2rem;
-  }
-}
-
-
 </style>
 
 </head>
@@ -154,16 +84,14 @@
         <a href="#">NOTICIAS</a>
         <a href="contacto.html">CONTACTO</a>
         <a href="#">TIENDA</a>
-
-      <img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 300px; margin-top:10px; " />
+        <img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 300px; margin-top:10px; " />
       </div>      
     </nav>
-  </header>
+    </header>
 <!-- --------------------- FIN DE HEADER ------------------------------------------------------------>
-    <section class="hero" id="inicio">
-    <div class="hero-content">
+    <section class="section1" >
         <fieldset style="margin-top: 8%; background-color:aquamarine" >
-            <table  class="hero-table" style=" width: 100%; height:200px;  table-layout: fixed;  padding-top:50px; border:none;" >
+            <table style=" width: 100%; height:200px;  table-layout: fixed;  padding-top:50px; border:none;" >
                 <tr>
                     <th class="td" ><h2>DEJANOS TUS DATOS</h2></th>
                     <th class="td"><h2>CONTACTANOS</h2></th>
@@ -244,12 +172,8 @@
                                 </td>                                
                             </tr>
                         </table>
-</div>
         </fieldset>
     </section>
-
-    <h2></h2>
 </body>
 </html>
-
 

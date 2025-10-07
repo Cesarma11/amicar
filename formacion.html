@@ -16,32 +16,42 @@
         vertical-align: middle;
       }
       /* modo responsive para movil,se ven las celdas apiladas una encima de la otra */
-/* por defecto: scroll horizontal */
-.table-container {
+/* ======= Tabla base ======= */
+table {
   width: 100%;
-  overflow-x: auto;
+  border-collapse: collapse;
+  table-layout: fixed;
 }
 
-/* en móviles: apilar filas */
-@media (max-width: 768px) {
-  .table-container table thead {
-    display: none;
-  }
-  .table-container table tr {
-    display: block;
-    margin-bottom: 15px;
-  }
-  .table-container table td {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-  }
-  .table-container table td::before {
-    content: attr(data-label);
-    font-weight: bold;
-  }
+td {
+  height: 400px;
+  text-align: center;
+  vertical-align: middle;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  transition: transform 0.3s ease;
 }
+
+td a {
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 400px; /* centra el texto verticalmente */
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+td:hover {
+  transform: scale(1.03);
+}
+
+/* ======= Responsive ======= */
+@media (max-width:
+
 
     </style>
 
@@ -81,4 +91,5 @@
           </tr>
         </table>
       </section>
+
 

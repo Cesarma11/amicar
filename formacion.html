@@ -16,39 +16,33 @@
         vertical-align: middle;
       }
       /* modo responsive para movil,se ven las celdas apiladas una encima de la otra */
-      .responsive-table {
-        width: 100%;
-        border-collapse: collapse;
-      }
+/* por defecto: scroll horizontal */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
 
-      .responsive-table th, .responsive-table td {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: left;
-      }
+/* en móviles: apilar filas */
+@media (max-width: 768px) {
+  .table-container table thead {
+    display: none;
+  }
+  .table-container table tr {
+    display: block;
+    margin-bottom: 15px;
+  }
+  .table-container table td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .table-container table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+  }
+}
 
-      @media (max-width: 768px) {
-        .responsive-table thead {
-          display: none; /* ocultar cabecera */
-        }
-        .responsive-table tr {
-          display: block;
-          margin-bottom: 15px;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          background: #fff;
-        }
-        .responsive-table td {
-          display: flex;
-          justify-content: space-between;
-          padding: 10px;
-        }
-        .responsive-table td::before {
-          content: attr(data-label);
-          font-weight: bold;
-          color: #333;
-        }
-      }
     </style>
 
 </head>

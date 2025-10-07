@@ -6,59 +6,95 @@
     <title>AMICAR</title>
     <link rel="icon" href="./image/L.ico" />
     <link rel="stylesheet" href="style.css" />
-    
 
+<style>
+.contenedor1 {
+  display: flex;
+  gap: 10px;               /* espacio entre texto e imagen */
+  width: 100%;
+  border: 2px solid #ccc;  /* marco general del bloque */
+  padding: 10px;
+}
+
+.caja1 {
+  flex: 1;                 
+  padding: 10px;
+  background-color: lightblue;
+  border-right: 2px solid #888; /* línea de separación entre texto e imagen */
+}
+
+.imagen1 {
+  flex: 1;                 
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-left: 2px solid #888;  /* opcional, para simetría */
+  padding-left: 10px;           /* separa la imagen del borde */
+}
+@media (max-width: 768px) {
+  .contenedor1 {
+    flex-direction: column;
+    border-right: none;
+    border-left: none;
+  }
+
+  .caja1, .imagen1 {
+    border: none;   /* elimina las líneas de separación vertical */
+    padding: 5px;
+  }
+}
+
+</style>
 
 </head>
 <body>
-
-      <!-- Header -->
+<!-- --------------------------- INICIO HEADER (encabezado)---------------------------------------------------------------->
     <header>
-      <a href="index.html"><img src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/></a>
-      <!-- <h1>Autoescuela am¡car</h1>-->
-      <nav>
-        <div class="dropdown">       
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Quienes Somos</a>
-        <a href="#">CAMPUS VIRTUAL</a>
-        <a href="#">NOTICIAS</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="#">TIENDA</a>
+        
+        <a href="index.html"><img src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/></a>
+        <nav>      
+        <div class="dropdown" id="nav-links" > 
+            <div class="contenedor" >
+            <h1>Autoescuela am¡car</h1>
+            <a href="index.html"><img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 100px; margin-top:1px; " /></a>
+            </div>               
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Quienes Somos</a>
+            <a href="#">CAMPUS VIRTUAL</a>
+            <a href="#">NOTICIAS</a>
+            <a href="contacto.html">CONTACTO</a>
+            <a href="#">TIENDA</a>
         </div>
-        <img src="./image/l practicas.png" alt="" style="width:5%; margin-left: 300px; margin-top:10px; " />
-      </nav>
+        </nav>
     </header>
-<table>
-    <tr>
-        <td>    
-            <fieldset style=" margin-left:100px;  margin-top:300px; width: 500px; border:none; ">
-                <h2>SOBRE NOSOTROS</h2>
-                <br><br>            
-                <h3>Forma parte de la familia Amicar</h3>
-                <br><br>
-                <label for=""> 60 años de experiencia. ¿Es lo que nos avala?</label>
-                <br>
-                <label for="" style="display:block; text-align:justify; width:500px;">Creemos que la palabra que nos define por excelencia es: CAMBIOS. Y estos cambios representan una evolución.
-                    <strong>60 años de evolución</strong>. Amicar es un centro que ha ido formando parte de las familias como un bien heredado:
-                    de bisabuelos, a abuelos, de abuelos a padres, y de padres a hijos, nietos, sobrinos… 
-                    Hemos sido imagen del pasado y hemos crecido poco a poco hasta lo que somos en el presente y lo que seremos en el futuro:
-                    tu centro de formación de confianza.
-                </label>
-                <br><br>
-                <label for="" style="display:block; text-align:justify; width:500px;">
-                Aun así, no sabemos echar el freno y queremos seguir avanzando e inculcando nuestras enseñanzas para crecer juntos. Pero toda carrera es mejor si se hace acompañado.
-                </label>
-                <br><br>
-                <label for="">¿Te unes de copiloto? </label>                
-            </fieldset>
-        </td>
-        <td>
-            <fieldset style="margin-left:300px; width:500px; border:none; ">
-                <img src="./image/nosotros.jpeg" alt="" width="90%" style="margin-top:300px;"  >
-            </fieldset>
-        </td>
-    </tr>
-</table>
+<!-- --------------------- FIN DE HEADER ------------------------------------------------------------>
+
+<section style="margin-top: 100px;">
+  <div class="contenedor1">
+    <div class="caja1">
+      <h2>SOBRE NOSOTROS</h2>
+      <br><br>
+      <h3>Forma parte de la familia Amicar</h3>
+      <br><br>        
+      <label> 60 años de experiencia. ¿Es lo que nos avala?</label>
+      <br>
+      <label>Creemos que la palabra que nos define por excelencia es: CAMBIOS. Y estos cambios representan una evolución.
+      <strong>60 años de evolución</strong>. Amicar es un centro que ha ido formando parte de las familias como un bien heredado:
+      de bisabuelos, a abuelos, de abuelos a padres, y de padres a hijos, nietos, sobrinos… 
+      Hemos sido imagen del pasado y hemos crecido poco a poco hasta lo que somos en el presente y lo que seremos en el futuro:
+      tu centro de formación de confianza.
+      </label>
+      <br><br>
+      <label>
+      Aun así, no sabemos echar el freno y queremos seguir avanzando e inculcando nuestras enseñanzas para crecer juntos. Pero toda carrera es mejor si se hace acompañado.
+      </label>
+      <br><br>
+      <label>¿Te unes de copiloto? </label>  
+    </div>
+    <img src="./image/nosotros.jpeg" alt="Imagen sobre nosotros" class="imagen1">
+  </div>
+</section>
+
 </body>
 </html>
 

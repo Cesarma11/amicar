@@ -249,6 +249,38 @@ nav a:hover {
   transform: scale(1.03);
 }
 
+* ---RESPONSIVE TABLET --- */
+@media (max-width: 1024px) {
+  header {
+    flex-direction: column;
+    padding: 10px 20px;
+    height: 50%;
+
+  }
+
+  nav h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  nav a {
+    font-size: 18px;
+    /*margin: 5px;*/
+  }
+
+  nav a:hover {
+    font-size: 19px;
+  }
+}
+
+
 
 /* --- Versión móvil --- */
 @media (max-width: 768px) {
@@ -518,5 +550,6 @@ footer {
 }
 
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
+
 
 

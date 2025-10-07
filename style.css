@@ -256,7 +256,83 @@ nav a:hover {
   }
 }
 
+
+/* 1️⃣ Asegura que las celdas y enlaces sean relativos y visibles */
+.hero-content table td {
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.hero-content table td a {
+  display: block;            /* hace que el enlace cubra toda la celda */
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;                /* por encima del ::before */
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 2️⃣ Si algún overlay interfiere, fuerza el paso del clic */
+.hero,
+.hero-content,
+.hero-content * {
+  pointer-events: auto;      /* reactiva los clics en todos los hijos */
+}
+
+/* Tabla por defecto (escritorio) */
+.hero table {
+  width: 100%;
+  height: 500px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.hero td {
+  background-size: cover;
+  background-position: center;
+  border: 1px solid black; /* para que se vean los cuadros */
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* RESPONSIVE PARA TABLET*/
+@media (max-width: 1024px) { /* tablet */
+  .hero table, .hero tr, .hero td {
+    display: block; /* convierte filas y celdas en bloques */
+    width: 100%;
+    height: 200px; /* ajusta la altura */
+    
+  }
+.hero-content{
+  margin: auto;
+}
+
+  .hero td {
+    margin-bottom: 10px; /* espacio entre cuadros */
+  }
+}
+/* RESPONSIVE PARA MOVIL */
+@media (max-width: 768px) { 
+  .hero td {
+    height: 150px; /* altura más pequeña */
+  }
+
+  .hero td h1 {
+    font-size: 1rem; /* tamaño del texto más pequeño */
+  }
+
+}
+
+
+
+
+
+
+
 /* ************************************************* FIN DEL HERO (parte media de la pantalla debajo del banner )********************/
+
 
 .btn {
   display: inline-block;

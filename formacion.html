@@ -16,41 +16,78 @@
         vertical-align: middle;
       }
       /* modo responsive para movil,se ven las celdas apiladas una encima de la otra */
-/* ======= Tabla base ======= */
-table {
+/* =================== HERO BASE =================== */
+.hero {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.hero-table {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
 }
 
-td {
+.hero-table td {
   height: 400px;
-  text-align: center;
-  vertical-align: middle;
   background-size: cover;
   background-position: center;
+  text-align: center;
   position: relative;
   transition: transform 0.3s ease;
 }
 
-td a {
-  text-decoration: none;
-  color: black;
-  font-size: 2rem;
-  font-weight: bold;
-  display: block;
-  width: 100%;
-  height: 100%;
-  line-height: 400px; /* centra el texto verticalmente */
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-td:hover {
+.hero-table td:hover {
   transform: scale(1.03);
 }
 
-/* ======= Responsive ======= */
-@media (max-width:
+.hero-table td a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.35);
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* =================== RESPONSIVE =================== */
+
+/* 📱 Móviles y tablets */
+@media (max-width: 1024px) {
+  .hero-table,
+  .hero-table tr,
+  .hero-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .hero-table td {
+    height: 250px; /* todas las celdas mismo alto */
+    margin-bottom: 15px;
+  }
+
+  .hero-table td a {
+    font-size: 1.5rem;
+  }
+}
+
+/* 📱 Teléfonos pequeños */
+@media (max-width: 480px) {
+  .hero-table td {
+    height: 200px; /* más pequeño aún, pero igual para todos */
+  }
+
+  .hero-table td a {
+    font-size: 1.2rem;
+  }
+}
 
 
     </style>
@@ -73,9 +110,11 @@ td:hover {
         <img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 300px; margin-top:10px; " />
       </nav>
     </header>
-    <section style="margin-top: 250px;margin-left:50px">
-        <h1>FORMACIÓN</h1>
-        <table  class="responsive-table">
+        <h1 style="margin-top: 250px;">FORMACIÓN</h1>    
+    <section style="margin-left:50px" class="hero" id="inicio">
+
+    <div class="hero-content">
+        <table  class="hero-table">
           <tr>
             <td>
               <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d127.27674326242413!2d-7.112474222344585!3d42.39515141207759!2m2!1f314.51257350314455!2f39.417085041030454!3m2!1i1024!2i768!4f35!3m3!1m2!1s0xd307e687a0f0cd5%3A0x9b3485de2e63657a!2sAmicar%20Formaci%C3%B3n%20y%20autoescuela%20S.L.!5e1!3m2!1ses!2ses!4v1759823060641!5m2!1ses!2ses"
@@ -90,6 +129,8 @@ td:hover {
             </td>
           </tr>
         </table>
+    </div>
       </section>
+
 
 

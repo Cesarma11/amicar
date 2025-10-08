@@ -103,12 +103,18 @@ nav h1 {
   flex: 1;
 }
 nav a {
+  color: #ffffff; /* blanco sobre fondo azul */  
   margin-left: 20px;
   text-decoration: none;
   color: #444;
   font-weight: bold;
-  transition: 0.3s;
+  font-size: 18px;  
+  transition: color 0.3s, transform 0.3s, font-size 0.3s;  
+  display: inline-block; 
+  position: relative;   
 }
+
+
 /* Enlaces normales (PC) */
 .nav-links {
   display: flex;
@@ -123,12 +129,26 @@ nav a {
   transition: 0.3s;
 }
 
+/* Efecto hover */
 nav a:hover {
-  color: #c62828;
-  transform: scale(1.1);
-  font-size: 25px;
+  /*   color: #c62828;*/
+  color: #ffcc00; /* amarillo Amícar */
+  transform: scale(1.15);
+    font-size: 25px;
 }
-
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+}
+nav a:hover::after {
+  width: 100%;
+}
 /* Botón hamburguesa de menu oculto en pc, se ve un cuadro con las rayas */
 .menu-toggle {
   display: none;
@@ -192,6 +212,14 @@ nav a:hover {
     font-size: 19px;
   }
 }
+/* Enlace activo (página actual) para dejar constancia de que pagina estas*/
+nav a.active {
+  color: red; /* mismo amarillo que el hover */
+}
+
+nav a.active::after {
+  width: 100%; /* mantiene la línea amarilla debajo */
+}
 
 /* --- RESPONSIVE MÓVIL --- */
 @media (max-width: 768px) {
@@ -212,7 +240,7 @@ nav a:hover {
     margin-left: 20px;
   }
   header img{
-    transform: scale(0.9); /* 70% del tamaño original */
+    transform: scale(0.9); /* 90% del tamaño original */
     transform-origin: center center; /* se reduce desde el centro */
     padding-right: 50px;
   }
@@ -287,7 +315,11 @@ nav a:hover {
   .nav-links.active {
     display: flex; /* Muestra el menú cuando se hace clic */
   }
+  nav a:hover {
+    transform: none;
+  }
 }
+
 
 /* ***********************************************HERO  parte media de la pantalla ********************************/
 .hero {
@@ -622,6 +654,120 @@ footer {
 }
 
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
+/* ******************************** PIE DE PAGINA **********************************************/
+footer {
+  background-color: #00264d;
+  color: white;
+  text-align: center;
+  padding: 40px 20px 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  max-width: 300px;
+}
+
+.footer-section h3 {
+  color: #ffcc00;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.footer-section h4 {
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.footer-section p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 24px;
+  margin: 0 10px;
+  color: white;
+  transition: transform 0.2s, color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espacio entre icono y texto */ 
+  font-weight: 500; 
+
+}
 
 
+
+
+
+.social-icons a:hover {
+  color: #ffcc00;
+  transform: scale(1.2);
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* hace los iconos blancos */
+  transition: filter 0.3s;
+}
+
+.social-icons a:hover img {
+  filter: brightness(1.2) saturate(2); /* efecto al pasar el ratón */
+}
+
+
+.footer-bottom {
+  border-top: 1px solid #ffcc00;
+  padding-top: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+.footer-links a {
+  color: #e62424; /* rojo para contraste sobre azul */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+  position: relative;  
+}
+
+.footer-links a:hover {
+  color: #ffcc00; /* amarillo Amícar al pasar el ratón */
+  transform: translateX(4px); /* pequeño movimiento elegante */
+}
+
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
 

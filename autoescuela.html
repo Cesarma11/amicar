@@ -48,7 +48,7 @@
     <a href="index.html">Inicio</a>
     <a href="nosotros.html">Quienes Somos</a>
     <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
-    <a href="#">Noticias</a>
+    <a href="noticias.html">Noticias</a>
     <a href="contacto.html">Contacto</a>
     <a href="#">Tienda</a>
   </nav>
@@ -172,6 +172,48 @@
             </table>
         </div>
     </section> 
+<!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-logo">
+      <a href="index.html"><img src="./image/logo.png" alt="Autoescuela Amícar" /></a>
+      <h3>Autoescuela Amícar</h3>
+      <p>Tu centro de formación de confianza desde hace más de 60 años.</p>
+    </div>
+
+    <div class="footer-links">
+      <h4>Enlaces rápidos</h4>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Quiénes somos</a></li>
+        <li><a href="#">Cursos</a></li>
+        <li><a href="#">Noticias</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contacto</h4>
+      <p><strong>📍 Dirección:</strong> Av. Conde de Fenosa, 18, 32300 O Barco Orense</p>
+      <p><strong>📞 Teléfono:</strong> 698 17 66 95</p>
+      <p><strong>✉️ Email:</strong> info@amicar.com</p>
+    </div>
+
+    <div class="footer-social">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a href="#"><img src="./image/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="./image/instagram.svg" alt="Instagram"></a>
+        <a href="#"><img src="./image/twitter.svg" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 Autoescuela Amícar · Todos los derechos reservados</p>
+  </div>
+</footer>
+<!-- --------------------------------------FIN PIE DE PAGINA--------------------------------------------------->
     
     <!-- SCRIPT PARA LA VENTANTA EMERGENTE-->
     <script> 
@@ -209,8 +251,14 @@
         });
     </script>
     </body>
+<script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
+ 
 </html>
-
-
-
-

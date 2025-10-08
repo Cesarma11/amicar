@@ -131,7 +131,7 @@ nav a:hover {
 
 /* Botón hamburguesa de menu oculto en pc, se ve un cuadro con las rayas */
 .menu-toggle {
-  display: block;
+  display: none;
   font-size: 34px;                     /* un poco más grande */
   background: rgba(0,0,0,0.6);         /* fondo más oscuro para contraste */
   color: #ffd700;                      /* color amarillo brillante */
@@ -622,6 +622,7 @@ footer {
 }
 
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
+
 
 
 

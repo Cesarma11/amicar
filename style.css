@@ -321,7 +321,7 @@ nav a.active::after {
 }
 
 
-/* ***********************************************HERO  parte media de la pantalla ********************************/
+/* *********************************************** HERO  parte media de la pantalla ********************************/
 .hero {
   height: 100vh; /* abarca todo el alto de pantalla */
   /*background: url("./image/fotoAutoescuela2.png") no-repeat center center/cover;*/
@@ -378,6 +378,7 @@ nav a.active::after {
   border: 1px solid #000;
   transition: transform 0.3s ease;
   box-sizing: border-box;
+  opacity: 0.8; /* 0 = totalmente invisible, 1 = totalmente opaca */
 }
 
 /* --- Texto dentro --- */
@@ -770,4 +771,5 @@ footer {
     text-align: center;
   }
 }
+
 

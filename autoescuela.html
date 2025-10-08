@@ -6,14 +6,14 @@
     <title>AMICAR</title>
     <link rel="icon" href="./image/L.ico" />
     <link rel="stylesheet" href="style.css" />
-    <style>
 
-  td {
-    width: 33.33%; /* cada celda ocupa un tercio */
-    text-align: center;
-    vertical-align: middle;
-  }
-</style>
+    <style>
+        td {
+            width: 33.33%; /* cada celda ocupa un tercio */
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
 
 </head>
 <body>
@@ -31,57 +31,33 @@
 </div>
 
 
-    <script>
-        const modal = document.getElementById("myModal");
-        const closeBtn = document.querySelector(".close");
-
-        // Abrir ventana al cargar la página
-        window.addEventListener("load", () => {
-        modal.style.display = "flex";
-        setTimeout(() => modal.classList.add("show"), 10); // delay pequeñito para animación
-        });
-
-        // Cerrar ventana con el botón
-        closeBtn.addEventListener("click", () => {
-        modal.classList.remove("show");
-        setTimeout(() => modal.style.display = "none", 400); // espera a que termine la animación
-        });
-
-        // Cerrar si se hace clic fuera del contenido
-        window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.classList.remove("show");
-            setTimeout(() => modal.style.display = "none", 400);
-        }
-        });
-
-    </script>
 
 <!-- **************************************FIN ESPACIO VENTANA EMERGENTE ******************************************  -->
 
+<!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
+<header>
+  <div class="top-bar">
+    <a href="index.html">
+      <img src="./image/logo.png" alt="Logo Amicar" width="160px" />
+    </a>
+    <h1>Autoescuela Am¡car</h1>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </div>
 
-<!-- --------------------------- INICIO HEADER (encabezado)---------------------------------------------------------------->
-    <header>
-      <a href="index.html"><img src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/></a>
-      <nav>      
-        <div class="dropdown" id="nav-links" > 
-        <h1>Autoescuela am¡car</h1>                 
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Quienes Somos</a>
-        <a href="#">CAMPUS VIRTUAL</a>
-        <a href="#">NOTICIAS</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="#">TIENDA</a>
-        </div>
-        <img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 300px; margin-top:10px; " />
-      </nav>
-    </header>
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Quienes Somos</a>
+    <a href="#">Campus Virtual</a>
+    <a href="#">Noticias</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#">Tienda</a>
+  </nav>
+</header>
 <!-- --------------------- FIN DE HEADER ------------------------------------------------------------>
- <!----------------------- INICIO SECTION ---------------------------------------------
-    <section style="margin-left:5%;margin-top: 250px;" >-->
+ <!----------------------- INICIO SECTION --------------------------------------------- -->
     <section style="margin-left:5%; margin-top: 250px; "  id="inicio">
         <h1 style="margin-bottom: 100px;">NUESTROS CENTROS</h1>
-            <table style="border:none; " >
+            <table>
                 <tr>
                     <td>
                         <img style="width:400px;height:400px;" src="./image/Amicar_barco.jpeg" alt="">                    
@@ -179,9 +155,46 @@
                 </tr>
             </table>
         </div>
-    </section>  
+    </section> 
+    
+    <!-- SCRIPT PARA LA VENTANTA EMERGENTE-->
+    <script> 
+        const modal = document.getElementById("myModal");
+        const closeBtn = document.querySelector(".close");
+
+        // Abrir ventana al cargar la página
+        window.addEventListener("load", () => {
+        modal.style.display = "flex";
+        setTimeout(() => modal.classList.add("show"), 10); // delay pequeñito para animación
+        });
+
+        // Cerrar ventana con el botón
+        closeBtn.addEventListener("click", () => {
+        modal.classList.remove("show");
+        setTimeout(() => modal.style.display = "none", 400); // espera a que termine la animación
+        });
+
+        // Cerrar si se hace clic fuera del contenido
+        window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+            modal.classList.remove("show");
+            setTimeout(() => modal.style.display = "none", 400);
+        }
+        });
+
+    </script>
+    <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+            toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            });
+        });
+    </script>
     </body>
 </html>
+
 
 
 

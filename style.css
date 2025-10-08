@@ -198,6 +198,7 @@ nav a:hover {
   header {
     flex-direction: column;
     height: 32%;
+    width: 100%;
 
   }
   .header-container {
@@ -205,22 +206,21 @@ nav a:hover {
     align-items: flex-start;
     position: relative;
   }
-
   header a{
     margin-right: 70%;
     height: 5%;
     margin-left: 20px;
   }
   header img{
-    transform: scale(0.7); /* 70% del tamaño original */
+    transform: scale(0.9); /* 70% del tamaño original */
     transform-origin: center center; /* se reduce desde el centro */
-    padding-right: 80px;
+    padding-right: 50px;
   }
 
   header h1 {
+    /*display: none;*/
     font-size: 26px;
     text-align: left;
-    margin-left: 10px;
   }
 
   .menu-toggle {
@@ -622,8 +622,6 @@ footer {
 }
 
 /* *************************FIN ESPACIO VENTANA EMERGENTE **************************************/
-
-
 
 
 

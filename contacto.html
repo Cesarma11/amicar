@@ -10,7 +10,7 @@
     <style>
         table{
             width: 100%;
-            background-color:aquamarine;
+            background-color: aquamarine;
         }
       .td {
         width: 50%; /* cada celda ocupa la mitad de la pantalla*/
@@ -102,30 +102,30 @@
   }
 }
 
-
-    
-
-
 </style>
 
 </head>
 <body>
 <!-- --------------------------- INICIO HEADER (encabezado)---------------------------------------------------------------->
-  <header>
-    <a href="index.html"><img src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/></a>
-    <nav>      
-      <div class="dropdown" id="nav-links" > 
-        <h1>Autoescuela am¡car</h1>                 
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Quienes Somos</a>
-        <a href="#">CAMPUS VIRTUAL</a>
-        <a href="#">NOTICIAS</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="#">TIENDA</a>
-        <img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 300px; margin-top:10px; " />
-      </div>      
-    </nav>
-    </header>
+<!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
+<header>
+  <div class="top-bar">
+    <a href="index.html">
+      <img src="./image/logo.png" alt="Logo Amicar" width="160px" />
+    </a>
+    <h1>Autoescuela Am¡car</h1>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </div>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Quienes Somos</a>
+    <a href="#">Campus Virtual</a>
+    <a href="#">Noticias</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#">Tienda</a>
+  </nav>
+</header>>
 <!-- --------------------- FIN DE HEADER ------------------------------------------------------------>
     <section class="section1"  >
         <fieldset style="margin-top: 8%;" >
@@ -161,10 +161,8 @@
                         <table>
                             <tr>
                                 <td colspan="5" style="height: 80px;" >
-                                    <div>
-                                        <img src="./image/telefono.png" alt="imagen teléfono" style=" width:6%; border:none;">
-                                        <h2>TELEFONOS</h2>
-                                    </div>
+                                    <img src="./image/telefono.png" alt="imagen teléfono" style=" width:6%; border:none;">
+                                    <h2>TELEFONOS</h2>
                                 </td>
                             </tr>
                             <tr>
@@ -213,13 +211,25 @@
                             <tr>
                                 <td colspan="5" >
                                     <h4>698176695</h4>
-                                </td>                                
+                                </td>
                             </tr>
                         </table>
+                    </td>                                          
+                </tr>
+            </table>
         </fieldset>
     </section>
+
+    <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+            toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            });
+        });
+    </script>
 </body>
 </html>
-
 
 

@@ -49,24 +49,25 @@
 </head>
 <body>
 <!-- --------------------------- INICIO HEADER (encabezado)---------------------------------------------------------------->
-    <header>
-        
-        <a href="index.html"><img src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/></a>
-        <nav>      
-        <div class="dropdown" id="nav-links" > 
-            <div class="contenedor" >
-            <h1>Autoescuela am¡car</h1>
-            <a href="index.html"><img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 100px; margin-top:1px; " /></a>
-            </div>               
-            <a href="index.html">Inicio</a>
-            <a href="nosotros.html">Quienes Somos</a>
-            <a href="#">CAMPUS VIRTUAL</a>
-            <a href="#">NOTICIAS</a>
-            <a href="contacto.html">CONTACTO</a>
-            <a href="#">TIENDA</a>
-        </div>
-        </nav>
-    </header>
+<!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
+<header>
+  <div class="top-bar">
+    <a href="index.html">
+      <img src="./image/logo.png" alt="Logo Amicar" width="160px" />
+    </a>
+    <h1>Autoescuela Am¡car</h1>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </div>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Quienes Somos</a>
+    <a href="#">Campus Virtual</a>
+    <a href="#">Noticias</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#">Tienda</a>
+  </nav>
+</header>
 <!-- --------------------- FIN DE HEADER ------------------------------------------------------------>
 
 <section style="margin-top: 100px;">
@@ -94,7 +95,15 @@
     <img src="./image/nosotros.jpeg" alt="Imagen sobre nosotros" class="imagen1">
   </div>
 </section>
-
+<script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
 </body>
 </html>
 

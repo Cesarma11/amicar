@@ -6,31 +6,48 @@
     <title>AMICAR</title>
     <link rel="icon" href="./image/L.ico" />
     <link rel="stylesheet" href="style.css" />
-    
-    <!--ESTILOS DEL CELDAS DE INFORMACION-->
-    <style>
-      td {
-        border: 1px solid #000;
-        width: 33.33%; /* cada celda ocupa un tercio */
-        text-align: center;
-        vertical-align: middle;
-      }
-      td:hover {
-        background-color: #0056b3; /* Azul más oscuro */
-        transform: scale(1.1); /* Agrandar ligeramente el botón */
-        cursor: url('./image/volante.png'), pointer; /* 'pointer' es el cursor de enlace predeterminado */
-      }
-    </style>
-
 </head>
+
+
+
+
+
+
 <body>
-<!-- --------------------------- INICIO HEADER (encabezado)---------------------------------------------------------------->
+<!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
+<header>
+  <div class="top-bar">
+    <a href="index.html">
+      <img src="./image/logo.png" alt="Logo Amicar" width="160px" />
+    </a>
+    <h1>Autoescuela Am¡car</h1>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </div>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html">Inicio</a>
+    <a href="nosotros.html">Quienes Somos</a>
+    <a href="#">Campus Virtual</a>
+    <a href="#">Noticias</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#">Tienda</a>
+  </nav>
+</header>
+
+
+<!-- 
+
+ --------------------------- INICIO HEADER (encabezado)---------------------------------------------------------------
   <header>
-    
+     Botón hamburguesa -
+    <button class="menu-toggle" id="menu-toggle">☰</button>    
     <a href="index.html"><img src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/></a>
-    <nav>      
+    <nav class="nav-links" id="nav-links" >      
       <div class="dropdown" id="nav-links" > 
-        <h1>Autoescuela am¡car</h1>                 
+        <div class="contenedor" >
+        <h1>Autoescuela am¡car</h1>
+        <!--<a href="index.html"><img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 100px; margin-top:1px; " /></a>--
+        </div>               
         <a href="index.html">Inicio</a>
         <a href="nosotros.html">Quienes Somos</a>
         <a href="#">CAMPUS VIRTUAL</a>
@@ -38,15 +55,15 @@
         <a href="contacto.html">CONTACTO</a>
         <a href="#">TIENDA</a>
       </div>
-      <!-- <img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 300px; margin-top:10px; " />-->
     </nav>
   </header>
-<!-- --------------------- FIN DE HEADER ------------------------------------------------------------>
+ --------------------- FIN DE HEADER ------------------------------------------------------------>
  <!----------------------- INICIO SECTION ---------------------------------------------->
 <section class="hero" id="inicio">
   <div class="hero-content">
     <div class="hero-grid">
       <div class="hero-item" style="background-image: url('image/autoescuela3.png');">
+        <br>
         <a href="autoescuela.html"><h1>AUTOESCUELAS</h1></a>
       </div>
       <div class="hero-item" style="background-image: url('image/formacion2.png');">
@@ -58,9 +75,20 @@
     </div>
   </div>
 </section>
+<script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
+  document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
 
 </body>
 </html>
+
 
 
 

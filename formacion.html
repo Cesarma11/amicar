@@ -17,105 +17,55 @@
       }
       /* modo responsive para movil,se ven las celdas apiladas una encima de la otra */
 /* =================== HERO BASE =================== */
-.hero {
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.hero-table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
 
-.hero-table td {
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  text-align: center;
-  position: relative;
-  transition: transform 0.3s ease;
-}
 
-.hero-table td:hover {
-  transform: scale(1.03);
-}
 
-.hero-table td a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.35);
-  color: black;
-  font-size: 2rem;
-  font-weight: bold;
-}
+
+
+
 
 /* =================== RESPONSIVE =================== */
 
 /* 📱 Móviles y tablets */
 @media (max-width: 1024px) {
-  .hero-table,
-  .hero-table tr,
-  .hero-table td {
-    display: block;
-    width: 80%;
-    
-  }
-    .hero{
-        margin-left:20px;
-    }
+
 
   .hero-table td {
-    height: 400px; /* todas las celdas mismo alto */
+    height: 250px; /* todas las celdas mismo alto */
     margin-bottom: 15px;
   }
 
-  .hero-table td a {
-    font-size: 1.5rem;
-  }
+
 }
 
-/* 📱 Teléfonos pequeños */
-@media (max-width: 480px) {
-  .hero-table td {
-    height: 200px; /* más pequeño aún, pero igual para todos */
-  }
-
-  .hero-table td a {
-    font-size: 1.2rem;
-  }
-}
 
 
     </style>
 
 </head>
 <body>
-      <!-- Header -->
-    <header>
-      <a href="index.html"><img src="./image/logo.png" alt="Descripción de la imagen" width="180px  "/></a>
-      <nav>      
-        <div class="dropdown" id="nav-links" > 
-        <h1>Autoescuela am¡car</h1>                 
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Quienes Somos</a>
-        <a href="#">CAMPUS VIRTUAL</a>
-        <a href="#">NOTICIAS</a>
-        <a href="contacto.html">CONTACTO</a>
-        <a href="#">TIENDA</a>
-        </div>
-        <img src="./image/l practicas.png" alt="imagen L practicas" style="width:5%; margin-left: 300px; margin-top:10px; " />
-      </nav>
-    </header>
-        <h1 style="margin-top: 200px;">FORMACIÓN</h1>    
-    <section style="margin-left:50px" class="hero" id="inicio">
+  <!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
+  <header>
+    <div class="top-bar">
+      <a href="index.html">
+        <img src="./image/logo.png" alt="Logo Amicar" width="160px" />
+      </a>
+      <h1>Autoescuela Am¡car</h1>
+      <button class="menu-toggle" id="menu-toggle">☰</button>
+    </div>
 
+    <nav class="nav-links" id="nav-links">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Quienes Somos</a>
+      <a href="#">Campus Virtual</a>
+      <a href="#">Noticias</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="#">Tienda</a>
+    </nav>
+  </header>>
+        <h1 style="margin-top: 250px;">FORMACIÓN</h1>    
+    <section style="margin-left:50px" class="hero" id="inicio">
     <div class="hero-content">
         <table  class="hero-table">
           <tr>
@@ -134,6 +84,17 @@
         </table>
     </div>
       </section>
+    <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+            toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            });
+        });
+    </script>       
+  </body>
+</html>
 
 
 

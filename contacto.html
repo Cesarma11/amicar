@@ -7,102 +7,7 @@
     <link rel="icon" href="./image/L.ico" />
     <link rel="stylesheet" href="style.css" />
     <!--ESTILOS DEL CELDAS DE INFORMACION-->
-    <style>
-        table{
-            width: 100%;
-            background-color: aquamarine;
-        }
-      .td {
-        width: 50%; /* cada celda ocupa la mitad de la pantalla*/
-        vertical-align: top;
-        margin-top: 20px;
-        text-align: left;
-        text-align: center;
-         border:none;
-         height:80px;
-        }
-      .td1 {
-        width: 50%; /* cada celda ocupa la mitad*/
-        /*text-align: center;
-        vertical-align: middle;*/
-        vertical-align: top;
-        margin-top: 20px;
-        text-align: left;
-      }
-      label{
-       text-align: left;
-      }
-      img.contac{
-        width: 6%;
-        display: flex; /* Coloca los elementos internos en fila */
-        align-items: center; /* Centra verticalmente la imagen y el texto */
-        margin-left: 200px;
-      }
-    div{
-        display: flex; 
-        border:none; 
-        margin:auto;
-        justify-content: center; /* Centra horizontalmente */
-        align-items: center; /* Centra verticalmente */
-    }
-/* =================== BASE =================== */
-.section1 table {
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: fixed;
-}
 
-.section1 th, .section1 td {
-  padding: 10px;
-  vertical-align: top;
-}
-
-/* =================== FORMULARIO =================== */
-.td1 input, .td1 textarea, .boton input[type="submit"] {
-  width: 100%;
-  padding: 8px;
-  margin-top: 5px;
-  box-sizing: border-box;
-}
-
-/* =================== RESPONSIVE =================== */
-@media (max-width: 1024px) {
-  /* Para tablets y móviles grandes */
-  .section1 table, .section1 tr, .section1 th, .section1 td {
-    display: block;
-    width: 100%;
-  }
-
-  .section1 th {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .section1 td {
-    margin-bottom: 20px;
-  }
-
-  .section1 td1 input, .td1 textarea, .boton input[type="submit"] {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  /* Para móviles pequeños */
-  .section1 th h2, .section1 td h2, .section1 td h3, .section1 td h4 {
-    font-size: 14px;
-  }
-
-  .section1 td1 input, .td1 textarea, .boton input[type="submit"] {
-    font-size: 14px;
-  }
-
-  .section1 img {
-    width: 20px; /* iconos más pequeños en móvil */
-  }
-}
-
-</style>
 
 </head>
 <body>
@@ -127,98 +32,74 @@
   </nav>
 </header>>
 <!-- --------------------- FIN DE HEADER ------------------------------------------------------------>
-    <section class="section1"  >
-        <fieldset style="margin-top: 8%;" >
-            <table style=" width: 100%; height:200px;  table-layout: fixed;  padding-top:50px; border:none;" >
-                <tr>
-                    <th class="td" ><h2>DEJANOS TUS DATOS</h2></th>
-                    <th class="td"><h2>CONTACTANOS</h2></th>
-                </tr>
-                <tr>
-                    <td class="td1" >
-                        <form action="">
-                            <label for=""><h3>NOMBRE</h3></label>
-                            <br>
-                            <input type="text" name="nombre" id="">                                        
-                            <br>
-                            <label for=""><h3>TELEFONO</h3></label>
-                            <br>
-                            <input type="text" name="telefono" id="">                                        
-                            <br>
-                            <label for=""><h3>EMAIL</h3></label>
-                            <br>
-                            <input type="email" name="email" id="">    
-                            <br>
-                            <label for=""><h3>MENSAJE</h3></label>
-                            <br>
-                            <textarea name="mensaje" id="" style="width: 100%; height:200px;" ></textarea> 
-                            <br> <br>
-                            <button class="boton" ><input type="submit" value="ENVIAR"></button>                                      
-                                           
-                        </form>
-                    </td>
-                    <td>
-                        <table>
-                            <tr>
-                                <td colspan="5" style="height: 80px;" >
-                                    <img src="./image/telefono.png" alt="imagen teléfono" style=" width:6%; border:none;">
-                                    <h2>TELEFONOS</h2>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><h4>AMICAR </h4>
-                                    <h4>O BARCO</h4>
-                                    <h4>📞698 17 66 95</h4>
-                                </td>
-                                <td><h4>AMICAR </h4>
-                                    <h4>A RUA</h4>
-                                    <h4>📞988 68 57 20</h4>                                
-                                </td>
-                                <td><h4>AMICAR</h4>
-                                    <h5>VIANA DO BOLO</h5>
-                                    <h4>📞665 84 77 34</h4>
-                                </td>
-                                <td><h4>AMICAR </h4>
-                                    <h4>VERIÍN</h4>
-                                    <h4>📞604 02 31 46</h4>
-                                </td>
-                                <td><h4>AMICAR </h4>
-                                    <h4>PONFERRADA</h4>
-                                    <h4>📞600 83 63 06</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" style="height: 80px;" >
-                                    <div>
-                                        <img src="./image/email.png" alt="imagen Email" style=" width:6%; border:none;">
-                                        <h2>EMAIL</h2>
-                                    </div>                                                                        
-                                </td>
+<section class="contacto-section">
+  <div class="contacto-container">
+    <!-- COLUMNA IZQUIERDA: INFO -->
+    <div class="contacto-info">
+      <h2>📍 Nuestras sedes</h2>
+      <div class="sede">
+        <h3>O BARCO</h3>
+        <p>Av. Conde de Fenosa, 18</p>
+        <p>📞 698 17 66 95</p>
+      </div>
+      <div class="sede">
+        <h3>A RÚA</h3>
+        <p>C/ Progreso, 10</p>
+        <p>📞 988 68 57 20</p>
+      </div>
+      <div class="sede">
+        <h3>VIANA DO BOLO</h3>
+        <p>C/ San Roque, 5</p>
+        <p>📞 665 84 77 34</p>
+      </div>
+      <div class="sede">
+        <h3>VERÍN</h3>
+        <p>Av. de Castilla, 56</p>
+        <p>📞 604 02 31 46</p>
+      </div>
+      <div class="sede">
+        <h3>XINZO</h3>
+        <p>Avenida Ourense nº12 </p>
+        <p>📞 </p>
+      </div>
+      <div class="sede">
+        <h3>PONFERRADA</h3>
+        <p>C/ Camino de Santiago, 22</p>
+        <p>📞 600 83 63 06</p>
+      </div>
 
-                            </tr> 
-                            <tr>
-                                <td colspan="5">
-                                    <h4>info@amicar.es</h4>
-                                </td>                                
-                            </tr>                               
-                            <td colspan="5" >
-                                <div>
-                                    <img src="./image/wassap.png" alt="imagen whatsapp" style=" width:6%; border:none;">
-                                    <h2>WHATSAPP</h2>
-                                </div>                                     
-                            </td>
-                            </tr>
-                            <tr>
-                                <td colspan="5" >
-                                    <h4>698176695</h4>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>                                          
-                </tr>
-            </table>
-        </fieldset>
-    </section>
+      <hr>
+
+      <p><strong>✉️ Email:</strong> info@amicar.es</p>
+      <p><strong>💬 WhatsApp:</strong> 698 17 66 95</p>
+    </div>
+
+    <!-- COLUMNA DERECHA: FORMULARIO -->
+    <div class="contacto-form">
+      <h2>📩 Envíanos un mensaje</h2>
+      <form id="contact-form" action="https://formspree.io/f/mzzbbpqq" method="POST">
+        <label>Nombre</label>
+        <input type="text" name="nombre" required>
+
+        <label>Teléfono</label>
+        <input type="text" name="telefono">
+
+        <label>Email</label>
+        <input type="email" name="email" required>
+
+        <label>Mensaje</label>
+        <textarea name="mensaje" rows="5" required></textarea>
+
+        <input type="submit" value="Enviar mensaje" class="btn-enviar">
+      </form>
+
+      <!-- MENSAJE DE CONFIRMACIÓN -->
+      <p id="form-status" class="form-status"></p>
+    </div>
+  </div>
+</section>
+
+
 <!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
 <footer class="footer">
   <div class="footer-container">
@@ -234,7 +115,7 @@
         <li><a href="index.html" class="active">  Inicio</a></li>
         <li><a href="nosotros.html">Quiénes somos</a></li>
         <li><a href="#">Cursos</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="noticias.htlm">Noticias</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
@@ -288,7 +169,31 @@
         link.classList.add('active');
         }
     });
-    </script>    
-</body>
+    </script>
+    <!-- SCRIP PARA ENVIAR LA INFORMACION POR EMAIL--> 
+    <script>
+        const form = document.getElementById("contact-form");
+        const statusMsg = document.getElementById("form-status");
 
+        form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { Accept: "application/json" }
+        });
+        if (response.ok) {
+            statusMsg.textContent = "✅ Tu mensaje ha sido enviado correctamente.";
+            statusMsg.className = "form-status success";
+            form.reset();
+        } else {
+            statusMsg.textContent = "❌ Ocurrió un error. Inténtalo de nuevo.";
+            statusMsg.className = "form-status error";
+        }
+        });
+    </script>
+
+
+</body>
 </html>

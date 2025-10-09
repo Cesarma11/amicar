@@ -72,6 +72,7 @@ header {
   box-sizing: border-box;
 }
 
+
 /* Top bar: logo + h1 + hamburguesa */
 .top-bar {
   display: flex;

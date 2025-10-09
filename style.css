@@ -151,6 +151,7 @@ nav a.active {
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 15px;
+    height: 33%;
   }
 
     /* Logo */
@@ -893,4 +894,5 @@ footer {
 
 
 /* ---------------------------------------- FIN PAGINA CONTACTO ------------------------------------*/
+
 

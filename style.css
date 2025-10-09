@@ -816,3 +816,201 @@ footer {
 
 
 /* ---------------------------------------- FIN IMAGENES PAGINA NOTICIAS ------------------------------------*/
+/* ---------------------------------------- INICIO PAGINA CONTACTO ------------------------------------*/
+/* === SECCIÓN DE CONTACTO === */
+/* === SECCIÓN DE CONTACTO === */
+.contacto-section {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacto-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1100px;
+  width: 100%;
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* ==== INFO ==== */
+.contacto-info {
+  flex: 1;
+  min-width: 280px;
+}
+
+.contacto-info h2 {
+  color: #c62828;
+  margin-bottom: 15px;
+}
+
+.sede {
+  margin-bottom: 15px;
+}
+
+.sede h3 {
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.sede p {
+  margin: 2px 0;
+  color: #555;
+}
+
+.contacto-info hr {
+  margin: 20px 0;
+  border: 0;
+  height: 1px;
+  background: #ddd;
+}
+
+/* ==== FORMULARIO ==== */
+.contacto-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contacto-form h2 {
+  color: #c62828;
+  margin-bottom: 15px;
+}
+
+.contacto-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacto-form label {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}
+
+.contacto-form input,
+.contacto-form textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  border-color: #c62828;
+  box-shadow: 0 0 6px rgba(198,40,40,0.3);
+  outline: none;
+}
+
+.btn-enviar {
+  margin-top: 20px;
+  background: #c62828;
+  color: white;
+  font-size: 18px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.btn-enviar:hover {
+  background: #a81f1f;
+  transform: scale(1.05);
+}
+
+
+
+
+/* === EFECTO SUAVE DE HOVER/FOCUS EN CAMPOS === */
+.contacto-form input,
+.contacto-form textarea {
+  transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
+}
+
+.contacto-form input:hover,
+.contacto-form textarea:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 8px rgba(198, 40, 40, 0.4);
+}
+
+.contacto-form input:focus,
+.contacto-form textarea:focus {
+  transform: scale(1.03);
+  border-color: #c62828;
+  box-shadow: 0 0 12px rgba(198, 40, 40, 0.5);
+  outline: none;
+}
+
+/* === EFECTO HOVER EN LOS TÍTULOS DE SEDES === */
+.contacto-info .sede h3 {
+  transition: color 0.3s ease, transform 0.2s ease;
+  cursor: default;
+}
+
+.contacto-info .sede h3:hover {
+  color: #c62828;       /* rojo Amícar */
+  transform: scale(1.05); /* pequeño zoom */
+}
+
+
+
+/* === EFECTO SUAVE EN EL BOTÓN === */
+.btn-enviar {
+  transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-enviar:hover {
+  transform: scale(1.08);
+  box-shadow: 0 4px 15px rgba(198, 40, 40, 0.4);
+}
+
+
+
+
+
+
+
+/* ==== MENSAJE DE CONFIRMACIÓN ==== */
+.form-status {
+  margin-top: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.form-status.success {
+  color: #2e7d32;
+}
+
+.form-status.error {
+  color: #c62828;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 900px) {
+  .contacto-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contacto-info, .contacto-form {
+    width: 100%;
+  }
+
+  .sede h3 {
+    margin-top: 10px;
+  }
+}
+
+
+/* ---------------------------------------- FIN PAGINA CONTACTO ------------------------------------*/
+

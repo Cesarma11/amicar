@@ -245,7 +245,7 @@ nav a.active {
   color: black;
   z-index: 1;
   width: 100%;
-  /*margin: 0 auto;*/
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -279,7 +279,7 @@ nav a.active {
 .hero-item a h1 {
   /*color: white !important;           fuerza color blanco */
   font-size: 1.5rem !important;     /* fuerza tamaño más pequeño */
-  background: goldenrod;
+  background: wheat;
   padding: 10px 15px;
   border-radius: 10px;
   margin: 0;
@@ -302,12 +302,15 @@ nav a.active {
 .hero-item:hover h1 {
   transform: scale(1.05);
   transition: 0.3s ease;
-  background-color: #fff;
+  background-color: violet;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
 /* --- Versión móvil --- */
 @media (max-width: 768px) {
+  .hero{
+    height: auto;
+  }
   .hero-grid {
     flex-direction: column;
   }
@@ -905,7 +908,7 @@ footer {
 /* === SECCIÓN CENTROS === */
 #inicio {
   margin-left: 0;
-  margin-top: 10px; /* solo un pequeño espacio */
+  margin-top: 5px; /* solo un pequeño espacio */
   text-align: center;
 }
 

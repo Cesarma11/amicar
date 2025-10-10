@@ -332,7 +332,7 @@ nav a.active {
 @media (max-width: 768px) {
   .hero{
     height: auto;
-    padding-top: 45px; /* baja el hero en el movil */
+    padding-top: 30px; /* baja el hero en el movil */
   }
 
 
@@ -718,9 +718,8 @@ footer {
     flex-direction: column;  /* apilar verticalmente */
     gap: 15px; 
   }
-  .hero{
-    padding-top: 45%;
-  }
+
+
   .imagen-noticia {
     width: 100%;             /* ocupa todo el ancho del contenedor */
     height: auto;
@@ -728,7 +727,7 @@ footer {
 }
 
 
-/* ---------------------------------------- FIN IMAGENES PAGINA NOTICIAS ------------------------------------*/
+/* ---------------------------------------- PAGINA NOTICIAS ------------------------------------*/
 /* ---------------------------------------- INICIO PAGINA CONTACTO ------------------------------------*/
 /* === SECCIÓN DE CONTACTO === */
 /* === SECCIÓN DE CONTACTO === */
@@ -1058,5 +1057,6 @@ footer {
 
 
 /* ---------------------------------------- FIN PAGINA AUTOESCUELA ------------------------------------*/
+
 
 

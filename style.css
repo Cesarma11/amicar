@@ -719,10 +719,14 @@ footer {
     gap: 15px; 
   }
 
-
+  .hero{
+    padding-top: 45%;
+    padding-bottom: 30%;
+  }
   .imagen-noticia {
     width: 100%;             /* ocupa todo el ancho del contenedor */
     height: auto;
+    margin-top: 30px;
   }
 }
 
@@ -1057,6 +1061,7 @@ footer {
 
 
 /* ---------------------------------------- FIN PAGINA AUTOESCUELA ------------------------------------*/
+
 
 
 

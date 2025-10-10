@@ -45,7 +45,6 @@
     padding: 5px;
   }
 }
-
 </style>
 
 </head>
@@ -61,7 +60,7 @@
 
   <nav class="nav-links" id="nav-links">
     <a href="index.html" >Inicio</a>
-    <a  class="active" href="nosotros.html">Quiénes Somos</a>
+    <a class="active" href="nosotros.html">Quiénes Somos</a>
     <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
     <a href="noticias.html">Noticias</a>
     <a href="contacto.html">Contacto</a>
@@ -98,6 +97,43 @@
     <img src="./image/nosotros.jpeg" alt="Imagen sobre nosotros" class="imagen1">
   </div>
 </section>
+
+<!-- CONTENEDOR PRINCIPAL DE LOS NÚMEROS -->
+<!-- TÍTULO DE LA SECCIÓN -->
+<section class="counters-section">
+<h1 class="counters-title">NUESTRAS CUENTAS</h1>
+
+  <div class="counters-row">
+    <div class="counter-container">
+      <div class="counter-box experience">
+        <div class="counter" id="counter1"></div>
+      </div>
+      <div class="message">Años de experiencia</div>
+    </div>
+
+    <div class="counter-container">
+      <div class="counter-box students">
+        <div class="counter" id="counter2"></div>
+      </div>
+      <div class="message">Estudiantes</div>
+    </div>
+
+    <div class="counter-container">
+      <div class="counter-box approved">
+        <div class="counter" id="counter3"></div>
+      </div>
+      <div class="message">Aprobados</div>
+    </div>
+
+    <div class="counter-container">
+      <div class="counter-box centers">
+        <div class="counter" id="counter4"></div>
+      </div>
+      <div class="message">Centros de formación y autoescuelas</div>
+    </div>
+  </div>
+</section>
+
 
 
 <!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
@@ -151,25 +187,70 @@
     });
   });
 </script>
+
 <script>
-  // script para señalizar con un subrayado en el hero  la pagina donde estas navegando
-  // Obtener todos los enlaces del nav
-  const navLinks = document.querySelectorAll('nav a');
+  // Función para animar los contadores
+  function startCounter(id, target, finalText = '', interval = 80) {
+    const counterDiv = document.getElementById(id);
+    const itemHeight = 120;
 
-  // Obtener la URL actual
-  const currentURL = window.location.pathname.split("/").pop();
-
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-
-    // Si coincide con la página actual, añadir clase 'active'
-    if(linkHref === currentURL) {
-      link.classList.add('active');
+    // Crear números del 0 al target-1
+    for (let i = 0; i < target; i++) {
+      const span = document.createElement("span");
+      span.textContent = i;
+      counterDiv.appendChild(span);
     }
-  });
+
+    let current = 0;
+
+    function animate() {
+      if (current < target) {
+        counterDiv.style.transform = `translateY(${-current * itemHeight}px)`;
+        current++;
+        if (current === target) {
+          setTimeout(() => {
+            counterDiv.innerHTML = `<span class="final">${finalText}</span>`;
+            const finalSpan = counterDiv.querySelector('.final');
+            // Activar efecto zoom después de una pequeña pausa
+            setTimeout(() => finalSpan.classList.add('show'), 50);
+            counterDiv.style.transform = "translateY(0)";
+          }, interval / 2);
+        } else {
+          setTimeout(animate, interval);
+        }
+      }
+    }
+
+    animate();
+  }
+
+  // Animar título al hacer scroll
+  const title = document.querySelector('.counters-title');
+  const countersRow = document.querySelector('.counters-row');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Mostrar título
+        title.classList.add('show');
+
+        // Iniciar los contadores solo cuando se ven
+        startCounter('counter1', 60, '+60');
+        startCounter('counter2', 10, '10k', 150);
+        startCounter('counter3', 80, '80%');
+        startCounter('counter4', 6, '6');
+
+        observer.unobserve(title); // Solo una vez
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(title);
 </script>
 
 
-</body>
 
+
+
+</body>
 </html>

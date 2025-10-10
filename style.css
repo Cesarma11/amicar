@@ -332,13 +332,12 @@ nav a.active {
 @media (max-width: 768px) {
   .hero{
     height: auto;
-    padding-top: 30px; /* baja el hero en el movil */
+    padding-top: 10%;
+    padding-bottom: 10%;
   }
 
 
-
-
-  .hero-grid {
+ .hero-grid {
     flex-direction: column;
   }
   .hero-item {
@@ -688,7 +687,7 @@ footer {
     text-align: center;
   }
 }
-/* ------------------------------------------- PAGINA DE NOTICIAS ---------------------------*/
+/* -------------------------------------------  PAGINA DE NOTICIAS ---------------------------*/
 
 .contenedor-imagenes {
   display: flex;
@@ -716,13 +715,9 @@ footer {
 @media (max-width: 768px) {
   .contenedor-imagenes {
     flex-direction: column;  /* apilar verticalmente */
-    gap: 15px; 
+    gap: 15px;
   }
 
-  .hero{
-    padding-top: 45%;
-    padding-bottom: 30%;
-  }
   .imagen-noticia {
     width: 100%;             /* ocupa todo el ancho del contenedor */
     height: auto;
@@ -731,7 +726,7 @@ footer {
 }
 
 
-/* ---------------------------------------- PAGINA NOTICIAS ------------------------------------*/
+/* ---------------------------------------- FIN IMAGENES PAGINA NOTICIAS ------------------------------------*/
 /* ---------------------------------------- INICIO PAGINA CONTACTO ------------------------------------*/
 /* === SECCIÓN DE CONTACTO === */
 /* === SECCIÓN DE CONTACTO === */
@@ -909,7 +904,7 @@ footer {
   .contacto-container {
     flex-direction: column;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 80px;
   }
 
   .contacto-info, .contacto-form {
@@ -1065,7 +1060,94 @@ footer {
 
 
 
+/* ---------------------------------------- ANIMACIÓN 'NUESTROS NÚMEROS' ------------------------------------*/
+
+  .counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .counter-box {
+    width: 150px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+
+  /* Colores para cada caja */
+  .counter-box.experience { background: #f39c12; } /* naranja */
+  .counter-box.students   { background: #27ae60; } /* verde */
+  .counter-box.approved   { background: #2980b9; } /* azul */
+  .counter-box.centers    { background: #8e44ad; } /* morado */
+
+  .counter {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease-in-out;
+  }
+/* numeros dentro de las caja */
+  .counter span {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+  }
+  .counters-row {
+    display: flex;
+    flex-wrap: wrap;          /* baja a otra fila si no caben */
+    justify-content: center;  /* centra horizontalmente */
+    gap: 30px;                /* espacio entre cajas */
+  }
+  .final {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #fff;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .final.show {
+    transform: scale(1);
+    opacity: 1;
+  }
+/*tamaño y color de los mensajes exteriores de las cajas */
+  .message {
+    color: red;
+    font-size: 2rem;
+    text-align: center;
+    max-width: 180px;
+  }
+  /* ESTILO DEL H1 ENCIMA DE LOS CONTADORES */
+.counters-section {
+  text-align: center;
+  margin: 50px 0;
+}
 
 
 
+.counters-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 50px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
+.counters-title.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ---------------------------------------- FIN ANIMACIÓN ------------------------------------*/

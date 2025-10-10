@@ -909,6 +909,7 @@ footer {
   .contacto-container {
     flex-direction: column;
     text-align: center;
+    margin-top: 80px;
   }
 
   .contacto-info, .contacto-form {
@@ -1061,6 +1062,7 @@ footer {
 
 
 /* ---------------------------------------- FIN PAGINA AUTOESCUELA ------------------------------------*/
+
 
 
 

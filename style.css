@@ -688,7 +688,7 @@ footer {
     text-align: center;
   }
 }
-/* ------------------------------------------- IMAGENES DE LA PAGINA DE NOTICIAS ---------------------------*/
+/* ------------------------------------------- PAGINA DE NOTICIAS ---------------------------*/
 
 .contenedor-imagenes {
   display: flex;
@@ -716,9 +716,11 @@ footer {
 @media (max-width: 768px) {
   .contenedor-imagenes {
     flex-direction: column;  /* apilar verticalmente */
-    gap: 15px;
+    gap: 15px; 
   }
-
+  .hero{
+    padding-top: 45%;
+  }
   .imagen-noticia {
     width: 100%;             /* ocupa todo el ancho del contenedor */
     height: auto;
@@ -1056,4 +1058,5 @@ footer {
 
 
 /* ---------------------------------------- FIN PAGINA AUTOESCUELA ------------------------------------*/
+
 

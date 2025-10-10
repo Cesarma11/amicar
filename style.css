@@ -95,19 +95,33 @@ header {
   white-space: nowrap; /* no se rompa en varias líneas */
 }
 
-/* Menú (PC) */
+/* Menú (PC) 
 .nav-links {
   display: flex !important;
   gap: 20px;
-  margin-left: auto; /* empuja los enlaces a la derecha */
-  align-items: center; /* centra verticalmente */
-  flex-direction: row;   /* horizontal */  
-  flex-wrap: nowrap;     /* evitar saltos de línea */ 
+  margin-left: auto; /* empuja los enlaces a la derecha 
+  align-items: center; /* centra verticalmente 
+  flex-direction: row;   /* horizontal  
+  flex-wrap: nowrap;     /* evitar saltos de línea 
   position: static;
+}*/
+
+/* --- Base (por defecto: oculto para móvil) --- */
+.nav-links {
+  display: none;
+  flex-direction: row;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  background: rgba(0, 64, 128, 0.95);
+  padding: 15px;
+  border-radius: 0 0 8px 8px;
+  z-index: 1000;
 }
 
-
-
+.nav-links.active {
+  display: flex;
+}
 
 
 
@@ -195,6 +209,10 @@ nav a.active {
     right: 20px;
   }
 
+
+
+
+
   /* Menú desplegable */
   .nav-links {
     display: none;
@@ -217,7 +235,33 @@ nav a.active {
     padding: 10px 0;
     text-align: center;
     font-size: 16px;
+      white-space: nowrap;  
   }
+}
+
+
+/* --- ESCRITORIO --- */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex !important;   /* visible solo en escritorio */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    position: static;
+    background: none;
+    padding: 0;
+    gap: 20px;
+  }
+
+  .menu-toggle {
+    display: none; /* oculta la hamburguesa */
+  }
+
+  .nav-links a {
+    color: black;
+    font-size: 16px;
+    white-space: nowrap;
+  }
+
 }
 
 /* *********************************************** HERO  parte media de la pantalla ********************************/

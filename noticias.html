@@ -7,27 +7,36 @@
     <link rel="icon" href="./image/L.ico" />
     <link rel="stylesheet" href="style.css" />
 </head>
+<style>
+@media (max-width: 768px) {
+  .hero{
+    height: auto;
+    padding-top: 40%;
+    padding-bottom: 40%;
+  }
+}
+</style>
 
 <body>
-    <!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
-    <header>
-    <div class="top-bar">
-        <a href="index.html">
-        <img src="./image/logo.png" alt="Logo Amicar" width="160px" />
-        </a>
-        <h1>Autoescuela Am¡car</h1>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
-    </div>
+<!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
+<header>
+  <div class="top-bar">
+    <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
+    <h1>Autoescuela Am¡car</h1>
+    <h1><img src="image/l practicas.png" width="10%"></h1>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </div>
 
-    <nav class="nav-links" id="nav-links">
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Quienes Somos</a>
-        <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
-        <a class="active" href="noticias.html">Noticias</a>
-        <a href="contacto.html">Contacto</a>
-        <a href="#">Tienda</a>
-    </nav>
-    </header>
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html" class="active">Inicio</a>
+    <a href="nosotros.html">Quiénes Somos</a>
+    <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#">Tienda</a>
+  </nav>
+</header>
+
  <!---------------------- FIN DE HEADER ------------------------------------------------------------>
  <!---------------------- INICIO SECTION ----------------------------------------------------------->
     <section class="hero" id="inicio">
@@ -112,7 +121,7 @@
         <li><a href="index.html" class="active">  Inicio</a></li>
         <li><a href="nosotros.html">Quiénes somos</a></li>
         <li><a href="#">Cursos</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
+        <li><a href="noticias.htlm">Noticias</a></li>
         <li><a href="contacto.html">Contacto</a></li>
       </ul>
     </div>
@@ -168,5 +177,4 @@
   });
 </script>
 </body>
-
 </html>

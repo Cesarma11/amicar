@@ -332,7 +332,7 @@ nav a.active {
 @media (max-width: 768px) {
   .hero{
     height: auto;
-    padding-top: 25px; /* baja el hero en el movil */
+    padding-top: 45px; /* baja el hero en el movil */
   }
 
 
@@ -1056,3 +1056,4 @@ footer {
 
 
 /* ---------------------------------------- FIN PAGINA AUTOESCUELA ------------------------------------*/
+

@@ -61,6 +61,7 @@
             <div class="info">
             <img src="./image/galicia.png" alt="Galicia" />
             <h4>Amicar O Barco</h4>
+            <h5>Av. Conde de Fenosa, 18, 32300 O Barco, Ourense</h5>
             <p>📞 698 17 66 95</p>
         </div>        
       <img src="./image/Amicar_barco.jpeg" alt="Amicar O Barco" />
@@ -73,11 +74,12 @@
         <div class="info">
             <img src="./image/galicia.png" alt="Galicia" />
             <h4>Amicar A Rúa</h4>
+            <h5>Rúa Felgar, 13, 32350 A Rúa, Ourense</h5>
             <p>📞 988 68 57 20</p>
       </div>
       <img src="./image/Amicar_rua.jpeg" alt="Amicar A Rúa" />
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47074.695391099725!2d-7.091970435917838!3d42.406349370292794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd30856f8c45093d%3A0xd418b84e474d9dcd!2sAutoescuela%20Amicar!5e1!3m2!1ses!2ses!4v1759505731972!5m2!1ses!2ses" loading="lazy" allowfullscreen=""></iframe>
-
+      
+<iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3606.1553359677205!2d-7.115970215314985!3d42.396144160276634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sAmicar%20Formaci%C3%B3n%20y%20autoescuela%20S.L.!5e1!3m2!1ses!2ses!4v1760458732233!5m2!1ses!2ses" allowfullscreen="" loading="lazy" ></iframe>
     </div>
 
     <!-- VIANA -->
@@ -85,6 +87,7 @@
         <div class="info">
             <img src="./image/galicia.png" alt="Galicia" />
             <h4>Amicar Viana do Bolo</h4>
+            <h5>Rúa Nicolás Tenorio, 1, 32550 Viana do Bolo, Ourense</h5>
             <p>📞 665 84 77 34</p>
         </div>        
       <img src="./image/Amicar_viana.jpeg" alt="Amicar Viana" />
@@ -97,6 +100,7 @@
       <div class="info">
         <img src="./image/galicia.png" alt="Galicia" />
         <h4>Amicar Verín</h4>
+        <h5>Av. Luis Espada, 70, 32600 Verín, Ourense</h5>
         <p>📞 604 02 31 46</p>
       </div>        
       <img src="./image/AmicarVerin.jpg" alt="Amicar Verín" />
@@ -108,6 +112,7 @@
       <div class="info">
         <img src="./image/galicia.png" alt="Galicia" />
         <h4>Amicar Xinzo de Limia</h4>
+        <h5>Av. de Ourense, 12, 32630 Xinzo de Limia, Ourense</h5>
         <p>📞 — </p>
       </div>        
       <img src="./image/Amicar-Xinzo.png" alt="Amicar Xinzo" />
@@ -129,6 +134,7 @@
       <div class="info">
         <img src="./image/bierzo.png" alt="Bierzo" />
         <h4>AT Ponferrada</h4>
+        <h5>C. Obispo Osmundo, 12, 24400 Ponferrada, León</h5>
         <p>📞 600 83 63 06</p>
         <a target="_blank" href="https://www.autoescuela.at/ponferrada">
           <img src="./image/logoAT.png" width="100" alt="AT Ponferrada">
@@ -190,43 +196,38 @@
 <!-- --------------------------------------FIN PIE DE PAGINA--------------------------------------------------->
     
     <!-- SCRIPT PARA LA VENTANTA EMERGENTE-->
-    <script> 
-        const modal = document.getElementById("myModal");
-        const closeBtn = document.querySelector(".close");
+  <script> 
+      const modal = document.getElementById("myModal");
+      const closeBtn = document.querySelector(".close");
 
-        // Abrir ventana al cargar la página
-        window.addEventListener("load", () => {
-        modal.style.display = "flex";
-        setTimeout(() => modal.classList.add("show"), 10); // delay pequeñito para animación
-        });
+      // Abrir ventana al cargar la página
+      window.addEventListener("load", () => {
+      modal.style.display = "flex";
+      setTimeout(() => modal.classList.add("show"), 10); // delay pequeñito para animación
+      });
 
-        // Cerrar ventana con el botón
-        closeBtn.addEventListener("click", () => {
-        modal.classList.remove("show");
-        setTimeout(() => modal.style.display = "none", 400); // espera a que termine la animación
-        });
+      // Cerrar ventana con el botón
+      closeBtn.addEventListener("click", () => {
+      modal.classList.remove("show");
+      setTimeout(() => modal.style.display = "none", 400); // espera a que termine la animación
+      });
 
-        // Cerrar si se hace clic fuera del contenido
-        window.addEventListener("click", (e) => {
-        if (e.target === modal) {
-            modal.classList.remove("show");
-            setTimeout(() => modal.style.display = "none", 400);
-        }
-        });
+      // Cerrar si se hace clic fuera del contenido
+      window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+          modal.classList.remove("show");
+          setTimeout(() => modal.style.display = "none", 400);
+      }
+      });
 
-    </script>
-
-
-<script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-    toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
+    // script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
+      document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
     });
-  });
-</script>
- 
-    </body>
+  </script>
+</body> 
 </html>
-

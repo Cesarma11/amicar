@@ -1188,7 +1188,7 @@ footer {
   align-items: stretch;        /* hace que todas las cajas tengan la misma altura */
   flex-wrap: wrap;             /* permite que bajen si no caben */
   gap: 30px;                   /* espacio entre cajas */
-  margin-top: 50px;
+  margin-top: 150px;
   padding: 0 20px;
   border: none;
 }
@@ -1293,3 +1293,4 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+

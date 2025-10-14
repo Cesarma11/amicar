@@ -292,16 +292,40 @@
 <!-- --------------------------------------FIN PIE DE PAGINA--------------------------------------------------->
 
 
- <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
+    <!-- SCRIPT PARA LA VENTANTA EMERGENTE-->
+  <script> 
+      const modal = document.getElementById("myModal");
+      const closeBtn = document.querySelector(".close");
 
-    toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
+      // Abrir ventana al cargar la página
+      window.addEventListener("load", () => {
+      modal.style.display = "flex";
+      setTimeout(() => modal.classList.add("show"), 10); // delay pequeñito para animación
+      });
+
+      // Cerrar ventana con el botón
+      closeBtn.addEventListener("click", () => {
+      modal.classList.remove("show");
+      setTimeout(() => modal.style.display = "none", 400); // espera a que termine la animación
+      });
+
+      // Cerrar si se hace clic fuera del contenido
+      window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+          modal.classList.remove("show");
+          setTimeout(() => modal.style.display = "none", 400);
+      }
+      });
+
+    // script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
+      document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
     });
-  });
-</script>
+  </script>
 <script>
   // script para señalizar con un subrayado en el hero  la pagina donde estas navegando
   // Obtener todos los enlaces del nav

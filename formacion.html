@@ -6,84 +6,292 @@
     <title>AMICAR</title>
     <link rel="icon" href="./image/L.ico" />
     <link rel="stylesheet" href="style.css" />
-    
-    <!--ESTILOS DEL CELDAS DE INFORMACION-->
-    <style>
-      td {
-        border: 1px solid #000;
-        width: 50%; /* cada celda ocupa un tercio */
-        text-align: center;
-        vertical-align: middle;
-      }
-      /* modo responsive para movil,se ven las celdas apiladas una encima de la otra */
-/* =================== HERO BASE =================== */
-
-
-
-
-
-
-
-
-/* =================== RESPONSIVE =================== */
-
-/* 📱 Móviles y tablets */
-@media (max-width: 1024px) {
-
-
-  .hero-table td {
-    height: 250px; /* todas las celdas mismo alto */
-    margin-bottom: 15px;
-  }
-
-
-}
-
-
-
-    </style>
-
-</head>
+  </head>
 <body>
-  <!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
-  <header>
-    <div class="top-bar">
-      <a href="index.html">
-        <img src="./image/logo.png" alt="Logo Amicar" width="160px" />
-      </a>
-      <h1>Autoescuela Am¡car</h1>
-      <button class="menu-toggle" id="menu-toggle">☰</button>
+<!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
+<header>
+  <div class="top-bar">
+    <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
+    <h1>Autoescuela Am¡car</h1>
+    <h1><img src="image/l practicas.png" width="10%"></h1>
+    <button class="menu-toggle" id="menu-toggle">☰</button>
+  </div>
+
+  <nav class="nav-links" id="nav-links">
+    <a href="index.html" class="active">Inicio</a>
+    <a href="nosotros.html">Quiénes Somos</a>
+    <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
+    <a href="noticias.html">Noticias</a>
+    <a href="contacto.html">Contacto</a>
+    <a href="#">Tienda</a>
+  </nav>
+</header>
+
+ <!---------------------- FIN DE HEADER ------------------------------------------------------------>
+
+  <section>
+    <div class="contenedor1" style="margin-top: 150px;">
+      <div class="caja1">
+        <h1>FORMACION</h1> 
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d127.27674326242413!2d-7.112474222344585!3d42.39515141207759!2m2!1f314.51257350314455!2f39.417085041030454!3m2!1i1024!2i768!4f35!3m3!1m2!1s0xd307e687a0f0cd5%3A0x9b3485de2e63657a!2sAmicar%20Formaci%C3%B3n%20y%20autoescuela%20S.L.!5e1!3m2!1ses!2ses!4v1759823060641!5m2!1ses!2ses"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="caja1" style="  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;" >
+          <h2>AMICAR CENTRO DE FORMACIÓN </h2>
+          <br>
+          <h3>Rúa Felgar, 13, 32350 A Rúa, Ourense</h3> 
+          <br>
+          <h3>📞 988 50 82 95</h3> 
+          <br>
+          <h3>HORARIO:</h3>
+          <br> 
+          <h3>De lunes a viernes de 9:00-17:00 horas</h3>
+        </div>  
+    </div>
+  </section>
+  <section>
+    <br><br>
+    <h1 style="text-align: center;" >NUESTROS CURSOS</h1>
+    <div class="contenedor1">
+      <div class="box1">  
+        <img src="image/adr.png" alt="Imagen ADR" >
+        <br>
+        <h3>ADR</h3>
+        <br>
+        <label for="">-Básico + Cisternas:</label>
+        <br>
+        <label for="">PRESENCIAL 36H + extinción de incendios.</label>
+        <br>  
+        <label for="">-Explosivos o radioactivos.</label>
+        <br>
+        <label for="">PRESENCIAL 18H + extinción de incendios. </label> 
+      </div>
+      <div class="box1" >  
+        <img src="image/itcMineria.jpg" alt="Imagen ADR" >
+        <br>
+        <h3>ITC Minera / Silice</h3>
+        <br>
+        <label for="">Formar y capacitar a los trabajadores del sector minero en base a la regulación
+          de la formación profesional mínima en materia de seguridad y salud laboral.</label>
+        <br>
+        <label for="">PRESENCIAL 20 horas.</label> 
+      </div>
+      <div class="box1" >  
+        <img src="image/agricola.jpg" alt="Imagen ADR" >
+        <br>
+        <h3>PRL maquinaria agricola</h3>
+        <br>
+        <label for="">Identificar cuáles son los riesgos que conlleva una mala actuación en la
+            utilización de maquinaria agrícola, aplicando los procedimientos adecuados para un uso seguro de la maquinaria.</label>
+        <br>
+        <label for="">Online 20 horas.</label> 
+      </div>
+      <div class="box1" >  
+        <img src="image/carretilla.png" alt="Imagen ADR" style=>
+        <br>
+        <h3>Carretilla elevadora</h3>
+        <br>
+        <label for="">Adquirir las competencias y habilidades necesarias para la correcta conducción y manejo de carretillas elevadoras
+           con control de las cargas total y seguridad del area.</label>
+        <br>
+        <label for="">ONLINE/PRESENCIAL 10H + PRÁCTICAS. </label> 
+      </div>
+    </div>
+    <div class="contenedor1">
+      <div class="box1">
+        <img src="image/retroexcabadora.png" alt="Imagen ADR" >
+        <br>
+        <h3>Operador retroexcavadora y pala cargadora</h3>
+        <br>
+        <label for="">Adquirir las competencias y habilidades necesarias para la correcta conducción y manejo de pala cargadora y
+           retroexcavadora, potenciar la seguridad en el uso de maquinaria y cargas según las normas de prevención de riesgos.</label>
+        <br>
+        <label for="">ONLINE/PRESENCIAL 10H + PRÁCTICAS.</label> 
+      </div>
+      <div class="box1">
+        <img src="image/gruaPluma.png" alt="Imagen ADR" >
+        <br>
+        <h3>Operador grúa pluma</h3>
+        <br>
+        <label for="">Adquirir las competencias y habilidades necesarias para el manejo de la grúa pluma respetando la normativa
+           y utilizando los EPI ́S necesarios para evitar riesgos.</label>
+        <br>
+        <label for="">ONLINE/PRESENCIAL 12H + PRÁCTICAS. </label> 
+      </div>
+       <div class="box1">     
+        <img src="image/plataformaMovil.png" alt="Imagen plataformaMovil" >
+        <br>
+        <h3>Operador plataformas móviles</h3>
+        <br>
+        <label for="">Adquirir las competencias y habilidades necesarias para manejar plataformas elevadoras móviles de personal
+           (PEMP) en condiciones de seguridad.</label>
+        <br>
+        <label for="">ONLINE/PRESENCIAL 12H + PRÁCTICAS. </label> 
+      </div>
+       <div class="box1">     
+        <img src="image/telescopicaManitou.png" alt="Imagen telescopicaManitou" >
+        <br>
+        <h3>Operador carretilla telescópica (manitou)</h3>
+        <br>
+        <label for="">Adquirir las competencias y habilidades necesarias para realizar gestiones de operador y manipulador telescópica
+           y su correcto funcionamiento con el fin de evitar situaciones de riesgo.</label>
+        <br>
+        <label for="">ONLINE/PRESENCIAL 10H + PRÁCTICAS. </label> 
+      </div>
+    </div>
+    <div class="contenedor1">
+       <div class="box1">     
+        <img src="image/miniPalaOruga.png" alt="Imagen miniPalaOruga" >
+        <br>
+        <h3>PRL movimiento de tierra (mini pala y oruga)</h3>
+        <br>
+        <label for="">Adquirir conocimientos preventivos básicos sobre los riesgos inherentes a los vehículos y maquinaria para el
+           movimiento de tierras más utilizados en la construcción, su utilización y las técnicas preventivas específicas de aplicación.</label>
+        <br>
+        <label for="">ONLINE/PRESENCIAL 20H + PRÁCTICAS.</label> 
+      </div>
+      <div class="box1">     
+        <img src="image/conduccionEficiente.jpg" alt="Imagen condjuccionEficiente">
+        <br>
+        <h3>Conducción eficiente</h3>
+        <br>
+        <label for="">Conocer y aplicar las diferentes técnicas de conducción eficiente al manejar cualquier vehículo industrial</label>
+        <br>
+        <label for="">ONLINE/PRESENCIAL 30H + PRÁCTICAS. </label> 
+      </div>
+      <div class="box1">     
+        <img src="image/conduccionEfice.jpg" alt="Imagen conduccionEficiente">
+        <br>
+        <h3>Conducción eficiente</h3>
+        <br>
+        <label for="">Conocer las diferentes técnicas de conducción Y mejorar aspectos relacionados con el consumo de carburante para reducir
+          al máximo el consumo de combustible con diferentes habilidades.</label>
+        <br>
+        <label for="">ONLINE/PRESENCIAL 12H + PRÁCTICAS. </label> 
+      </div>
+      <div class="box1">     
+        <img src="image/capacitacionTransporte.png" alt="Imagen capacitacionTransporte" >
+        <br>
+        <h3>Capacitación transportistas</h3>
+        <br>
+        <label for="">Obtención del título acreditativo que reconoce a sus titulares la capacidad para poder ejercer tanto la profesión de transportista
+           de mercancías de servicio público (o por cuenta ajena), como la de Operador de Transporte.</label>
+        <br>
+        <label for="">ONLINE/MIXTO 100H. </label> 
+      </div>
+    </div>
+    <div class="contenedor1">
+       <div class="box1">     
+        <img src="image/CAPInicial.png" alt="Imagen miniPalaOruga" >
+        <br>
+        <h3>CAP inicial Mercancias/Viajeros</h3>
+        <br>
+        <label for="">Obtención de una acreditación profesional europea que avala que has superado los exámenes para ser un conductor
+           profesional capaz de ejercer la profesión en todos los países que forman parte de la Unión Europea.</label>
+        <br>
+        <label for="">PRESENCIAL 130H TEORÍA + 10H PRÁCTICAS. </label> 
+      </div>
+      <div class="box1">     
+        <img src="image/CAPampiacion.png" alt="Imagen condjuccionEficiente">
+        <br>
+        <h3>CAP ampliación Mercancias/Viajeros</h3>
+        <br>
+        <label for="">Ampliar el perfil profesional como transportista. El curso CAP Ampliación tiene una duración más corta que el inicial
+           porque concentra únicamente el contenido específico que se desea acreditar.</label>
+        <br>
+        <label for="">PRESENCIAL TEORÍA 23,5H + 2,5H PRÁCTICAS.</label> 
+      </div>
+      <div class="box1">     
+        <img src="image/CAPrenovacion.png" alt="Imagen conduccionEficiente">
+        <br>
+        <h3>CAP renovación Mercancias/Viajeros</h3>
+        <br>
+        <label for="">Deben hacerlo todos los conductores profesionales cada cinco años. Estos cursos para renovar el CAP para el transporte 
+          de mercancias deben realizarse durante toda su vida profesional</label>
+        <br>
+        <label for="">PRESENCIAL 35HORAS. </label> 
+      </div>
+      <div class="box1">     
+        <img src="image/PRLGenerico.png" alt="Imagen capacitacionTransporte" >
+        <br>
+        <h3>PRL Genérico</h3>
+        <br>
+        <label for="">Identificar conceptos básicos sobre seguridad y salud y puedan conocer el marco normativo general que rige la actividad
+           en este aspecto.</label>
+        <br>
+        <label for="">PRESENCIAL/ONLINE 60H. </label> 
+      </div>
+    </div>
+    <div class="contenedor1">
+      <div class="box1">
+                <img src="image/epis.jpg" alt="Imagen capacitacionTransporte" >
+        <br>
+        <h3>Equipos protección industrial</h3>
+        <br>
+        <label for="">Identificar los diferentes equipos de protección individual a utilizar en cada tipo de trabajo y aplicar conocimientos
+           adquiridos en este curso para promover el uso adecuado de los equipos de protección individual.</label>
+        <br>
+        <label for="">ONLINE 10H. </label> 
+      </div>
+      <div class="box1">
+                <img src="image/manipuladorAlimentos.png" alt="Imagen capacitacionTransporte" >
+        <br>
+        <h3>Manipulador de alimentos</h3>
+        <br>
+        <label for="">Proporcionar los conocimientos básicos en cuanto a la manipulación de alimentos (fabricación, procesado, envasado,
+           almacenamiento, transporte, distribución y comercialización de los alimentos). </label>
+        <br>
+        <label for="">ONLINE 10H. </label> 
+      </div>
+    </div>
+  </section> 
+  
+<!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-logo">
+        <a href="index.html"><img src="./image/logo.png" alt="Autoescuela Amícar" /></a>
+        <h3>Autoescuela Amícar</h3>
+        <p>Tu centro de formación de confianza desde hace más de 60 años.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="index.html" >  Inicio</a></li>
+          <li><a href="autoescuela.html" >  Autoescuelas</a></li>
+          <li><a href="formacion.html" >  Formación</a></li>
+          <li><a href="#" >  Cursos</a></li>
+          <li><a href="nosotros.html">Quiénes somos</a></li>
+          <li><a href="#">Cursos</a></li>
+          <li><a href="noticias.html">Noticias</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="#">Tienda</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contacto</h4>
+        <p><strong>📍 Dirección:</strong> Av. Conde de Fenosa, 18, 32300 O Barco Orense</p>
+        <p><strong>📞 Teléfono:</strong> 698 17 66 95</p>
+        <p><strong>✉️ Email:</strong> info@amicar.com</p>
+      </div>
+
+
+    <div class="footer-social">
+      <h4>Síguenos</h4>
+      <div class="social-icons">
+        <a target="_blank" href="https://www.facebook.com/p/Amicar-Formaci%C3%B3n-100044451739049/?locale=es_ES"><img src="./image/facebookIcono.png" alt="Facebook"> Facebook</a>
+        <a target="_blank" href="https://www.instagram.com/formacion.amicar/"><img src="./image/instagran.png" alt="Instagram"> Instagram</a>
+        <!-- <a href="#"><img src="./image/twiterIcono.png" alt="Twitter"> Twitter</a>-->
+      </div>
     </div>
 
-    <nav class="nav-links" id="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="nosotros.html">Quienes Somos</a>
-    <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
-      <a href="noticias.html">Noticias</a>
-      <a href="contacto.html">Contacto</a>
-      <a href="#">Tienda</a>
-    </nav>
-  </header>>
-        <h1 style="margin-top: 250px;">FORMACIÓN</h1>    
-    <section style="margin-left:50px" class="hero" id="inicio">
-    <div class="hero-content">
-        <table  class="hero-table">
-          <tr>
-            <td>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d127.27674326242413!2d-7.112474222344585!3d42.39515141207759!2m2!1f314.51257350314455!2f39.417085041030454!3m2!1i1024!2i768!4f35!3m3!1m2!1s0xd307e687a0f0cd5%3A0x9b3485de2e63657a!2sAmicar%20Formaci%C3%B3n%20y%20autoescuela%20S.L.!5e1!3m2!1ses!2ses!4v1759823060641!5m2!1ses!2ses"
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>              
-            </td>
-            <td style="background-color:goldenrod ;" >
-              <h2>AMICAR CENTRO DE FORMACIÓN </h2>
-              <h3>Rúa Felgar, 13, 32350 A Rúa, Ourense</h3> 
-              <h3>📞 988 50 82 95</h3> 
-              <h3>HORARIO:</h3> 
-              <h3>De lunes a viernes de 9:00-17:00 horas</h3>           
-            </td>
-          </tr>
-        </table>
+    <div class="footer-bottom">
+      <p>© 2025 Autoescuela Amícar · Todos los derechos reservados</p>
     </div>
-      </section>
+  </footer>
+<!-- --------------------------------------FIN PIE DE PAGINA--------------------------------------------------->
     <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
         document.addEventListener("DOMContentLoaded", () => {
             const toggle = document.getElementById("menu-toggle");
@@ -92,57 +300,6 @@
             navLinks.classList.toggle("active");
             });
         });
-    </script>
-    
-<!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <a href="index.html"><img src="./image/logo.png" alt="Autoescuela Amícar" /></a>
-      <h3>Autoescuela Amícar</h3>
-      <p>Tu centro de formación de confianza desde hace más de 60 años.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Enlaces rápidos</h4>
-      <ul>
-        <li><a href="index.html" >  Inicio</a></li>
-        <li><a href="autoescuela.html" >  Autoescuelas</a></li>
-        <li><a href="formacion.html" >  Formación</a></li>
-        <li><a href="#" >  Cursos</a></li>
-        <li><a href="nosotros.html">Quiénes somos</a></li>
-        <li><a href="#">Cursos</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="#">Tienda</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-contact">
-      <h4>Contacto</h4>
-      <p><strong>📍 Dirección:</strong> Av. Conde de Fenosa, 18, 32300 O Barco Orense</p>
-      <p><strong>📞 Teléfono:</strong> 698 17 66 95</p>
-      <p><strong>✉️ Email:</strong> info@amicar.com</p>
-    </div>
-
-
-  <div class="footer-social">
-    <h4>Síguenos</h4>
-    <div class="social-icons">
-      <a target="_blank" href="https://www.facebook.com/p/Amicar-Formaci%C3%B3n-100044451739049/?locale=es_ES"><img src="./image/facebookIcono.png" alt="Facebook"> Facebook</a>
-      <a target="_blank" href="https://www.instagram.com/formacion.amicar/"><img src="./image/instagran.png" alt="Instagram"> Instagram</a>
-      <!-- <a href="#"><img src="./image/twiterIcono.png" alt="Twitter"> Twitter</a>-->
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Autoescuela Amícar · Todos los derechos reservados</p>
-  </div>
-</footer>
-<!-- --------------------------------------FIN PIE DE PAGINA--------------------------------------------------->
-    
+    </script>    
   </body>
-
 </html>
-
-

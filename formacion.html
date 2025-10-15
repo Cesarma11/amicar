@@ -7,16 +7,111 @@
     <link rel="icon" href="./image/L.ico" />
     <link rel="stylesheet" href="style.css" />
 </head>
+
+<style>
+/* Contenedor principal: mantiene los box1 en línea */
+/* Contenedor principal */
+.contenedor1 {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow: visible;
+}
+
+/* Cada caja */
+.box1 {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  overflow: visible; /* permite que el tooltip se vea completo */
+  margin-bottom: 50px;
+  height: 350px;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 270px;
+}
+
+/* Imagen dentro del tooltip */
+.tooltip img {
+  display: block;
+  max-width: 260px;
+}
+
+/* Tooltip desplegable hacia abajo */
+.tooltip .tooltiptext {
+  width: 140%; /* un poco más ancho que el box1 */
+  max-height: 290px; /* altura máxima */
+  overflow-y: auto; /* permite scroll si es más alto */
+  position: absolute;
+  z-index: 9999;
+  top: 100%; 
+  left: -35px;
+  background-color: goldenrod;
+  color: black;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: normal;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: auto;
+}
+
+/* Mostrar tooltip al hover */
+.tooltip:hover .tooltiptext,
+.tooltip .tooltiptext:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Scrollbar discreto */
+.tooltip .tooltiptext::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tooltip .tooltiptext::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tooltip .tooltiptext {
+    max-height: 180px;
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+</style>
+
+
+
 <body>
 <!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
 <header>
-  <div class="top-bar">
-    <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
-    <h1>Autoescuela Am¡car</h1>
-    <h1><img src="image/l practicas.png" width="10%"></h1>
-    <button class="menu-toggle" id="menu-toggle">☰</button>
+<div class="top-bar">
+  <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
+  <div class="titles-with-icon">
+    <div class="titles">
+      <h1>Centro de Formación</h1>
+      <h1>Autoescuelas</h1>
+      <h1>Am¡car</h1>
+    </div>
+    <div class="titles">
+    <img src="image/graduacion.png" alt="gorro graduacion" class="l-icon">    
+    <img src="image/l practicas.png" alt="L prácticas" class="l-icon">
+    </div>
   </div>
-
+  <button class="menu-toggle" id="menu-toggle">☰</button>
+</div>
   <nav class="nav-links" id="nav-links">
     <a href="index.html" class="active">Inicio</a>
     <a href="nosotros.html">Quiénes Somos</a>
@@ -26,8 +121,9 @@
     <a href="#">Tienda</a>
   </nav>
 </header>
-
  <!---------------------- FIN DE HEADER ------------------------------------------------------------>
+
+
   <section >
     <div class="contenedor1" style="margin-top: 150px;">
       <div class="caja1">
@@ -44,207 +140,972 @@
             <h3>De lunes a viernes de 9:00-17:00 horas</h3>
         </div>         
       </div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m11!1m3!1d127.27674326242413!2d-7.112474222344585!3d42.39515141207759!2m2!1f314.51257350314455!2f39.417085041030454!3m2!1i1024!2i768!4f35!3m3!1m2!1s0xd307e687a0f0cd5%3A0x9b3485de2e63657a!2sAmicar%20Formaci%C3%B3n%20y%20autoescuela%20S.L.!5e1!3m2!1ses!2ses!4v1759823060641!5m2!1ses!2ses"
-          allowfullscreen="" loading="lazy" ></iframe> 
+      <div class="caja1">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1471.3279271668207!2d-7.113424!3d42.395958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd307e687a0f0cd5%3A0x9b3485de2e63657a!2sAmicar%20Formaci%C3%B3n%20y%20autoescuela%20S.L.!5e1!3m2!1ses!2ses!4v1760528765372!5m2!1ses!2ses"
+        width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div> 
     </div>
 
     <br><br>
     <h1 style="text-align: center;" >NUESTROS CURSOS</h1>
-    <div class="contenedor1">
+    <!-- ----------------------------------------ESPACIO ADR EXPLOSIVOS---------------------------------->
+      <div class="contenedor1">  
+        <div class="box1">  
+          <div class="tooltip">
+            <img src="image/adr.png" alt="Imagen ADR">
+            <div class="tooltiptext">
+              <strong>OBTENCIÓN ADR EXPLOSIVOS O RADIOACTIVOS</strong><br>
+              formación Am¡car<br><br>
+              <strong>CONTENIDO:</strong><br>
+
+              1. Disposiciones particulares
+              aplicables al transporte de materias y
+              objetos explosivos. <br>
+              2. Riesgos específicos que presentan
+              las materias y objetos explosivos y
+              pirotécnicos. <br>
+              3. Disposiciones específicas sobre la
+              carga en común de materias y objetos
+              de la clase 1. <br>
+              4. El Reglamento de explosivos y sus
+              disposiciones complementarias. <br>
+              5. Formación práctica básica común
+              aplicada exclusivamente a las
+              materias de la clase 1.
+              <br>
+              <strong>OBJETIVO</strong>
+              <br>
+              Preparar al alumnado para la adquisición
+              de los conocimientos teóricos adecuados
+              así como los hábitos prácticos necesarios y
+              suficientes de cara a la superación de las
+              pruebas establecidas para conseguir
+              <br>
+              <strong>SE DEBE HACER RENOVACIÓN A LOS 5 AÑOS</strong>
+            </div>
+          </div>
+          <h3>ADR EXPLOSIVOS O RADIOACTIVOS</h3>
+        </div>
+        <!-------------------------------------ESPACIO ADR CISTERNAS----------------------------------------->
+        <div class="box1">  
+          <div class="tooltip">
+            <img src="image/adr.png" alt="Imagen ADR">
+            <div class="tooltiptext">
+              <strong>OBTENCIÓN ADR BÁSICO + CISTERNAS</strong><br>
+              formación Am¡car<br><br>
+              <strong>CONTENIDO:</strong><br>
+              1. Normativa ADR.<br>
+              2. Nociones básicas de química.<br>
+              3. Clasificaciones mercancías peligrosas.<br>
+              4. Control y vigilancia sobre el lugar de trabajo y su entorno.<br>
+              5. Envases y embalajes<br>
+              6. Documentación<br>
+              7. Tipos de vehículos y equipamiento especial.<br>
+              8. Conducción de vehículos<br>
+              9. Operación de carga y descarga<br>
+              10. Actuación en caso de emergencia
+              <br>
+              <strong>OBJETIVO</strong>
+              <br>
+              Preparar al alumnado para la adquisición
+              de los conocimientos teóricos adecuados
+              así como los hábitos prácticos necesarios y
+              suficientes de cara a la superación de las
+              pruebas establecidas para conseguir
+              <br>
+
+              <strong>SE DEBE HACER RENOVACIÓN A LOS 5 AÑOS</strong>
+            </div>
+          </div>
+          <h3>ADR BÁSICO + CISTERNAS</h3>
+        </div>
+    <!---------------------------------------ESPACIO ITC MINERIA SILICE----------------------------------------------->
+        <div class="box1">  
+          <div class="tooltip">
+            <img src="image/itcMineria.jpg" alt="Imagen ADR">
+            <div class="tooltiptext">
+              <strong>ITC MINERA/SILICE</strong><br>
+              formación Am¡car<br><br>
+              <strong>CONTENIDO:</strong><br>
+                1. Definición de los trabajos. <br>
+                2. Técnicas preventivas y de
+                protección específicas. <br>
+                3. Equipos, herramientas o
+                medios auxiliares. <br>
+                4. Control y vigilancia sobre
+                el lugar de trabajo y su
+                entorno. <br>
+                5. Interferencias con otras
+                actividades. <br>
+                6. Normativa y legislación. <br>
+              <strong>OBJETIVO</strong>
+              <br>
+              Formar y capacitar a los trabajadores del
+              sector minero en base a la regulación de la
+              formación profesional mínima en materia
+              de seguridad y salud laboral que deben
+              poseer los que desempeñan su trabajo
+              habitual en centros de trabajo adscritos a
+              actividades mineras.<br>
+              <strong>MODALIDAD</strong> <br>                       
+              Presencial 20horas
+            </div>
+          </div>
+          <h3>ITC MINERA/SILICE</h3>
+        </div>
+    <!-------------------------------ESPACIO PRL MAQUINARIA AGRICOLA--------------------------------------------------->
+        <div class="box1">  
+          <div class="tooltip">
+            <img src="image/agricola.jpg" alt="Imagen ADR">
+            <div class="tooltiptext">
+              <strong>PRL MAQUINARIA AGRÍCOLA</strong><br>
+              formación Am¡car<br><br>
+              <strong>CONTENIDO:</strong><br>
+                1. CONCEPTOS BÁSICOS
+                SOBRE SEGURIDAD Y SALUD
+                EN EL TRABAJO. MARCO
+                NORMATIVO. <br>
+                2. RIESGOS GENERALES Y SU
+                PREVENCIÓN. <br>
+                3. RIESGOS ESPECÍFICOS EN
+                MAQUINARIA. <br>
+                4. MEDIDAS PREVENTIVAS
+                APLICADAS A MAQUINARIA
+                AGRÍCOLA. <br>
+                5. PREVENCIÓN DE RIESGOS
+                CON MAQUINARIA
+                AGRÍCOLA. <br>
+                6. LA SEGURIDAD EN LA
+                MAQUINARIA AGRÍCOLA<br>            
+              <strong>OBJETIVO</strong>
+              <br>
+                Identificar cuáles son los riesgos que
+                conlleva una mala actuación en la
+                utilización de maquinaria agrícola,
+                aplicando los procedimientos adecuados
+                para un uso seguro de la maquinaria<br>
+                <strong>MODALIDAD</strong> <br>                
+                ONLINE 20H.
+            </div>
+          </div>
+          <h3>PRL MAQUINARIA AGRíCOLA</h3>
+        </div>
+    </div>
+    <!-- ----------------------------------------ESPACIO CARRETILLA ELEVADORA------------------------------------------->
+    <div class="contenedor1">  
       <div class="box1">  
-        <img src="image/adr.png" alt="Imagen ADR" >
-        <br>
-        <h3>ADR</h3>
-        <br>
-        <label for="">-Básico + Cisternas:</label>
-        <br>
-        <label for="">PRESENCIAL 36H + extinción de incendios.</label>
-        <br>  
-        <label for="">-Explosivos o radioactivos.</label>
-        <br>
-        <label for="">PRESENCIAL 18H + extinción de incendios. </label> 
+        <div class="tooltip">
+          <img src="image/carretilla.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>CARRETILLA ELEVADORA</strong><br>
+            formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+              UD1. El oficio del operador
+              de carretillas. <br>
+              UD2. La carretilla elevadora. <br>
+              UD3. Mecánica y
+              mantenimiento de la
+              carretilla. <br>
+              UD4. Manejo de carretillas
+              elevadoras. <br>
+              UD5. Simbología. <br>
+              UD6. Seguridad en la
+              conducción de carretillas. <br>
+              UD7. Ergonomía en la
+              conducción de carretillas. <br>
+              UD8. Normativa aplicabl<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+              Adquirir las competencias y habilidades
+              necesarias para la correcta conducción y
+              manejo de carretillas elevadoras con
+              control de las cargas total y seguridad del
+              area<br> 
+            <strong>MODALIDAD</strong> <br>                                
+            ONLINE/PRESENCIAL 10H.
+            + PRÁCTICAS
+            PUEDEN REALIZARSE EN LA
+            PROPIA EMPRESA
+          </div>
+        </div>
+        <h3>CARRETILLA ELEVADORA</h3>
       </div>
-      <div class="box1" >  
-        <img src="image/itcMineria.jpg" alt="Imagen ADR" >
-        <br>
-        <h3>ITC Minera / Silice</h3>
-        <br>
-        <label for="">Formar y capacitar a los trabajadores del sector minero en base a la regulación
-          de la formación profesional mínima en materia de seguridad y salud laboral.</label>
-        <br>
-        <label for="">PRESENCIAL 20 horas.</label> 
+      <!----------------------------------------------ESPACIO OPERADOR RETROEXCAVADORA Y PALA-------------------------------->
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/retroexcabadora.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>OPERADOR DE RETROEXCAVADORA Y PALA CARGADORA</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+              MODULO I:
+              Retroexcavadora. <br>
+              MODULO II:
+              Pala cargadora. <br>
+              MODULO III:
+              Ergonomía y construcción:
+              trabajo en zanjas. <br>
+              MODULO IV:
+              Técnicas de prevención<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Adquirir las competencias y habilidades
+            necesarias para la correcta conducción y
+            manejo de pala cargadora y
+            retroexcavadora, potenciar la seguridad en
+            el uso de maquinaria y cargas según las
+            normas de prevención de ries<br>
+            <strong>MODALIDAD</strong> <br>                               
+            ONLINE/PRESENCIAL 10H.
+            + PRÁCTICAS
+            PUEDEN REALIZARSE EN LA
+            PROPIA EMPRESA
+          </div>
+        </div>
+        <h3>OPERADOR DE RETROEXCAVADORA Y PALA CARGADORA</h3>
       </div>
-      <div class="box1" >  
-        <img src="image/agricola.jpg" alt="Imagen ADR" >
-        <br>
-        <h3>PRL maquinaria agricola</h3>
-        <br>
-        <label for="">Identificar cuáles son los riesgos que conlleva una mala actuación en la
-            utilización de maquinaria agrícola, aplicando los procedimientos adecuados para un uso seguro de la maquinaria.</label>
-        <br>
-        <label for="">Online 20 horas.</label> 
+      <!---------------------------------------------ESPACIO GRUA PLUMA--------------------------------------------->
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/gruaPluma.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>GRÚA PLUMA</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+              UD1. Prevención de riesgos
+              en la grúa. <br>
+              D2. Sistemas de seguridad
+              del equipo para la limitación
+              de cargas. <br>
+              UD3. El cabrestante y sus
+              accesorios. <br>
+              UD4. Útiles de enganche. <br>
+              UD5. Riesgo eléctrico. <br>
+              UD6. Recomendaciones de
+              seguridad frente a otros
+              trabajos y riesgos. <br>
+              UD7. Señales para trabajar
+              con la grúa. <br>
+              UD8. Equipos de protección
+              individual<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Adquirir las competencias y habilidades
+            necesarias para el manejo de la grúa
+            pluma respetando la normativa y
+            utilizando los EPI´S necesarios para evitar
+            riesgos.<br> 
+            <strong>MODALIDAD</strong> <br>                              
+            ONLINE/E-LEARNING 12H.
+            + PRÁCTICAS
+            PUEDEN REALIZARSE EN LA
+            PROPIA EMPRESA
+          </div>
+        </div>
+        <h3>GRÚA PLUMA</h3>
       </div>
-      <div class="box1" >  
-        <img src="image/carretilla.png" alt="Imagen ADR" style=>
-        <br>
-        <h3>Carretilla elevadora</h3>
-        <br>
-        <label for="">Adquirir las competencias y habilidades necesarias para la correcta conducción y manejo de carretillas elevadoras
-           con control de las cargas total y seguridad del area.</label>
-        <br>
-        <label for="">ONLINE/PRESENCIAL 10H + PRÁCTICAS. </label> 
+      <!----------------------------------------ESPACIO PLATAFORMA MOVIL---------------------------------------------------->
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/plataformaMovil.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>OPERADOR PLATAFORMAS MÓVILES</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            UD1. Las plataformas móviles
+            de personal. <br>
+            UD2. Seguridad en el manejo
+            de los PEMP. <br>
+            UD3. Riesgos y medidas de
+            prevención durante el
+            manejo de los PEMP. <br>
+            UD4. Mantenimiento de las
+            PEMP.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Adquirir las competencias y habilidades
+            necesarias para manejar plataformas
+            elevadoras móviles de personal (PEMP) en
+            condiciones de seguridad.<br>
+            <strong>MODALIDAD</strong> <br>           
+            ONLINE/E-LEARNING 12H.
+            + PRÁCTICAS
+            PUEDEN REALIZARSE EN LA
+            PROPIA EMPRESA
+          </div>
+        </div>
+        <h3>OPERADOR PLATAFORMAS MÓVILES</h3>
+      </div>
+
+    </div>
+    <!-------------------------------------------ESPACIO OPERADOR CARRETILLA TELESCOPICA MANITOU------------------------>
+    <div class="contenedor1">  
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/telescopicaManitou.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>OPERADOR DE CARRETILLA TELESCÓPICA (MANITOU)</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Tema 1. Introducción <br>
+            Tema 2. Definición <br>
+            Tema 3. Partes manipuladora 
+            telescópica  <br>
+            Tema 4. Tipos y clasificación <br>
+            Tema 5. Usos <br>
+            Tema 6. Normativa de aplicación <br>
+            Tema 7. Accidentes más
+            frecuentes <br>
+            Tema 8. Prevención de accidentes
+            y riesgo <br>
+            Tema 9. Manuales <br>
+            Tema 10. Placas <br>
+            Tema 11. Mantenimiento e
+            inspección <br>
+            Tema 12. Formación del operador.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Adquirir las competencias y habilidades
+            necesarias para realizar gestiones de
+            operador y manipulador telescópica y su
+            correcto funcionamiento con el fin de
+            evitar situaciones de riesgo.<br>
+            <strong>MODALIDAD</strong> <br>        
+            ONLINE/E-LEARNING 10H.
+            + PRÁCTICAS
+            PUEDEN REALIZARSE EN LA
+            PROPIA EMPRESA
+          </div>
+        </div>
+        <h3>OPERADOR DE CARRETILLA TELESCÓPICA (MANITOU)</h3>
+      </div>
+      <!----------------------------------------ESPACIO PRL MOVIMIENTOS DE TIERRA (MINI PALA Y ORUGA)------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/miniPalaOruga.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>PRL MOVIMIENTOS DE TIERRA (MINI PALA Y ORUGA)</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Tema 1. Técnicas preventivas <br>
+            Tema 2. Medios auxiliares, equipos
+            y herramientas <br>
+            Tema 3. Verificación, identificación
+            y vigilancia de la zona de trabajo <br>
+            Tema 4. Interferencias entre
+            actividades <br>
+            Tema 5. Derechos y obligaciones <br>
+            Tema 6. Primeros auxilios y
+            medidas de emergencia.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Adquirir conocimientos preventivos
+            básicos sobre los riesgos inherentes a los
+            vehículos y maquinaria para el
+            movimiento de tierras más utilizados en la
+            construcción, su utilización y las técnicas
+            preventivas específicas de aplicación.<br>
+            <strong>MODALIDAD</strong> <br>        
+            ONLINE/E-LEARNING 20H.
+            + PRÁCTICAS
+            PUEDEN REALIZARSE EN LA
+            PROPIA EMPRESA
+          </div>
+        </div>
+        <h3>PRL MOVIMIENTOS DE TIERRA (MINI PALA Y ORUGA)</h3>
+      </div> 
+      <!----------------------------------------ESPACIO CONDUCCIÓN EFICIENTE EN VEHÍCULOS INDUSTRIALES------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/conduccionEficiente.jpg" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>CONDUCCIÓN EFICIENTE EN VEHÍCULOS INDUSTRIALES</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            UD1. Consumo de energía y
+            emisiones al medio ambiente
+            de los vehículos industriales. <br>
+            UD2. Nociones sobre motores
+            y vehículos. <br>
+            UD3. La actitud del
+            conductor. <br>
+            UD4. Control de los
+            elementos del vehículo y
+            conducción. <br>
+            UD5. Conducción eficiente.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Conocer y aplicar las diferentes técnicas
+            de conducción eficiente al manejar
+            cualquier vehículo industrial.<br>
+            <strong>MODALIDAD</strong> <br>        
+            ONLINE/E-LEARNING 30H.
+            + PRÁCTICAS
+            PUEDEN REALIZARSE EN LA
+            PROPIA EMPRESA
+          </div>
+        </div>
+        <h3>CONDUCCIÓN EFICIENTE EN VEHÍCULOS INDUSTRIALES</h3>
+      </div> 
+      <!----------------------------------------ESPACIO CONDUCCIÓN EFICIENTE------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/conduccionEfice.jpg" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>CONDUCCIÓN EFICIENTE</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            UD1. Consumo de energía y
+            emisiones al medio
+            ambiente. <br>
+            UD2. La actitud del
+            conductor. <br>
+            UD3. Conducción eficiente
+            desde el punto de vista del
+            vehículo.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Conocer las diferentes técnicas
+            de conducción Y mejorar aspectos
+            relacionados con el consumo de
+            carburante para reducir al máximo el
+            consumo de combustible con diferentes
+            habilidades.<br>
+            <strong>MODALIDAD</strong> <br>        
+            ONLINE/E-LEARNING 12H.
+            + PRÁCTICAS
+          </div>
+        </div>
+        <h3>CONDUCCIÓN EFICIENTE</h3>
+      </div> 
+
+    </div>
+      <div class="contenedor1">  
+      <!----------------------------------------ESPACIO CAPACITACIÓN TRANSPORTISTA------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/capacitacionTransporte.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>CAPACITACIÓN TRANSPORTISTA</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            UD1. Elementos del derecho
+            privado <br>
+            UD2. El empresario mercantil <br>
+            UD3. Derecho social <br>
+            UD4. Derecho fiscal <br>
+            UD5. Gestión comercial y
+            financiera <br>
+            UD6. Normas de explotación y
+            técnicas <br>
+            UD7. Seguridad en carretera<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Obtención del título acreditativo que
+            reconoce a sus titulares la capacidad para
+            poder ejercer tanto la profesión de
+            transportista de mercancías de servicio
+            público (o por cuenta ajena), como la de
+            Operador de Transporte.<br>
+            <strong>MODALIDAD</strong> <br>        
+            ONLINE/MIXTO 100H.
+          </div>
+        </div>
+        <h3>CAPACITACIÓN TRANSPORTISTA</h3>
+      </div> 
+      <!----------------------------------------ESPACIO ITC SILICE Y POLVO------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/itcSilice.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>ITC SILICE Y POLVO</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Tema 1. Riesgos para la salud
+            por exposición a polvo y SCR. <br>
+            Tema 2. Materias manipuladas y
+            riesgo de puesta en suspensión. <br>
+            Tema 4. Control del riesgo: Las
+            mediciones. <br>
+            Tema 5. Medidas de protección
+            contra el polvo y la SCR. <br>
+            Tema 6. Equipos de protección
+            respiratoria: uso, ajuste y
+            mantenimiento. <br>
+            Tema 7. Buenas y malas
+            prácticas preventivas <br>
+            Tema 8. Derecho a la
+            información y participación de
+            los trabajadores.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Prevenir las enfermedades profesionales
+            causadas por polvo y SCR de los
+            trabajadores expuestos en la industria de
+            rocas y minerales industriales en procesos
+            de extracción, elaboración y manipulado,
+            haciendo el uso adecuado de las medidas
+            de protección colectivas e individuales.<br>
+            <strong>MODALIDAD</strong> <br>        
+            10 HORAS.
+          </div>
+        </div>
+        <h3>ITC SILICE Y POLVO</h3>
+      </div> 
+      <!----------------------------------------ESPACIO CAP INICIAL MERCANCIAS/VIAJEROS------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/CAPInicial.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>CAP INICIAL MERCANCIAS/VIAJEROS</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Bloque I: Aplicación de la
+            reglamentación y normativa
+            de transportes. <br>
+            Bloque II: Mecánica y
+            mantenimiento de
+            vehículos. <br>
+            Bloque III: Salud, seguridad
+            vial y medioambiental,
+            servicio, logística.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Obtención de una acreditación profesional
+            europea que avala que has superado los
+            exámenes para ser un conductor
+            profesional capaz de ejercer la profesión
+            en todos los países que forman parte de la
+            Unión Europea.<br>
+            <strong>MODALIDAD</strong> <br>        
+            PRESENCIAL
+            130H. TEÓRIA + 10 H PRÁCTICAS
+            SE PUEDE REALIZAR PACK CON
+            PERMISO C /C+E /D
+          </div>
+        </div>
+        <h3>CAP INICIAL MERCANCIAS/VIAJEROS</h3>
+      </div> 
+      <!----------------------------------------ESPACIO CAP AMPLIACIÓN MERCANCIAS/VIAJEROS------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/CAPampiacion.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>CAP AMPLIACIÓN MERCANCIAS/VIAJEROS</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Bloque I: Aplicación de la
+            reglamentación y normativa
+            de transportes. <br>
+            Bloque II: Mecánica y
+            mantenimiento de
+            vehículos. <br>
+            Bloque III: Salud, seguridad
+            vial y medioambiental,
+            servicio, logística.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Ampliar el perfil profesional como
+            transportista. El curso CAP Ampliación
+            tiene una duración más corta que el inicial
+            porque concentra únicamente el
+            contenido específico que se desea
+            acreditar.<br>
+            <strong>MODALIDAD</strong> <br>        
+            PRESENCIAL 32'5H. TEÓRIA + 2'5 H PRÁCTICAS  SE PUEDE REALIZAR PACK CON
+            PERMISO C /C+E /D
+          </div>
+        </div>
+        <h3>CAP AMPLIACIÓN MERCANCIAS/VIAJEROS</h3>
       </div>
     </div>
-    <div class="contenedor1">
-      <div class="box1">
-        <img src="image/retroexcabadora.png" alt="Imagen ADR" >
-        <br>
-        <h3>Operador retroexcavadora y pala cargadora</h3>
-        <br>
-        <label for="">Adquirir las competencias y habilidades necesarias para la correcta conducción y manejo de pala cargadora y
-           retroexcavadora, potenciar la seguridad en el uso de maquinaria y cargas según las normas de prevención de riesgos.</label>
-        <br>
-        <label for="">ONLINE/PRESENCIAL 10H + PRÁCTICAS.</label> 
-      </div>
-      <div class="box1">
-        <img src="image/gruaPluma.png" alt="Imagen ADR" >
-        <br>
-        <h3>Operador grúa pluma</h3>
-        <br>
-        <label for="">Adquirir las competencias y habilidades necesarias para el manejo de la grúa pluma respetando la normativa
-           y utilizando los EPI ́S necesarios para evitar riesgos.</label>
-        <br>
-        <label for="">ONLINE/PRESENCIAL 12H + PRÁCTICAS. </label> 
-      </div>
-       <div class="box1">     
-        <img src="image/plataformaMovil.png" alt="Imagen plataformaMovil" >
-        <br>
-        <h3>Operador plataformas móviles</h3>
-        <br>
-        <label for="">Adquirir las competencias y habilidades necesarias para manejar plataformas elevadoras móviles de personal
-           (PEMP) en condiciones de seguridad.</label>
-        <br>
-        <label for="">ONLINE/PRESENCIAL 12H + PRÁCTICAS. </label> 
-      </div>
-       <div class="box1">     
-        <img src="image/telescopicaManitou.png" alt="Imagen telescopicaManitou" >
-        <br>
-        <h3>Operador carretilla telescópica (manitou)</h3>
-        <br>
-        <label for="">Adquirir las competencias y habilidades necesarias para realizar gestiones de operador y manipulador telescópica
-           y su correcto funcionamiento con el fin de evitar situaciones de riesgo.</label>
-        <br>
-        <label for="">ONLINE/PRESENCIAL 10H + PRÁCTICAS. </label> 
-      </div>
+    <div class="contenedor1">  
+      <!----------------------------------------ESPACIO CAP RENOVACIÓN MERCANCIAS/VIAJEROS------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/CAPrenovacion.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>CAP RENOVACIÓN MERCANCIAS/VIAJEROS</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Bloque I: formación
+            avanzada sobre conducción
+            racional basada en las
+            normas de seguridad. <br>
+            Bloque II: aplicación de la
+            reglamentación. <br>
+            Bloque III: salud, seguridad
+            vial y medioambiental,
+            servicio, logística.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Deben hacerlo todos los conductores
+            profesionales cada cinco años. Estos cursos
+            para renovar el CAP para el transporte de
+            mercancias deben realizarse durante toda
+            su vida profesional<br>
+            <strong>MODALIDAD</strong> <br>        
+            PRESENCIAL 35H
+          </div>
+        </div>
+        <h3>CAP RENOVACIÓN MERCANCIAS/VIAJEROS</h3>
+      </div> 
+      <!----------------------------------------ESPACIO PRL GENÉRICO------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/PRLGenerico.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>PRL GENÉRICO</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            loque I: Conceptos básicos
+            sobre seguridad y salud en el
+            trabajo.
+            Bloque II: Riesgos generales
+            y específicos. Prevención y
+            protección.
+            Bloque III: Riesgos
+            específicos y su prevención.
+            Genéricos.
+            Bloque IV: Elementos
+            básicos de gestión de
+            prevención de riesgos.
+            Bloque V: Primeros auxilios.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Identificar conceptos básicos sobre
+            seguridad y salud y puedan conocer el
+            marco normativo general que rige la
+            actividad en este aspecto.<br>
+            <strong>MODALIDAD</strong> <br>        
+            PRESENCIAL/ONLINE 60H
+          </div>
+        </div>
+        <h3>PRL GENÉRICO</h3>
+      </div> 
+      <!----------------------------------------ESPACIO EQUIPOS PROTECCIÓN INDIVIDUAL------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/epis.jpg" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>EQUIPOS PROTECCIÓN INDIVIDUAL</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Tema I: Introducción <br>
+            Tema II: Aspectos generales
+            sobre EPI’S <br>
+            Tema III: Clasificación de
+            EPI’S <br>
+            Tema IV: Selección de EPI’s <br>
+            Tema V: Elementos
+            auxiliares.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Identificar los diferentes equipos de
+            protección individual a utilizar en cada
+            tipo de trabajo y aplicar conocimientos
+            adquiridos en este curso para promover el
+            uso adecuado de los equipos de
+            protección individual.<br>
+            <strong>MODALIDAD</strong> <br>        
+            ONLINE 10H
+          </div>
+        </div>
+        <h3>EQUIPOS PROTECCIÓN INDIVIDUAL</h3>
+      </div> 
+      <!----------------------------------------ESPACIO MANIPULADOR DE ALIMENTOS------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/manipuladorAlimentos.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>MANIPULADOR DE ALIMENTOS</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Tema I: Introducción <br>
+            Tema II: Higiene alimentaria <br>
+            Tema III: Contaminación de
+            los alimentos. <br>
+            Tema IV: Enfermedades 
+            transmisión alimentaria.<br>
+            Tema V: Conservación y
+            almacenamiento. <br>
+            Tema VI: Limpieza e higiene
+            de manipuladores. <br>
+            Tema VII: Sistema de control
+            APPCC <br>
+            Tema VIII: Ley de
+            información (alérgenos)<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Proporcionar los conocimientos básicos en
+            cuanto a la manipulación de alimentos
+            (fabricación, procesado, envasado,
+            almacenamiento, transporte, distribución
+            y comercialización de los alimentos)<br>
+            <strong>MODALIDAD</strong> <br>        
+            ONLINE 10H
+          </div>
+        </div>
+        <h3>MANIPULADOR DE ALIMENTOS</h3>
+      </div> 
     </div>
     <div class="contenedor1">
-       <div class="box1">     
-        <img src="image/miniPalaOruga.png" alt="Imagen miniPalaOruga" >
-        <br>
-        <h3>PRL movimiento de tierra (mini pala y oruga)</h3>
-        <br>
-        <label for="">Adquirir conocimientos preventivos básicos sobre los riesgos inherentes a los vehículos y maquinaria para el
-           movimiento de tierras más utilizados en la construcción, su utilización y las técnicas preventivas específicas de aplicación.</label>
-        <br>
-        <label for="">ONLINE/PRESENCIAL 20H + PRÁCTICAS.</label> 
+      <!----------------------------------------ESPACIO PERMISO B------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/permisoB.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>PERMISO B</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Bloque I: Conceptos básicos
+            y normas de circulación. <br>
+            Bloque II: Señalización de la
+            vía y la velocidad. <br>
+            Bloque III: Elementos del
+            vehículo. <br>
+            Bloque IV: Maniobras y
+            órdenes de los agentes. <br>
+            Bloque V: Vehículos
+            especiales, seguridad al
+            volante y accidentes de
+            tráfico.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Con el carnet de conducir B podrás realizar
+            la conducción para automóviles cuya masa
+            máxima autorizada no exceda de 3.500 kg.
+            Y que estén diseñados y construidos para
+            el transporte de no más de ocho pasajeros
+            además del conductor.<br>
+            <strong>MODALIDAD</strong> <br>        
+            TEÓRICO PRESENCIAL/ONLINE
+          </div>
+        </div>
+        <h3>PERMISO B</h3>
+      </div> 
+      <!----------------------------------------ESPACIO PERMISO A1------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/permiso-a1-800b.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>PERMISO A1</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            L@s alumn@s deberán superar las
+            pruebas psicofísicas
+            correspondientes.
+            La edad mínima para obtener el
+            permiso es de 16 años
+            Teórico común : Quedará exento
+            de realizarlo si posee cualquier
+            otro permiso,
+            independientemente de su
+            antigüeda<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Proceeso para obtener el permiso de
+            conducir que permite manejar motocicletas
+            con una cilindrada máxima de 125 cc y una
+            potencia máxima de 11 kW
+            (aproximadamente 15 CV)<br>
+            <strong>MODALIDAD</strong> <br>        
+            TEÓRICO
+            PRESENCIAL/ONLINE
+          </div>
+        </div>
+        <h3>PERMISO A1</h3>
       </div>
-      <div class="box1">     
-        <img src="image/conduccionEficiente.jpg" alt="Imagen condjuccionEficiente">
-        <br>
-        <h3>Conducción eficiente</h3>
-        <br>
-        <label for="">Conocer y aplicar las diferentes técnicas de conducción eficiente al manejar cualquier vehículo industrial</label>
-        <br>
-        <label for="">ONLINE/PRESENCIAL 30H + PRÁCTICAS. </label> 
+      <!----------------------------------------ESPACIO PERMISO A2------------------>
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/permiso-a2.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>PERMISO A2</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Manejar motocicletas con una
+            potencia de hasta 35 kW de
+            cualquier cilindrada. Recuerda
+            que para la obtención de este
+            permiso de moto necesitarás
+            ser mayor de edad. Pero si
+            cuentas con el carnet A1, al
+            menos, durante 2 años, tendrás
+            solamente que presentarte al
+            examen práctico.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Si quieres sacarte el permiso de moto A2,
+            primero que todo, necesitas ser mayor de
+            edad. Además, vas a tener que presentarte a
+            una prueba teórica y dos prácticas, estas
+            últimas llevadas a cabo en un circuito
+            cerrado y otro abierto.<br>
+            <strong>MODALIDAD</strong> <br>        
+            TEÓRICO
+            PRESENCIAL/ONLINE
+          </div>
+        </div>
+        <h3>PERMISO A2</h3>
       </div>
-      <div class="box1">     
-        <img src="image/conduccionEfice.jpg" alt="Imagen conduccionEficiente">
-        <br>
-        <h3>Conducción eficiente</h3>
-        <br>
-        <label for="">Conocer las diferentes técnicas de conducción Y mejorar aspectos relacionados con el consumo de carburante para reducir
-          al máximo el consumo de combustible con diferentes habilidades.</label>
-        <br>
-        <label for="">ONLINE/PRESENCIAL 12H + PRÁCTICAS. </label> 
+      <!----------------------------------------ESPACIO PERMISO A-------------------->
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/permiso-a-gran-cilindrada.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>PERMISO A</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Tres horas de conocimientos
+            teóricos, dos horas de
+            circuito cerrado y cuatro
+            horas de circulación en vías
+            abiertas al tráfico general
+            Obligación de hacer horas
+            prácticas de conducción en
+            carretera convencional. Dos
+            de las cuatro horas de
+            formación en circulación en
+            vías abiertas al tráfico
+            deberá discurrir
+            obligatoriamente en
+            carretera convencional.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Permite conducir cualquier tipo de
+            motocicleta, incluyendo triciclos de motor,
+            sin limitaciones de potencia o cilindrada.
+            Para obtenerlo, es necesario tener al menos
+            20 años y dos años de experiencia con el
+            permiso A2.<br>
+            <strong>MODALIDAD</strong> <br>        
+            TEÓRICO
+            PRESENCIAL/ONLINE
+          </div>
+        </div>
+        <h3>PERMISO A</h3>
       </div>
-      <div class="box1">     
-        <img src="image/capacitacionTransporte.png" alt="Imagen capacitacionTransporte" >
-        <br>
-        <h3>Capacitación transportistas</h3>
-        <br>
-        <label for="">Obtención del título acreditativo que reconoce a sus titulares la capacidad para poder ejercer tanto la profesión de transportista
-           de mercancías de servicio público (o por cuenta ajena), como la de Operador de Transporte.</label>
-        <br>
-        <label for="">ONLINE/MIXTO 100H. </label> 
       </div>
-    </div>
     <div class="contenedor1">
-       <div class="box1">     
-        <img src="image/CAPInicial.png" alt="Imagen miniPalaOruga" >
-        <br>
-        <h3>CAP inicial Mercancias/Viajeros</h3>
-        <br>
-        <label for="">Obtención de una acreditación profesional europea que avala que has superado los exámenes para ser un conductor
-           profesional capaz de ejercer la profesión en todos los países que forman parte de la Unión Europea.</label>
-        <br>
-        <label for="">PRESENCIAL 130H TEORÍA + 10H PRÁCTICAS. </label> 
+      <!----------------------------------------ESPACIO PERMISO C-------------------->
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/permisoC.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>PERMISO C</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Bloque I: El conductor y el
+            vehículo. <br>
+            Bloque II: Normas de
+            circulación. <br>
+            Bloque III: Uso de las vías
+            públicas. <br>
+            Bloque IV: Reglamentación
+            sobre vehículos pesados. <br>
+            Bloque V: Seguridad Vial. <br>
+            Bloque VI: El disco diagrama
+            y el tacógrafo. <br>
+            Bloque VII: Mantenimiento
+            preventivo básico.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Permite conducir camiones de gran
+            tonelaje. Si el peso del vehículo está
+            entre 3500 kg y 7500 kg, se requiere la
+            licencia C1, que puede obtenerse a partir
+            de los 18 años. Con esta licencia se
+            permite el transporte de remolques
+            acoplados al camión.<br>
+            <strong>MODALIDAD</strong> <br>        
+            TEÓRICO
+            PRESENCIAL/ONLINE
+          </div>
+        </div>
+        <h3>PERMISO C</h3>
       </div>
-      <div class="box1">     
-        <img src="image/CAPampiacion.png" alt="Imagen condjuccionEficiente">
-        <br>
-        <h3>CAP ampliación Mercancias/Viajeros</h3>
-        <br>
-        <label for="">Ampliar el perfil profesional como transportista. El curso CAP Ampliación tiene una duración más corta que el inicial
-           porque concentra únicamente el contenido específico que se desea acreditar.</label>
-        <br>
-        <label for="">PRESENCIAL TEORÍA 23,5H + 2,5H PRÁCTICAS.</label> 
+      <!----------------------------------------ESPACIO PERMISO C+E-------------------->
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/permiso C+E.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>PERMISO C+E</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Para obtener este carnet de
+            conducir es necesario tener al
+            menos 18 años y disponer
+            previamente del Carnet de
+            Conducir C. Además, será
+            necesario superar diferentes
+            pruebas, tales como: prueba de
+            conocimientos, prueba de
+            práctica en circuito cerrado y
+            abierto, así como la prueba de
+            aptitud psicofísica.
+            Los test del carnet de tráiler se
+            pueden realizar online y en el
+            momento que desees, con un
+            horario totalmente flexible para
+            que no tengas que interrumpir
+            tus jornadas laborales, entre
+            muchas otras actividades.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Permite circular por las vías públicas a los
+            mandos de un vehículo que podrá
+            arrastrar un remolque de más de 750 Kg.,
+            destinado al transporte de mercancías o
+            un semirremolque arrastrado por una
+            cabeza tractora, cuyo conjunto podrá
+            mover una M.M.A.<br>
+            <strong>MODALIDAD</strong> <br>        
+            TEÓRICO
+            PRESENCIAL/ONLINE
+          </div>
+        </div>
+        <h3>PERMISO C+E</h3>
       </div>
-      <div class="box1">     
-        <img src="image/CAPrenovacion.png" alt="Imagen conduccionEficiente">
-        <br>
-        <h3>CAP renovación Mercancias/Viajeros</h3>
-        <br>
-        <label for="">Deben hacerlo todos los conductores profesionales cada cinco años. Estos cursos para renovar el CAP para el transporte 
-          de mercancias deben realizarse durante toda su vida profesional</label>
-        <br>
-        <label for="">PRESENCIAL 35HORAS. </label> 
-      </div>
-      <div class="box1">     
-        <img src="image/PRLGenerico.png" alt="Imagen capacitacionTransporte" >
-        <br>
-        <h3>PRL Genérico</h3>
-        <br>
-        <label for="">Identificar conceptos básicos sobre seguridad y salud y puedan conocer el marco normativo general que rige la actividad
-           en este aspecto.</label>
-        <br>
-        <label for="">PRESENCIAL/ONLINE 60H. </label> 
-      </div>
-    </div>
-    <div class="contenedor1">
-      <div class="box1">
-                <img src="image/epis.jpg" alt="Imagen capacitacionTransporte" >
-        <br>
-        <h3>Equipos protección industrial</h3>
-        <br>
-        <label for="">Identificar los diferentes equipos de protección individual a utilizar en cada tipo de trabajo y aplicar conocimientos
-           adquiridos en este curso para promover el uso adecuado de los equipos de protección individual.</label>
-        <br>
-        <label for="">ONLINE 10H. </label> 
-      </div>
-      <div class="box1">
-                <img src="image/manipuladorAlimentos.png" alt="Imagen capacitacionTransporte" >
-        <br>
-        <h3>Manipulador de alimentos</h3>
-        <br>
-        <label for="">Proporcionar los conocimientos básicos en cuanto a la manipulación de alimentos (fabricación, procesado, envasado,
-           almacenamiento, transporte, distribución y comercialización de los alimentos). </label>
-        <br>
-        <label for="">ONLINE 10H. </label> 
+      <!----------------------------------------ESPACIO PERMISO D------------------->
+      <div class="box1">  
+        <div class="tooltip">
+          <img src="image/permisoD.png" alt="Imagen ADR">
+          <div class="tooltiptext">
+            <strong>PERMISO D</strong>
+            <br>formación Am¡car<br><br>
+            <strong>CONTENIDO:</strong><br>
+            Bloque I: La vía. <br>
+            Bloque II: El vehículo. <br>
+            Bloque III: El conductor. <br>
+            Bloque IV: La conducción. <br>
+            Bloque V: El transporte de
+            viajeros. <br>
+            Bloque VI: El tacógrafo. <br>
+            Bloque VII Los neumáticos y
+            los frenos. <br>
+            Bloque VIII: La conducción
+            nocturna o con
+            meteorología adversa.<br>            
+            <strong>OBJETIVO</strong>
+            <br>
+            Adquirir los conocimientos necesarios
+            para la obtención del Permiso D1-D.
+            Conocer las técnicas y procesos
+            involucrados en la conducción, seguridad
+            vial y transporte de vehículos de viajeros
+            de más de 9 plazas (incluido el
+            conductor).<br>
+            <strong>MODALIDAD</strong> <br>        
+            TEÓRICO
+            PRESENCIAL/ONLINE
+          </div>
+        </div>
+        <h3>PERMISO D</h3>
       </div>
     </div>
   </section> 
-  
-<!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
+  <!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-logo">
@@ -326,35 +1187,86 @@
       });
     });
   </script>
-<script>
-  // script para señalizar con un subrayado en el hero  la pagina donde estas navegando
-  // Obtener todos los enlaces del nav
-  const navLinks = document.querySelectorAll('nav a');
+  <script>
+    // script para señalizar con un subrayado en el hero  la pagina donde estas navegando
+    // Obtener todos los enlaces del nav
+    const navLinks = document.querySelectorAll('nav a');
 
-  // Obtener la URL actual
-  const currentURL = window.location.pathname.split("/").pop();
+    // Obtener la URL actual
+    const currentURL = window.location.pathname.split("/").pop();
 
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
+    navLinks.forEach(link => {
+      const linkHref = link.getAttribute('href');
 
-    // Si coincide con la página actual, añadir clase 'active'
-    if(linkHref === currentURL) {
-      link.classList.add('active');
+      // Si coincide con la página actual, añadir clase 'active'
+      if(linkHref === currentURL) {
+        link.classList.add('active');
+      }
+    });
+  </script>
+
+  <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
+      document.addEventListener("DOMContentLoaded", () => {
+          const toggle = document.getElementById("menu-toggle");
+          const navLinks = document.getElementById("nav-links");
+          toggle.addEventListener("click", () => {
+          navLinks.classList.toggle("active");
+          });
+      });
+  </script>
+  
+  <script>/*script para que salga el texto con hover y poder scrolear el tooltip*/
+  document.querySelectorAll('.tooltip-trigger').forEach(img => {
+    const tooltip = img.nextElementSibling;
+    let timeout;
+
+    function showTooltip() {
+      clearTimeout(timeout);
+      const rect = img.getBoundingClientRect();
+      tooltip.style.top = rect.top + window.scrollY + rect.height/2 + 'px';
+      tooltip.style.left = rect.right + 10 + 'px';
+      tooltip.style.opacity = 1;
     }
+
+    function hideTooltip() {
+      timeout = setTimeout(() => {
+        tooltip.style.opacity = 0;
+      }, 200); // retraso para evitar desaparición inmediata
+    }
+
+    img.addEventListener('mouseenter', showTooltip);
+    img.addEventListener('mouseleave', hideTooltip);
+
+    tooltip.addEventListener('mouseenter', showTooltip); // mantiene visible al entrar en tooltip
+    tooltip.addEventListener('mouseleave', hideTooltip);
   });
-</script>
+  //script para poder clikar en el movil y aparezca el tolttip con el mensaje
+  const tooltips = document.querySelectorAll('.tooltip img');
+
+  tooltips.forEach(img => {
+    const tooltip = img.nextElementSibling;
+
+    img.addEventListener('click', e => {
+      e.stopPropagation();
+
+      // Cierra todos los tooltips
+      document.querySelectorAll('.tooltip .tooltiptext').forEach(tt => {
+        if (tt !== tooltip) tt.style.opacity = 0;
+      });
+
+      // Alterna el actual
+      tooltip.style.opacity = tooltip.style.opacity == 1 ? 0 : 1;
+    });
+  });
+
+  // Cierra tooltip al tocar fuera
+  document.body.addEventListener('click', () => {
+    document.querySelectorAll('.tooltip .tooltiptext').forEach(tt => {
+      tt.style.opacity = 0;
+    });
+  });
+  </script>
 
 
-
-
-    <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
-        document.addEventListener("DOMContentLoaded", () => {
-            const toggle = document.getElementById("menu-toggle");
-            const navLinks = document.getElementById("nav-links");
-            toggle.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-            });
-        });
-    </script>    
   </body>
 </html>

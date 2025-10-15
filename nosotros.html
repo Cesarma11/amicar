@@ -6,68 +6,34 @@
     <title>AMICAR</title>
     <link rel="icon" href="./image/L.ico" />
     <link rel="stylesheet" href="style.css" />
-
-<style>
-.contenedor1 {
-  display: flex;
-  gap: 10px;               /* espacio entre texto e imagen */
-  width: 100%;
-  border: 2px solid #ccc;  /* marco general del bloque */
-  padding: 10px;
-  margin-top: 150px;
-}
-
-.caja1 {
-  flex: 1;                 
-  padding: 10px;
-  background-color: lightblue;
-  border-right: 2px solid #888; /* línea de separación entre texto e imagen */
-}
-
-.imagen1 {
-  flex: 1;                 
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-left: 2px solid #888;  /* opcional, para simetría */
-  padding-left: 10px;           /* separa la imagen del borde */
-}
-@media (max-width: 768px) {
-  .contenedor1 {
-    flex-direction: column;
-    border-right: none;
-    border-left: none;
-    margin-top:180px;
-  }
-
-  .caja1, .imagen1 {
-    border: none;   /* elimina las líneas de separación vertical */
-    padding: 5px;
-  }
-}
-</style>
-
 </head>
 <body>
 <!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
 <header>
-  <div class="top-bar">
-    <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
-    <h1>Autoescuela Am¡car</h1>
-    <h1><img src="image/l practicas.png" width="10%"></h1>
-    <button class="menu-toggle" id="menu-toggle">☰</button>
+<div class="top-bar">
+  <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
+  <div class="titles-with-icon">
+    <div class="titles">
+      <h1>Centro de Formación</h1>
+      <h1>Autoescuelas</h1>
+      <h1>Am¡car</h1>
+    </div>
+    <div class="titles">
+    <img src="image/graduacion.png" alt="gorro graduacion" class="l-icon">    
+    <img src="image/l practicas.png" alt="L prácticas" class="l-icon">
+    </div>
   </div>
-
+  <button class="menu-toggle" id="menu-toggle">☰</button>
+</div>
   <nav class="nav-links" id="nav-links">
-    <a href="index.html" >Inicio</a>
-    <a class="active" href="nosotros.html">Quiénes Somos</a>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="nosotros.html">Quiénes Somos</a>
     <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
     <a href="noticias.html">Noticias</a>
     <a href="contacto.html">Contacto</a>
     <a href="#">Tienda</a>
   </nav>
 </header>
-
  <!---------------------- FIN DE HEADER ------------------------------------------------------------>
 
 <!-- --------------------- FIN DE HEADER ------------------------------------------------------------>
@@ -95,6 +61,7 @@
       <label>¿Te unes de copiloto? </label>  
     </div>
     <img src="./image/nosotros.jpeg" alt="Imagen sobre nosotros" class="imagen1">
+
   </div>
 </section>
 
@@ -102,7 +69,6 @@
 <!-- TÍTULO DE LA SECCIÓN -->
 <section class="counters-section">
 <h1 class="counters-title">NUESTRAS CUENTAS</h1>
-
   <div class="counters-row">
     <div class="counter-container">
       <div class="counter-box experience">
@@ -133,7 +99,7 @@
     </div>
   </div>
   <h4>Tu aprobado es posible gracias a nuestros profesionales. El compromiso y la vocación de nuestros docentes
-     nos ayudan a mantener un alto porcentaje de aprobados.</h4>    
+     nos ayudan a mantener un alto porcentaje de aprobados.</h4>
 </section>
 
 
@@ -254,12 +220,5 @@
   observer.observe(title);
 </script>
 
-
-
-
-
 </body>
-
 </html>
-
-

@@ -70,10 +70,7 @@
     </div>
   </div>
 </section>
-<section>
-<h1>El tiempo en Ponferrada</h1>
-<div id="weather"></div>
-</section>
+
 
  <!---------------------- FIN SECTION ------------------------------------------------------------->
 <!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
@@ -156,27 +153,7 @@
 
 
 
-<!-- script para ver el tiempo online de ponferrada-->
-  <script>
-    // API gratuita sin clave de Open-Meteo
-    const url = "https://api.open-meteo.com/v1/forecast?latitude=42.55&longitude=-6.6&current_weather=true";
-
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-        const clima = data.current_weather;
-        document.getElementById("weather").innerHTML = `
-          🌡️ Temperatura: ${clima.temperature} °C<br>
-          💨 Viento: ${clima.windspeed} km/h<br>
-          🧭 Dirección: ${clima.winddirection}°<br>
-          ⏰ Última actualización: ${new Date(clima.time).toLocaleString('es-ES')}
-        `;
-      })
-      .catch(error => {
-        console.error("Error al obtener datos:", error);
-        document.getElementById("weather").textContent = "No se pudo cargar el clima 😕";
-      });
-  </script>
   
 </body>
+
 </html>

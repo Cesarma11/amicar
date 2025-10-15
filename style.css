@@ -79,20 +79,57 @@ header {
   align-items: center;
   gap: 15px;
   flex-grow: 1;           /* ocupa todo el espacio disponible */
+  justify-content: flex-start; /* todo pegado a la izquierda */; 
+  padding: 10px 20px;   
 }
 
-/* Logo */
+
+
+
+
+
+/* Logo *//* Ajuste del logo principal */
 .top-bar a img {
   width: 160px;
   height: auto;
-}
+  display: block;
 
-/* Título al lado del logo */
+}
+/* Estilo de los títulos */
 .top-bar h1 {
-  font-size: 28px;
+  font-size: 34px;
   color: red;
   margin: 0;
-  white-space: nowrap; /* no se rompa en varias líneas */
+  line-height: 1.1;
+  white-space: nowrap;
+  text-align: center;
+  text-shadow: 
+    1px 1px 2px black,
+    0 0 10px rgba(255,0,0,0.5);/*efecto sombra brillante*/
+}
+
+/* Estilo de los títulos */
+
+.titles {
+  display: flex;
+  flex-direction: column; /* ← esto apila los h1 verticalmente */
+  margin-left: 15px; /* separa los títulos del logo */
+  margin-top: -55px; /* sube un poco los títulos */ 
+}
+
+
+/* Contenedor que agrupa los títulos y el icono de la "L" */
+.titles-with-icon {
+  display: flex;
+  align-items: center; /* centra verticalmente la imagen respecto a los títulos */
+  margin-left: 5px; /* espacio entre el logo y los títulos */
+}
+
+/* Imagen de la "L" */
+.l-icon {
+  width: 40px; /* ajusta el tamaño a tu gusto */
+  margin-left: 10px; /* separa un poco de los títulos */
+  margin-bottom: 10px;
 }
 
 /* --- Base (por defecto: oculto para móvil) --- */
@@ -114,7 +151,7 @@ header {
   text-decoration: none;
   font-weight: bold;
   color: #444;
-  font-size: 18px;
+  font-size: 24px;
   position: relative;
   transition: color 0.3s, transform 0.3s;
   white-space: nowrap;   /* evita que las palabras se partan */  
@@ -164,6 +201,8 @@ nav a.active {
   .top-bar a img {
     width: 100px;
     height: auto;
+    margin-top: -40px;
+    margin-left: -30px;
   }
   .top-bar {
     width: 100%;
@@ -172,7 +211,14 @@ nav a.active {
   }
 
   .top-bar h1 {
-    font-size: 20px;
+    font-size: 22px;
+    margin-left: -25px;
+
+  }
+    .l-icon {
+    width: 40px; /* más pequeña en pantallas pequeñas */
+    margin-left: -15px;
+
   }
 
   .menu-toggle {
@@ -181,6 +227,11 @@ nav a.active {
     top: 10px;
     right: 20px;
   }
+
+
+
+
+
   /* Menú desplegable */
   .nav-links {
     display: none;
@@ -205,6 +256,7 @@ nav a.active {
     font-size: 16px;
       white-space: nowrap;  
   }
+
 }
 
 
@@ -219,14 +271,7 @@ nav a.active {
     padding: 0;
     gap: 20px;
   }
-  .menu-toggle {
-    display: none; /* oculta la hamburguesa */
-  }
-  .nav-links a {
-    color: black;
-    font-size: 16px;
-    white-space: nowrap;
-  }
+
 }
 
 /* *********************************************** HERO  parte media de la pantalla ********************************/
@@ -1156,6 +1201,7 @@ footer {
   padding: 10px;
   background-color: lightblue;
   border-right: 2px solid #888; /* línea de separación entre texto e imagen */
+  height: 430px;
 }
 
 .imagen1 {
@@ -1188,9 +1234,10 @@ footer {
   align-items: stretch;        /* hace que todas las cajas tengan la misma altura */
   flex-wrap: wrap;             /* permite que bajen si no caben */
   gap: 30px;                   /* espacio entre cajas */
-  margin-top: 150px;
+  margin-top: 50px;
   padding: 0 20px;
   border: none;
+  margin-top: 150px;
 }
 
 .box1 {
@@ -1293,4 +1340,3 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
-

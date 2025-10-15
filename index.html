@@ -8,20 +8,43 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
+<style>
+    #weather {
+      margin-top: 30px;
+      font-size: 1.5rem;
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+      color: white;
+    }
+  
+
+</style>
+
+
 <body>
 <!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
 <header>
-  <div class="top-bar">
-    <a href="index.html">
-      <img src="./image/logo.png" alt="Logo Amicar" width="160px" />
-    </a>
-    <h1>Autoescuela Am¡car</h1>
-    <button class="menu-toggle" id="menu-toggle">☰</button>
+<div class="top-bar">
+  <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
+  <div class="titles-with-icon">
+    <div class="titles">
+      <h1>Centro de Formación</h1>
+      <h1>Autoescuelas</h1>
+      <h1>Am¡car</h1>
+    </div>
+    <div class="titles">
+    <img src="image/graduacion.png" alt="gorro graduacion" class="l-icon">    
+    <img src="image/l practicas.png" alt="L prácticas" class="l-icon">
+    </div>
   </div>
-
+  <button class="menu-toggle" id="menu-toggle">☰</button>
+</div>
   <nav class="nav-links" id="nav-links">
-    <a href="index.html">Inicio</a>
-    <a href="nosotros.html">Quienes Somos</a>
+    <a href="index.html" class="active">Inicio</a>
+    <a href="nosotros.html">Quiénes Somos</a>
     <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
     <a href="noticias.html">Noticias</a>
     <a href="contacto.html">Contacto</a>
@@ -29,6 +52,7 @@
   </nav>
 </header>
  <!---------------------- FIN DE HEADER ------------------------------------------------------------>
+
  <!---------------------- INICIO SECTION ----------------------------------------------------------->
 <section class="hero" id="inicio">
   <div class="hero-content">
@@ -45,6 +69,10 @@
       </div>
     </div>
   </div>
+</section>
+<section>
+<h1>El tiempo en Ponferrada</h1>
+<div id="weather"></div>
 </section>
 
  <!---------------------- FIN SECTION ------------------------------------------------------------->
@@ -127,8 +155,28 @@
 </script>
 
 
+
+<!-- script para ver el tiempo online de ponferrada-->
+  <script>
+    // API gratuita sin clave de Open-Meteo
+    const url = "https://api.open-meteo.com/v1/forecast?latitude=42.55&longitude=-6.6&current_weather=true";
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const clima = data.current_weather;
+        document.getElementById("weather").innerHTML = `
+          🌡️ Temperatura: ${clima.temperature} °C<br>
+          💨 Viento: ${clima.windspeed} km/h<br>
+          🧭 Dirección: ${clima.winddirection}°<br>
+          ⏰ Última actualización: ${new Date(clima.time).toLocaleString('es-ES')}
+        `;
+      })
+      .catch(error => {
+        console.error("Error al obtener datos:", error);
+        document.getElementById("weather").textContent = "No se pudo cargar el clima 😕";
+      });
+  </script>
+  
 </body>
-
 </html>
-
-

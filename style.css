@@ -1223,6 +1223,7 @@ footer {
   .caja1, .imagen1 {
     border: none;   /* elimina las líneas de separación vertical */
     padding: 5px;
+    margin-top:80px;
   }
 }
 /* ---------------------------------------- FIN NOSOTROS ------------------------------------*/
@@ -1420,5 +1421,6 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+
 
 

@@ -1411,16 +1411,16 @@ footer {
   }
   /* cuadros desplegables de informacion de los cursos*/
   .tooltip .tooltiptext {
-    max-height: 100vh;
     font-size: 13px;
     padding: 8px;
     z-index: 10000;
-    width:80%;
+    width:90%;
   }
 
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+
 
 
 

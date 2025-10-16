@@ -1388,6 +1388,7 @@ footer {
     box-sizing: border-box;
     overflow: visible; /* asegura que no se corte contenido interno */
     text-align: justify;
+    margin-bottom: 200px;
   }
   .box1 img {
     width: 100%;
@@ -1418,3 +1419,4 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+

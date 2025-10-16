@@ -1193,7 +1193,7 @@ footer {
   width: 100%;
   border: 2px solid #ccc;  /* marco general del bloque */
   padding: 10px;
-  margin-top: 150px;
+  margin-top: 50px;
 }
 
 .caja1 {
@@ -1388,7 +1388,7 @@ footer {
     box-sizing: border-box;
     overflow: visible; /* asegura que no se corte contenido interno */
     text-align: justify;
-    margin-bottom: 500px;
+    margin-bottom: 300px;
   }
   .box1 img {
     width: 100%;
@@ -1410,7 +1410,7 @@ footer {
   }
   /* cuadros desplegables de informacion de los cursos*/
   .tooltip .tooltiptext {
-    max-height: 180px;
+    max-height: 100vh;
     font-size: 13px;
     padding: 8px;
     z-index: 10000;
@@ -1419,5 +1419,3 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
-
-

@@ -1323,7 +1323,7 @@ footer {
 
 /* Tooltip desplegable hacia abajo */
 .tooltip .tooltiptext {
-  width: 140%; /* un poco más ancho que el box1 */
+  width: 130%; /* un poco más ancho que el box1 */
   max-height: 290px; /* altura máxima */
   overflow-y: auto; /* permite scroll si es más alto */
   position: absolute;
@@ -1423,6 +1423,7 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+
 
 
 

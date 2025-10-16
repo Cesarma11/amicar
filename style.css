@@ -1232,13 +1232,17 @@ footer {
   display: flex;
   justify-content: center;     /* centra horizontalmente */
   align-items: stretch;        /* hace que todas las cajas tengan la misma altura */
-  flex-wrap: wrap;             /* permite que bajen si no caben */
+  flex-wrap: nowrap;             /* permite que bajen si no caben */
   gap: 30px;                   /* espacio entre cajas */
   margin-top: 50px;
   padding: 0 20px;
   border: none;
   margin-top: 150px;
+  overflow: visible;  
 }
+
+
+
 
 .box1 {
   flex: 1 1 300px;             /* se adaptan al ancho disponible */
@@ -1248,15 +1252,20 @@ footer {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   text-align: justify;
   padding: 20px;
-  display: flex;
+  /*display: flex;*/
+  display: inline-block;  
   flex-direction: column;      /* mantiene orden vertical */
   justify-content: flex-start; /* textos alineados arriba */
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
+  /*overflow: hidden;*/
+  overflow: visible; /* permite que el tooltip se vea completo */  
   margin: auto;
+  position: relative;
+  vertical-align: top;
+  margin-bottom: 50px;
+  height: 350px;
 }
-
 /* 🖼️ Todas las imágenes iguales */
 /* Opcional: efecto suave en la imagen también */
 .box1 img {
@@ -1293,6 +1302,64 @@ footer {
   color: #555;
 }
 
+/* Tooltip container desplegable para ver la informacion de los cursos */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 270px;
+}
+
+/* Imagen dentro del tooltip */
+.tooltip img {
+  display: block;
+  max-width: 260px;
+}
+
+/* Tooltip desplegable hacia abajo */
+.tooltip .tooltiptext {
+  width: 140%; /* un poco más ancho que el box1 */
+  max-height: 290px; /* altura máxima */
+  overflow-y: auto; /* permite scroll si es más alto */
+  position: absolute;
+  z-index: 9999;
+  top: 100%; 
+  left: -35px;
+  background-color: goldenrod;
+  color: black;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: normal;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: auto;
+}
+
+/* Mostrar tooltip al hover */
+.tooltip:hover .tooltiptext,
+.tooltip .tooltiptext:hover {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+/* Scrollbar discreto */
+.tooltip .tooltiptext::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tooltip .tooltiptext::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
+
+
+
+
+
 /* =================== RESPONSIVE =================== */
 @media (max-width: 768px) {
   .contenedor1 {
@@ -1308,6 +1375,9 @@ footer {
     margin-bottom: 50px;
    }
   section{
+    margin-top: 250px;
+  }
+  section h1{
     margin-top: 250px;
   }
   .box1 {
@@ -1337,6 +1407,14 @@ footer {
     display: block;
     margin-bottom: 5px;
   }
+  /* cuadros desplegables de informacion de los cursos*/
+  .tooltip .tooltiptext {
+    max-height: 180px;
+    font-size: 13px;
+    padding: 8px;
+    z-index: 10000;
+  }
+
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/

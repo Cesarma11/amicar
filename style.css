@@ -1330,7 +1330,7 @@ footer {
   z-index: 9999;
   top: 100%; 
   left: -35px;
-  background-color: goldenrod;
+  background-color: #ffdf00;
   color: black;
   padding: 12px;
   border-radius: 8px;
@@ -1423,6 +1423,7 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+
 
 
 

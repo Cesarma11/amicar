@@ -83,6 +83,11 @@ header {
   padding: 10px 20px;   
 }
 
+
+
+
+
+
 /* Logo *//* Ajuste del logo principal */
 .top-bar a img {
   width: 160px;
@@ -111,6 +116,97 @@ header {
   margin-left: 15px; /* separa los títulos del logo */
   margin-top: -55px; /* sube un poco los títulos */ 
 }
+.titles2 {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #ff0055, #ff6600, #ff0055);
+  background-size: 300% 300%;
+  border-bottom-left-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation: moveGradient 6s ease infinite, slideIn 1.2s ease forwards;
+  animation-delay: 0s, 0.2s; /* empieza el deslizamiento después de un momento */
+  opacity: 0;
+}
+/*------------------------------------------------------------inicio espacio titles2 enlace encabezado-------------------------*/
+.titles2 a {
+  display: inline-block;
+  color: #fff;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+}
+
+.titles2 a:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 20px #fff, 0 0 30px #ff6600;
+}
+
+/* 🔥 Animaciones */
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    filter: brightness(0.5);
+  }
+  60% {
+    transform: translateX(-10%);
+    opacity: 1;
+    filter: brightness(1.2);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+@media (max-width: 768px) {
+
+  .titles2 {
+    top: 10px;
+    right: 80px; /*  más a la izquierda para no tapar el menú */
+    padding: 10px 15px;
+    border-bottom-left-radius: 15px;
+    animation: moveGradient 6s ease infinite, slideInMobile 1s ease forwards;
+  }
+
+  .titles2 a {
+    font-size: 1.0rem; /* más pequeño para móviles */
+    white-space: nowrap; /* que no se divida en varias líneas */
+  }
+}
+
+/* Animación lateral más suave para móviles */
+@keyframes slideInMobile {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+    filter: brightness(0.7);
+  }
+  60% {
+    transform: translateX(-5%);
+    opacity: 1;
+    filter: brightness(1.1);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+/*------------------------------------------------------------fin espacio titles2 enlace encabezado-------------------------*/
+
 
 
 /* Contenedor que agrupa los títulos y el icono de la "L" */
@@ -146,7 +242,7 @@ header {
   text-decoration: none;
   font-weight: bold;
   color: #444;
-  font-size: 24px;
+  font-size: 18px;
   position: relative;
   transition: color 0.3s, transform 0.3s;
   white-space: nowrap;   /* evita que las palabras se partan */  
@@ -183,6 +279,7 @@ nav a.active {
   cursor: pointer;
 }
 
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   header {
@@ -194,7 +291,7 @@ nav a.active {
 
     /* Logo */
   .top-bar a img {
-    width: 80px;
+    width: 90px;
     height: auto;
     margin-top: -40px;
     margin-left: -30px;
@@ -203,7 +300,7 @@ nav a.active {
     width: 100%;
     justify-content: flex-start;
     gap: 10px;
-    margin-top: 70px;
+    margin-top: 65px;
 
   }
 
@@ -224,10 +321,6 @@ nav a.active {
     top: 10px;
     right: 20px;
   }
-
-
-
-
 
   /* Menú desplegable */
   .nav-links {
@@ -251,14 +344,14 @@ nav a.active {
     padding: 10px 0;
     text-align: center;
     font-size: 16px;
-      white-space: nowrap;  
+    white-space: nowrap;  
   }
-
+ 
 }
 
 
 /* --- ESCRITORIO --- */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .nav-links {
     display: flex !important;   /* visible solo en escritorio */
     flex-direction: row;
@@ -266,7 +359,7 @@ nav a.active {
     position: static;
     background: none;
     padding: 0;
-    gap: 20px;
+    gap: 20px; 
   }
 
 }
@@ -1063,7 +1156,7 @@ footer {
   }
 
   .centro iframe {
-    width: 95%;
+    width: 80%;
     height: 280px;
   }
 
@@ -1086,7 +1179,6 @@ footer {
   iframe{
     width: 100%;
   }
-  
 }
 
 
@@ -1202,7 +1294,7 @@ footer {
   padding: 10px;
   background-color: lightblue;
   border-right: 2px solid #888; /* línea de separación entre texto e imagen */
-  height: 430px;
+  height: 500px;
 }
 
 .imagen1 {
@@ -1224,7 +1316,7 @@ footer {
   .caja1, .imagen1 {
     border: none;   /* elimina las líneas de separación vertical */
     padding: 5px;
-    margin-top:80px;
+    margin-top: 80px;
   }
 }
 /* ---------------------------------------- FIN NOSOTROS ------------------------------------*/
@@ -1242,9 +1334,6 @@ footer {
   margin-top: 150px;
   overflow: visible;  
 }
-
-
-
 
 .box1 {
   flex: 1 1 300px;             /* se adaptan al ancho disponible */
@@ -1266,7 +1355,7 @@ footer {
   position: relative;
   vertical-align: top;
   margin-bottom: 50px;
-  height: 350px;
+  height: 450px;
 }
 /* 🖼️ Todas las imágenes iguales */
 /* Opcional: efecto suave en la imagen también */
@@ -1321,11 +1410,11 @@ footer {
 /* Tooltip desplegable hacia abajo */
 .tooltip .tooltiptext {
   width: 130%; /* un poco más ancho que el box1 */
-  max-height: 290px; /* altura máxima */
+  max-height: 400px; /* altura máxima */
   overflow-y: auto; /* permite scroll si es más alto */
   position: absolute;
   z-index: 9999;
-  top: 100%; 
+  top: 40%; 
   left: -35px;
   background-color: #ffdf00;
   color: black;
@@ -1357,10 +1446,123 @@ footer {
   background-color: rgba(255,255,255,0.3);
   border-radius: 3px;
 }
+/* --------------------estilos del 'boton cursos online' -------------------------------------------*/
+.fullwidth-btn {
+  display: block;
+  width: 80%;
+  margin: 30px auto;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #111, #2b2b2b);
+  color: #f5b027;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid #f5b027;
+  border-radius: 12px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* ✨ Brillo animado lateral al pasar el raton*/
+.fullwidth-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+.fullwidth-btn:hover::before {
+  left: 125%;
+}
+
+/* 🌟 Hover con resplandor */
+.fullwidth-btn:hover {
+  color: #111;
+  background: linear-gradient(90deg, #f5b027, #f0a500);
+  transform: scale(1.03);
+  box-shadow: 0 0 25px rgba(245,176,39,0.7);
+  animation: pulseGlow 1.8s infinite ease-in-out;
+}
+
+/* 🔸 Efecto de clic */
+.fullwidth-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 0 10px rgba(245,176,39,0.5);
+}
+
+/* ✴️ Animación del resplandor */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 10px rgba(245,176,39,0.5);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(245,176,39,0.9);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(245,176,39,0.5);
+  }
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .fullwidth-btn {
+    width: 90%;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+  }
+}
 
 
 
+/* Tooltip especial  para que desñpliegue varias ventanas de informacion en cada box1*/
+.special-tooltip .tooltip-wrapper {
+  position: absolute;
+  top: 40%;
+  left: -50%;          /* justo a la derecha de la imagen */
+  display: flex;        /* horizontal */
+  gap: 10px;
+  opacity: 0;
+  pointer-events: auto;
+  z-index: 2000;
+  overflow: visible; /* clave para que no haya scroll horizontal */ 
+}
 
+.special-tooltip:hover .tooltip-wrapper {
+  opacity: 1;
+}
+
+.special-tooltip .tooltip-wrapper .tooltiptext {
+  width: 260px;
+  background-color: #ffdf00;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+  font-size: 16px;
+  line-height: 1.4;
+  max-height: 300px;       /* limita altura */
+  overflow-y: auto;        /* scroll vertical */
+  flex-shrink: 0;          /* evita que se encoja */
+}
+
+/* Scrollbar discreto */
+.tooltip .tooltip-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+
+.tooltip .tooltip-wrapper::-webkit-scrollbar-thumb {
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 3px;
+}
 
 /* =================== RESPONSIVE =================== */
 @media (max-width: 768px) {
@@ -1375,6 +1577,7 @@ footer {
     height: auto; /* clave: que el contenedor crezca según contenido */
     overflow: visible; /* evita recortes */
     margin-bottom: 50px;
+    margin-top: 200px;
    }
   section{
     margin-top: 250px;
@@ -1412,22 +1615,22 @@ footer {
   }
   /* cuadros desplegables de informacion de los cursos*/
   .tooltip .tooltiptext {
+
+    max-height: 100vh;
     font-size: 13px;
     padding: 8px;
     z-index: 10000;
+  }
+  .special-tooltip .tooltip-wrapper {
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+  }
+  .special-tooltip .tooltip-wrapper .tooltiptext {
+    width: 100%;
+    margin-top: 10px;
   }
 
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
-
-
-
-
-
-
-
-
-
-
-

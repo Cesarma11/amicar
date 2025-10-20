@@ -35,7 +35,14 @@
       <h1>Autoescuelas</h1>
       <h1>Am¡car</h1>
     </div>
+
+    <div class="titles2">
+      <a href="">¡¡Permiso de residencia para extranjeros!!</a>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">     
+    </div>
+
     <div class="titles">
+     
     <img src="image/graduacion.png" alt="gorro graduacion" class="l-icon">    
     <img src="image/l practicas.png" alt="L prácticas" class="l-icon">
     </div>
@@ -46,6 +53,8 @@
     <a href="index.html" class="active">Inicio</a>
     <a href="nosotros.html">Quiénes Somos</a>
     <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
+    <a target="_blank" href="https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces">Nota Examen</a>
+    <a target="_blank" href="https://sede.dgt.gob.es/es/permisos-de-conducir/permiso-por-puntos/consulta-de-puntos/">Consulta tus puntos</a>
     <a href="noticias.html">Noticias</a>
     <a href="contacto.html">Contacto</a>
     <a href="#">Tienda</a>
@@ -60,17 +69,25 @@
       <div class="hero-item" style="background-image: url('image/autoescuela3.png');">
         <br>
         <a href="autoescuela.html"><h1>AUTOESCUELAS</h1></a>
-      </div>
-      <div class="hero-item" style="background-image: url('image/formacion2.png');">
-        <a href="formacion.html"><h1>FORMACIÓN</h1></a>
-      </div>
+        </div>
+        <div class="hero-item" style="background-image: url('image/formacion2.png');">
+          <div class="hero-text">
+            <a href="formacion.html"><h1>FORMACIÓN</h1></a>
+            <a href="#"><h1>ONLINE</h1></a>
+          </div>
+        </div>
+
       <div class="hero-item" style="background-image: url('image/cursos.png'); background-size: 65%;">
         <a href="#"><h1>CURSOS GRATUITOS y AYUDAS</h1></a>
       </div>
     </div>
   </div>
 </section>
-
+<section>
+<!-- TIEMPO EN PONFERRADA 
+<h1>El tiempo en Ponferrada</h1>
+<div id="weather"></div>
+</section>-->
 
  <!---------------------- FIN SECTION ------------------------------------------------------------->
 <!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
@@ -86,16 +103,26 @@
       <h4>Enlaces rápidos</h4>
       <ul>
         <li><a href="index.html" >  Inicio</a></li>
+        <li><a href="#" >Permiso de residencia</a></li>
+        <li><a href="nosotros.html">Quiénes somos</a></li>
+        <li><a href="https://campusamicar.formateeditorial.com/login/index.php">Campus virtual</a></li>
+        <li><a href="https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces">Nota Examen</a></li>
+        <li><a href="https://sede.dgt.gob.es/es/permisos-de-conducir/permiso-por-puntos/consulta-de-puntos/l">Consulta tus puntos</a></li> 
+      </ul>
+    </div>
+    <div class="footer-links">
+      <h4>Enlaces rápidos</h4>
+      <ul>
+        <li><a href="noticias.html">Noticias</a></li> 
+        <li><a href="contacto.html">Contacto</a></li>
         <li><a href="autoescuela.html" >  Autoescuelas</a></li>
         <li><a href="formacion.html" >  Formación</a></li>
         <li><a href="#" >  Cursos</a></li>
-        <li><a href="nosotros.html">Quiénes somos</a></li>
-        <li><a href="#">Cursos</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="#">Tienda</a></li>
+        <li><a href="#" >Online</a></li>      
       </ul>
     </div>
+
+
 
     <div class="footer-contact">
       <h4>Contacto</h4>
@@ -110,6 +137,7 @@
     <div class="social-icons">
       <a target="_blank" href="https://www.facebook.com/p/Amicar-Formaci%C3%B3n-100044451739049/?locale=es_ES"><img src="./image/facebookIcono.png" alt="Facebook"> Facebook</a>
       <a target="_blank" href="https://www.instagram.com/formacion.amicar/"><img src="./image/instagran.png" alt="Instagram"> Instagram</a>
+      <a target="_blank" href="https://www.tiktok.com/@tu_usuario_tiktok"><img src="./image/tiktok.png" alt="TikTok"> TikTok</a>      
       <!-- <a href="#"><img src="./image/twiterIcono.png" alt="Twitter"> Twitter</a>-->
     </div>
   </div>
@@ -153,7 +181,27 @@
 
 
 
+<!-- script para ver el tiempo online de ponferrada-->
+  <script>
+    // API gratuita sin clave de Open-Meteo
+    const url = "https://api.open-meteo.com/v1/forecast?latitude=42.55&longitude=-6.6&current_weather=true";
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const clima = data.current_weather;
+        document.getElementById("weather").innerHTML = `
+          🌡️ Temperatura: ${clima.temperature} °C<br>
+          💨 Viento: ${clima.windspeed} km/h<br>
+          🧭 Dirección: ${clima.winddirection}°<br>
+          ⏰ Última actualización: ${new Date(clima.time).toLocaleString('es-ES')}
+        `;
+      })
+      .catch(error => {
+        console.error("Error al obtener datos:", error);
+        document.getElementById("weather").textContent = "No se pudo cargar el clima 😕";
+      });
+  </script>
   
 </body>
-
 </html>

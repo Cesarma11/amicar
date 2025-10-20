@@ -1637,9 +1637,106 @@ footer {
     z-index: 9999;
   }
 }
+/* =================== TOOLTIP NORMAL =================== */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 110%; /* debajo del icono o imagen */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffdf00;
+  color: #000;
+  text-align: left;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+  width: 260px;
+  z-index: 9999;
+  transition: opacity 0.3s ease;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* =================== TOOLTIP ESPECIAL (3 ventanas) =================== */
+.special-tooltip .tooltip-wrapper {
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 2000;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+}
+
+.special-tooltip:hover .tooltip-wrapper {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.special-tooltip .tooltip-wrapper .tooltiptext {
+  width: 260px;
+  background-color: #ffdf00;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+  font-size: 16px;
+  line-height: 1.4;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* =================== MOBILE FIX =================== */
+@media (max-width: 768px) {
+  .contenedor1 {
+    overflow: visible !important;
+  }
+
+  /* Tooltips normales */
+  .tooltip .tooltiptext {
+    top: 100%;
+    left: 0;
+    transform: none;
+    width: 90%;
+    font-size: 13px;
+    z-index: 10000;
+  }
+
+  /* Tooltips especiales: mostrar debajo y en columna */
+  .special-tooltip .tooltip-wrapper {
+    flex-direction: column;
+    top: 100%;
+    left: 0;
+    white-space: normal;
+  }
+
+  .special-tooltip .tooltip-wrapper .tooltiptext {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  /* Cuando el tooltip está abierto, añade margen inferior */
+  .special-tooltip:has(.tooltip-wrapper:hover),
+  .special-tooltip:has(.tooltip-trigger:focus) {
+    margin-bottom: 700px;
+    z-index: 9999;
+  }
+}
 
 
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+
 
 

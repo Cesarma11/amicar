@@ -144,6 +144,7 @@
       <!----------------------------------------ESPACIO CAP ''''''''''''''''''''''''''------------------>    
    
       <div class="box1 special-tooltip" style="position: relative;">  
+        
         <img src="image/CAP.png" alt="CAP curso" class="tooltip-trigger">
         <h3>CAP</h3>
               <!-- Contenedor de las tres ventanas -->
@@ -999,6 +1000,16 @@
 
   </script>
 
-
+<script>
+document.querySelectorAll('.special-tooltip').forEach(el => {
+  el.addEventListener('click', () => {
+    const open = el.classList.toggle('open');
+    document.querySelectorAll('.special-tooltip').forEach(other => {
+      if (other !== el) other.classList.remove('open');
+    });
+  });
+});
+</script>
+ 
   </body>
 </html>

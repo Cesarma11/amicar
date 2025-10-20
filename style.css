@@ -1631,30 +1631,15 @@ footer {
     margin-top: 10px;
   }
 
-}
-/* Cuando el tooltip está activo en móviles, empuja el siguiente .box1 hacia abajo */
 @media (max-width: 768px) {
-  .special-tooltip:has(.tooltip-wrapper:hover),
-  .special-tooltip:has(.tooltip-trigger:focus) {
-    margin-bottom: 700px; /* ajusta según altura del tooltip */
+  .special-tooltip.open {
+    margin-bottom: 700px; /* o auto según el contenido */
     z-index: 9999;
   }
-
-  /* Asegura que el tooltip quede siempre por encima */
-  .special-tooltip .tooltip-wrapper {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 10000;
-    background: #ffdf00;
-  }
-
-  /* Evita que el tooltip se recorte en móviles */
-  .contenedor1 {
-    overflow: visible !important;
-  }
 }
+
 
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+
 

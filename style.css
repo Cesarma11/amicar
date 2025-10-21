@@ -89,13 +89,13 @@ header {
   height: auto;
   display: block;
 }
-/* EFECTO AGRANDAMIENTO AL ACERCAR EL RATON AL LOGO */
+/* EFECTO ZOOM AL ACERCAR EL RATON AL LOGO */
 .top-bar a img:hover {
-  transform: scale(1.08);
+  transform: scale(1.14);
   box-shadow: 0 6px 25px rgba(255, 111, 0, 0.6);
+  border: 5px solid rgba(255, 111, 0, 2);
+  border-radius: 10px;
 }
-
-
 
 /* Estilo de los títulos */
 .top-bar h1 {
@@ -109,21 +109,22 @@ header {
     1px 1px 2px black,
     0 0 10px rgba(255,0,0,0.5);/*efecto sombra brillante*/
 }
-
+/*------------------------------------------------------------inicio espacio titles2 enlace encabezado-------------------------*/
 /* Estilo de los títulos */
-
 .titles {
   display: flex;
   flex-direction: column; /* ← esto apila los h1 verticalmente */
   margin-left: 15px; /* separa los títulos del logo */
   margin-top: -55px; /* sube un poco los títulos */ 
 }
+
+/* Estilos para el enlace 'permiso de residencia para extranjeros' */
 .titles2 {
   position: absolute;
   top: 10px;
   right: 0;
   padding: 15px 30px;
-  background: linear-gradient(90deg, #ff0055, #ff6600, #ff0055);
+  background: linear-gradient(90deg, white, #ff6600, #ff0055);
   background-size: 300% 300%;
   border-bottom-left-radius: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -131,10 +132,15 @@ header {
   animation-delay: 0s, 0.2s; /* empieza el deslizamiento después de un momento */
   opacity: 0;
 }
-/*------------------------------------------------------------inicio espacio titles2 enlace encabezado-------------------------*/
+
+/* animacion al pasar el raton por el enlace 'permiso de residencia para extranjeros' */
+.titles2:hover{
+   border: 2px solid black; 
+}
+
 .titles2 a {
   display: inline-block;
-  color: #fff;
+  color: black;
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.6rem;
   letter-spacing: 1px;
@@ -173,6 +179,7 @@ header {
     filter: brightness(1);
   }
 }
+/* responsive para movil */
 @media (max-width: 768px) {
 
   .titles2 {
@@ -207,9 +214,6 @@ header {
     filter: brightness(1);
   }
 }
-/*------------------------------------------------------------fin espacio titles2 enlace encabezado-------------------------*/
-
-
 
 /* Contenedor que agrupa los títulos y el icono de la "L" */
 .titles-with-icon {
@@ -530,11 +534,6 @@ nav a.active {
   }
 }
 
-
-
-
-
-
 /* Si algún overlay interfiere, fuerza el paso del clic */
 .hero,
 .hero-content,
@@ -782,7 +781,6 @@ footer {
   }
 }
 
-
 .footer-bottom {
   border-top: 1px solid #ffcc00;
   padding-top: 10px;
@@ -825,7 +823,12 @@ footer {
     align-items: center;
     text-align: center;
   }
+  
 }
+
+
+
+
 /* -------------------------------------------  PAGINA DE NOTICIAS ---------------------------*/
 
 .contenedor-imagenes {
@@ -1751,9 +1754,6 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
-
-
-
 
 
 

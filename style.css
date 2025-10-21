@@ -88,8 +88,15 @@ header {
   width: 160px;
   height: auto;
   display: block;
-
 }
+/* EFECTO AGRANDAMIENTO AL ACERCAR EL RATON AL LOGO */
+.top-bar a img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 25px rgba(255, 111, 0, 0.6);
+}
+
+
+
 /* Estilo de los títulos */
 .top-bar h1 {
   font-size: 20px;
@@ -1744,6 +1751,7 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+
 
 
 

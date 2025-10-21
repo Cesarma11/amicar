@@ -439,7 +439,7 @@ nav a.active {
   border-radius: 10px;
   margin:  auto;
   max-width: 400px;
-
+  border: 2px solid #F5B027;
 }
 .hero a{
   text-decoration: none;
@@ -448,29 +448,32 @@ nav a.active {
 .hero-item:hover {
   transform: scale(1.03);
 }
-.hero-item:hover h1 {
+.hero h1:hover {
   transform: scale(1.05);
   transition: 0.3s ease;
   background-color: violet;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: url('image/volante-cursor.png') 16 16, pointer;
 }
 .hero2:hover img{
-  transform: scale(1.05);
+  transform: scale(1.11);
   transition: 0.3s ease;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border: 2px solid black;
   border-radius: 20px;
   background-color: violet;
+  cursor: url('image/volante-cursor.png') 16 16, pointer;
 }
 .hero2 img{
   width: 40%;
+   background-color: wheat; 
+   border: 2px solid #F5B027;
+   border-radius: 10px;
 }
-
-
 /* --- Versión móvil --- */
-/* --- Versión móvil mejorada --- */
-/* --- Versión móvil corregida --- */
 @media (max-width: 768px) {
-
   .hero {
     background-color: #F5B027;
     min-height: 100vh;   /* asegura al menos altura de la pantalla */
@@ -482,7 +485,6 @@ nav a.active {
     justify-content: flex-start; /* para que los items empiecen desde arriba */
     margin-bottom: -70%;
     top: 10px;
-
   }
 
   .hero-grid {
@@ -518,12 +520,10 @@ nav a.active {
     gap: 8px;
     height: 100%;
     width: 100%;
-
   }
 
   .hero-item:nth-child(2) .hero-text h1 {
     margin: 0 !important;
-
   }
 
   .hero-item:nth-child(2) .hero2 img {
@@ -540,8 +540,6 @@ nav a.active {
 .hero-content * {
   pointer-events: auto;      /* reactiva los clics en todos los hijos */
 }
-
-
 
 /* ************************************************* FIN DEL HERO (parte media de la pantalla debajo del banner )********************/
 
@@ -569,7 +567,6 @@ nav a.active {
 .btn-white:hover {
   background: #ddd;
 }
-
 /* SECCIONES */
 .section1 {
   padding: 80px 20px;

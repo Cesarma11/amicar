@@ -768,6 +768,13 @@ footer {
 .social-icons a:hover img {
   filter: brightness(1.2) saturate(2); /* efecto al pasar el ratón */
 }
+/* ================= ICONOS VISIBLES EN MÓVIL ================= */
+@media (hover: none) and (pointer: coarse) {
+  .social-icons img {
+    filter: none !important; /* 🔹 anula el filtro blanco */
+  }
+}
+
 
 .footer-bottom {
   border-top: 1px solid #ffcc00;
@@ -1737,6 +1744,7 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+
 
 
 

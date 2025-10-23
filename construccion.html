@@ -25,16 +25,53 @@ button{
   border: 2px solid black;
   border-radius: 10px;
 }
+label{
+  text-align: center;
+  margin-left: 200px;
+}
+a img{
+  width: 100px;
+}
+.arrow-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s;
+}
+
+.arrow-button:hover {
+  background-color: #2980b9;
+}
+
+/* Flecha hacia la izquierda */
+.arrow-button::before {
+  content: '';
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 5px;
+  margin-right: 10px;
+  transform: rotate(135deg);
+}
 </style>
 </head>
 <body>
   <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
-  <button><a href="index.html" class="active">VOLVER</a></button>
+
   <label for="" >AM¡CAR — Estamos trabajando en ello 🏗️</label>
-  
+  <br>
+<a href="index.html"><button class="arrow-button">Atrás</button></a>
 
 
 
 </body>
 </html>
-

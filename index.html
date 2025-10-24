@@ -1,179 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMICAR</title>
-    <link rel="icon" href="./image/L.ico" />
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Am¡car</title>
+  <!-- INCLUIMOS EN ENCABEZADO QUE ES IGUAL EN TODAS LAS PAGINAS-->
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+<div data-include="encabezadoPagina.html"></div>
 </head>
-
-<style>
-    #weather {
-      margin-top: 30px;
-      font-size: 1.5rem;
-      background: #222;
-      padding: 20px;
-      border-radius: 10px;
-      display: inline-block;
-      box-shadow: 0 0 10px rgba(255,255,255,0.2);
-      color: white;
-    }
-
-
-</style>
-
-
 <body>
-<!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
-<header>
-<div class="top-bar">
-  <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
-  <div class="titles-with-icon">
-    <div class="titles"  >
-      <h1 style="font-size: 28px; margin-left: -20px;" >Centro de Formación</h1>
-      <h1 style="font-size: 28px; margin-left: -20px;" >Autoescuelas</h1>
-      <h1 style="font-size: 28px; margin-left: -20px;" >Am¡car</h1>
-    </div>
-
-    <div class="titles2">
-      <a href="construccion.html">¡¡Permiso de residencia para extranjeros!!</a>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">     
-    </div>
-
-    <div class="titles">
-     
-    <img src="image/graduacion.png" alt="gorro graduacion" class="l-icon">    
-    <img src="image/l practicas.png" alt="L prácticas" class="l-icon">
-    </div>
-  </div>
-  <button class="menu-toggle" id="menu-toggle">☰</button>
-</div>
-  <nav class="nav-links" id="nav-links">
-    <a href="index.html" class="active">Inicio</a>
-    <a href="nosotros.html">Quiénes Somos</a>
-    <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
-    <a target="_blank" href="https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces">Nota Examen</a>
-    <a target="_blank" href="https://sede.dgt.gob.es/es/permisos-de-conducir/permiso-por-puntos/consulta-de-puntos/">Consulta tus puntos</a>
-    <a href="noticias.html">Noticias</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="construccion.html">Tienda</a>
-  </nav>
-</header>
- <!---------------------- FIN DE HEADER ------------------------------------------------------------>
-
- <!---------------------- INICIO SECTION ----------------------------------------------------------->
-<section class="hero" id="inicio">
-  <div class="hero-content">
-    <div class="hero-grid">
-      <div class="hero-item" style="background-image: url('image/autoescuela3.png');">
-        <br>
-        <a href="autoescuela.html"><h1>AUTOESCUELAS</h1></a>
-        </div>
-        <div class="hero-item" style="background-image: url('image/formacion2.png');">
-          <div class="hero-text"style="flex-direction: column;">
-            <a href="formacion.html"><h1>FORMACIÓN</h1></a>          
-            <a class="hero2" href="construccion.html"><img   src="image/online.png" alt=""></a>
+  <main>
+    <!---------------------- INICIO SECTION ----------------------------------------------------------->
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <div class="hero-grid">
+          <div class="hero-item" style="background-image: url('image/autoescuela3.png');">
+            <br>
+            <a href="autoescuela.html"><h1>AUTOESCUELAS</h1></a>
+            </div>
+            <div class="hero-item" style="background-image: url('image/formacion2.png');">
+              <div class="hero-text"style="flex-direction: column;">
+                <a href="formacion.html"><h1>FORMACIÓN</h1></a>          
+                <a class="hero2" href="construccion.html"><img   src="image/online.png" alt=""></a>
+              </div>
+            </div>
+          <div class="hero-item" style="background-image: url('image/cursos.png'); background-size: 65%;">
+            <a href="construccion.html"><h1>CURSOS GRATUITOS y AYUDAS</h1></a>
           </div>
         </div>
-      <div class="hero-item" style="background-image: url('image/cursos.png'); background-size: 65%;">
-        <a href="construccion.html"><h1>CURSOS GRATUITOS y AYUDAS</h1></a>
       </div>
-    </div>
-  </div>
-</section>
-<section>
-<!-- TIEMPO EN PONFERRADA 
-<h1>El tiempo en Ponferrada</h1>
-<div id="weather"></div>
-</section>-->
+    </section>
+    <section>
+    <!-- TIEMPO EN PONFERRADA 
+    <h1>El tiempo en Ponferrada</h1>
+    <div id="weather"></div>
+    </section>-->
 
- <!---------------------- FIN SECTION ------------------------------------------------------------->
-<!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <a href="index.html"><img src="./image/logo.png" alt="Autoescuela Amícar" /></a>
-      <h3>Autoescuela Amícar</h3>
-      <p>Tu centro de formación de confianza desde hace más de 60 años.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Enlaces rápidos</h4>
-      <ul>
-        <li><a href="index.html" >  Inicio</a></li>
-        <li><a href="construccion.html" >Permiso de residencia</a></li>
-        <li><a href="nosotros.html">Quiénes somos</a></li>
-        <li><a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus virtual</a></li>
-        <li><a target="_blank" href="https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces">Nota Examen</a></li>
-        <li><a target="_blank" href="https://sede.dgt.gob.es/es/permisos-de-conducir/permiso-por-puntos/consulta-de-puntos">Consulta tus puntos</a></li> 
-      </ul> 
-    </div>
-    <div class="footer-links">
-      <h4>Enlaces rápidos</h4>
-      <ul>
-        <li><a href="noticias.html">Noticias</a></li> 
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="autoescuela.html" >  Autoescuelas</a></li>
-        <li><a href="formacion.html" >  Formación</a></li>
-        <li><a href="construccion.html" >  Cursos</a></li>
-        <li><a href="construccion.html" >Online</a></li>      
-      </ul>
-    </div>
+    <!---------------------- FIN SECTION ------------------------------------------------------------->
+  </main>
 
 
+<!---------------------- INCLUIMOS EL PIE DE PAGINA QUE ES IGUAL EN TODAS LAS PAGINAS----------------------------->
+<div data-include="piePagina.html"></div>
+<!----------------------------------------- ZONA DE SCRIPTS--------------------------->
+<script src="include.js"></script>
 
-    <div class="footer-contact">
-      <h4>Contacto</h4>
-      <p><strong>📍 Dirección:</strong> Av. Conde de Fenosa, 18, 32300 O Barco Orense</p>
-      <p><strong>📞 Teléfono:</strong> 698 17 66 95</p>
-      <p><strong>✉️ Email:</strong> info@amicar.com</p>
-    </div>
-
-
-  <div class="footer-social">
-    <h4>Síguenos</h4>
-    <div class="social-icons">
-      <a target="_blank" href="https://www.facebook.com/p/Amicar-Formaci%C3%B3n-100044451739049/?locale=es_ES"><img src="./image/facebookIcono.png" alt="Facebook"> Facebook</a>
-      <a target="_blank" href="https://www.instagram.com/formacion.amicar/"><img src="./image/instagran.png" alt="Instagram"> Instagram</a>
-      <a target="_blank" href="https://www.tiktok.com/@autoescuela.amicar"><img src="./image/tiktok.png" alt="TikTok"> TikTok</a>      
-      <!-- <a href="#"><img src="./image/twiterIcono.png" alt="Twitter"> Twitter</a>-->
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Autoescuela Amícar · Todos los derechos reservados</p>
-  </div>
-</footer>
-<!-- --------------------------------------FIN PIE DE PAGINA--------------------------------------------------->
-
- <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
-  document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("menu-toggle");
-    const navLinks = document.getElementById("nav-links");
-
-    toggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-    });
-  });
-</script>
-<script>
-  // script para señalizar con un subrayado en el hero  la pagina donde estas navegando
-  // Obtener todos los enlaces del nav
-  const navLinks = document.querySelectorAll('nav a');
-
-  // Obtener la URL actual
-  const currentURL = window.location.pathname.split("/").pop();
-
-  navLinks.forEach(link => {
-    const linkHref = link.getAttribute('href');
-
-    // Si coincide con la página actual, añadir clase 'active'
-    if(linkHref === currentURL) {
-      link.classList.add('active');
-    }
-  });
-</script>
+ 
 <!-- script para ver el tiempo online de ponferrada-->
   <script>
     // API gratuita sin clave de Open-Meteo

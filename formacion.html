@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMICAR</title>
-    <link rel="icon" href="./image/L.ico" />
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Am¡car</title>
+  <!-- INCLUIMOS EN ENCABEZADO QUE ES IGUAL EN TODAS LAS PAGINAS-->
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <div data-include="encabezadoPagina.html"></div>
 </head>
 
 <body>
@@ -836,116 +838,12 @@
       </div> 
     </div>
 </section>
-  <!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-logo">
-        <a href="index.html"><img src="./image/logo.png" alt="Autoescuela Amícar" /></a>
-        <h3>Autoescuela Amícar</h3>
-        <p>Tu centro de formación de confianza desde hace más de 60 años.</p>
-      </div>
-
-      <div class="footer-links">
-        <h4>Enlaces rápidos</h4>
-        <ul>
-          <li><a href="index.html" >  Inicio</a></li>
-          <li><a href="autoescuela.html" >  Autoescuelas</a></li>
-          <li><a href="formacion.html" >  Formación</a></li>
-          <li><a href="#" >  Cursos</a></li>
-          <li><a href="nosotros.html">Quiénes somos</a></li>
-          <li><a href="#">Cursos</a></li>
-          <li><a href="noticias.html">Noticias</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
-          <li><a href="#">Tienda</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Contacto</h4>
-        <p><strong>📍 Dirección:</strong> Av. Conde de Fenosa, 18, 32300 O Barco Orense</p>
-        <p><strong>📞 Teléfono:</strong> 698 17 66 95</p>
-        <p><strong>✉️ Email:</strong> info@amicar.com</p>
-      </div>
+<!---------------------- INCLUIMOS EL PIE DE PAGINA QUE ES IGUAL EN TODAS LAS PAGINAS----------------------------->
+<div data-include="piePagina.html"></div>
+<!----------------------------------------- ZONA DE SCRIPTS--------------------------->
+<script src="include.js"></script>
 
 
-    <div class="footer-social">
-      <h4>Síguenos</h4>
-      <div class="social-icons">
-        <a target="_blank" href="https://www.facebook.com/p/Amicar-Formaci%C3%B3n-100044451739049/?locale=es_ES"><img src="./image/facebookIcono.png" alt="Facebook"> Facebook</a>
-        <a target="_blank" href="https://www.instagram.com/formacion.amicar/"><img src="./image/instagran.png" alt="Instagram"> Instagram</a>
-        <a target="_blank" href="https://www.tiktok.com/@autoescuela.amicar"><img src="./image/tiktok.png" alt="TikTok"> TikTok</a>       
-        <!-- <a href="#"><img src="./image/twiterIcono.png" alt="Twitter"> Twitter</a>-->
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>© 2025 Autoescuela Amícar · Todos los derechos reservados</p>
-    </div>
-  </footer>
-<!-- --------------------------------------FIN PIE DE PAGINA--------------------------------------------------->
-
-
-    <!-- SCRIPT PARA LA VENTANTA EMERGENTE-->
-  <script> 
-      const modal = document.getElementById("myModal");
-      const closeBtn = document.querySelector(".close");
-
-      // Abrir ventana al cargar la página
-      window.addEventListener("load", () => {
-      modal.style.display = "flex";
-      setTimeout(() => modal.classList.add("show"), 10); // delay pequeñito para animación
-      });
-
-      // Cerrar ventana con el botón
-      closeBtn.addEventListener("click", () => {
-      modal.classList.remove("show");
-      setTimeout(() => modal.style.display = "none", 400); // espera a que termine la animación
-      });
-
-      // Cerrar si se hace clic fuera del contenido
-      window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-          modal.classList.remove("show");
-          setTimeout(() => modal.style.display = "none", 400);
-      }
-      });
-
-    // script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
-      document.addEventListener("DOMContentLoaded", () => {
-      const toggle = document.getElementById("menu-toggle");
-      const navLinks = document.getElementById("nav-links");
-      toggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
-    });
-  </script>
-  <script>
-    // script para señalizar con un subrayado en el hero  la pagina donde estas navegando
-    // Obtener todos los enlaces del nav
-    const navLinks = document.querySelectorAll('nav a');
-
-    // Obtener la URL actual
-    const currentURL = window.location.pathname.split("/").pop();
-
-    navLinks.forEach(link => {
-      const linkHref = link.getAttribute('href');
-
-      // Si coincide con la página actual, añadir clase 'active'
-      if(linkHref === currentURL) {
-        link.classList.add('active');
-      }
-    });
-  </script>
-
-  <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
-      document.addEventListener("DOMContentLoaded", () => {
-          const toggle = document.getElementById("menu-toggle");
-          const navLinks = document.getElementById("nav-links");
-          toggle.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-          });
-      });
-  </script>
   
   <script>/*script para que salga el texto con hover y poder scrolear el tooltip*/
   document.querySelectorAll('.tooltip-trigger').forEach(img => {

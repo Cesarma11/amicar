@@ -1,218 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMICAR</title>
-    <link rel="icon" href="./image/L.ico" />
-    <link rel="stylesheet" href="style.css" />
-    <!--ESTILOS DEL CELDAS DE INFORMACION-->
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Am¡car</title>
+  <!-- INCLUIMOS EN ENCABEZADO QUE ES IGUAL EN TODAS LAS PAGINAS-->
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+<div data-include="encabezadoPagina.html"></div>
 </head>
 <body>
-<!-- INICIO DEL HEADER (boton hambuerguesa oculto, solo sale al entrar desde el movil y muestra el menú)-->
-<header>
-<div class="top-bar">
-  <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
-  <div class="titles-with-icon">
-    <div class="titles"  >
-      <h1 style="font-size: 28px; margin-left: -20px;" >Centro de Formación</h1>
-      <h1 style="font-size: 28px; margin-left: -20px;" >Autoescuelas</h1>
-      <h1 style="font-size: 28px; margin-left: -20px;" >Am¡car</h1>
-    </div>
+<main>
+  <section class="contacto-section">
+    <div class="contacto-container">
+      <!-- COLUMNA IZQUIERDA: INFO -->
+      <div class="contacto-info">
+        <h2>📍 Nuestras sedes</h2>
+        <div class="sede">
+          <h3>O BARCO</h3>
+          <p>Av. Conde de Fenosa, 18</p>
+          <p>📞 698 17 66 95</p>
+        </div>
+        <div class="sede">
+          <h3>A RÚA</h3>
+          <p>C/ Progreso, 10</p>
+          <p>📞 988 68 57 20</p>
+        </div>
+        <div class="sede">
+          <h3>VIANA DO BOLO</h3>
+          <p>C/ San Roque, 5</p>
+          <p>📞 665 84 77 34</p>
+        </div>
+        <div class="sede">
+          <h3>VERÍN</h3>
+          <p>Av. de Castilla, 56</p>
+          <p>📞 604 02 31 46</p>
+        </div>
+        <div class="sede">
+          <h3>XINZO</h3>
+          <p>Avenida Ourense nº12 </p>
+          <p>📞 </p>
+        </div>
+        <div class="sede">
+          <h3>PONFERRADA</h3>
+          <p>C/ Camino de Santiago, 22</p>
+          <p>📞 600 83 63 06</p>
+        </div>
 
-    <div class="titles2">
-      <a href="">¡¡Permiso de residencia para extranjeros!!</a>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">     
-    </div>
+        <hr>
 
-    <div class="titles">
-     
-    <img src="image/graduacion.png" alt="gorro graduacion" class="l-icon">    
-    <img src="image/l practicas.png" alt="L prácticas" class="l-icon">
-    </div>
-  </div>
-  <button class="menu-toggle" id="menu-toggle">☰</button>
-</div>
-  <nav class="nav-links" id="nav-links">
-    <a href="index.html" class="active">Inicio</a>
-    <a href="nosotros.html">Quiénes Somos</a>
-    <a target="_blank" href="https://campusamicar.formateeditorial.com/login/index.php">Campus Virtual</a>
-    <a target="_blank" href="https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces">Nota Examen</a>
-    <a target="_blank" href="https://sede.dgt.gob.es/es/permisos-de-conducir/permiso-por-puntos/consulta-de-puntos/">Consulta tus puntos</a>
-    <a href="noticias.html">Noticias</a>
-    <a href="contacto.html">Contacto</a>
-    <a href="#">Tienda</a>
-  </nav>
-</header>
- <!---------------------- FIN DE HEADER ------------------------------------------------------------>
-<section class="contacto-section">
-  <div class="contacto-container">
-    <!-- COLUMNA IZQUIERDA: INFO -->
-    <div class="contacto-info">
-      <h2>📍 Nuestras sedes</h2>
-      <div class="sede">
-        <h3>O BARCO</h3>
-        <p>Av. Conde de Fenosa, 18</p>
-        <p>📞 698 17 66 95</p>
-      </div>
-      <div class="sede">
-        <h3>A RÚA</h3>
-        <p>C/ Progreso, 10</p>
-        <p>📞 988 68 57 20</p>
-      </div>
-      <div class="sede">
-        <h3>VIANA DO BOLO</h3>
-        <p>C/ San Roque, 5</p>
-        <p>📞 665 84 77 34</p>
-      </div>
-      <div class="sede">
-        <h3>VERÍN</h3>
-        <p>Av. de Castilla, 56</p>
-        <p>📞 604 02 31 46</p>
-      </div>
-      <div class="sede">
-        <h3>XINZO</h3>
-        <p>Avenida Ourense nº12 </p>
-        <p>📞 </p>
-      </div>
-      <div class="sede">
-        <h3>PONFERRADA</h3>
-        <p>C/ Camino de Santiago, 22</p>
-        <p>📞 600 83 63 06</p>
+        <p><strong>✉️ Email:</strong> info@amicar.es</p>
+        <p><strong>💬 WhatsApp:</strong> 698 17 66 95</p>
       </div>
 
-      <hr>
+      <!-- COLUMNA DERECHA: FORMULARIO -->
+      <div class="contacto-form">
+        <h2>📩 Envíanos un mensaje</h2>
+        <form id="contact-form" action="https://formspree.io/f/mzzbbpqq" method="POST">
+          <label>Nombre</label>
+          <input type="text" name="nombre" required>
 
-      <p><strong>✉️ Email:</strong> info@amicar.es</p>
-      <p><strong>💬 WhatsApp:</strong> 698 17 66 95</p>
+          <label>Teléfono</label>
+          <input type="text" name="telefono">
+
+          <label>Email</label>
+          <input type="email" name="email" required>
+
+          <label>Mensaje</label>
+          <textarea name="mensaje" rows="5" required></textarea>
+
+          <input type="submit" value="Enviar mensaje" class="btn-enviar">
+        </form>
+
+        <!-- MENSAJE DE CONFIRMACIÓN -->
+        <p id="form-status" class="form-status"></p>
+      </div>
     </div>
+  </section>
+</main>
+<!---------------------- INCLUIMOS EL PIE DE PAGINA QUE ES IGUAL EN TODAS LAS PAGINAS----------------------------->
+<div data-include="piePagina.html"></div>
+<!----------------------------------------- ZONA DE SCRIPTS--------------------------->
+<script src="include.js"></script>
 
-    <!-- COLUMNA DERECHA: FORMULARIO -->
-    <div class="contacto-form">
-      <h2>📩 Envíanos un mensaje</h2>
-      <form id="contact-form" action="https://formspree.io/f/mzzbbpqq" method="POST">
-        <label>Nombre</label>
-        <input type="text" name="nombre" required>
+  <!-- SCRIP PARA ENVIAR LA INFORMACION POR EMAIL--> 
+  <script>
+      const form = document.getElementById("contact-form");
+      const statusMsg = document.getElementById("form-status");
 
-        <label>Teléfono</label>
-        <input type="text" name="telefono">
-
-        <label>Email</label>
-        <input type="email" name="email" required>
-
-        <label>Mensaje</label>
-        <textarea name="mensaje" rows="5" required></textarea>
-
-        <input type="submit" value="Enviar mensaje" class="btn-enviar">
-      </form>
-
-      <!-- MENSAJE DE CONFIRMACIÓN -->
-      <p id="form-status" class="form-status"></p>
-    </div>
-  </div>
-</section>
-
-
-<!-------------------------------------------PIE DE PÁGINA----------------------------------------------->
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-logo">
-      <a href="index.html"><img src="./image/logo.png" alt="Autoescuela Amícar" /></a>
-      <h3>Autoescuela Amícar</h3>
-      <p>Tu centro de formación de confianza desde hace más de 60 años.</p>
-    </div>
-
-    <div class="footer-links">
-      <h4>Enlaces rápidos</h4>
-      <ul>
-        <li><a href="index.html" >  Inicio</a></li>
-        <li><a href="autoescuela.html" >  Autoescuelas</a></li>
-        <li><a href="formacion.html" >  Formación</a></li>
-        <li><a href="#" >  Cursos</a></li>
-        <li><a href="nosotros.html">Quiénes somos</a></li>
-        <li><a href="#">Cursos</a></li>
-        <li><a href="noticias.html">Noticias</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="#">Tienda</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-contact">
-      <h4>Contacto</h4>
-      <p><strong>📍 Dirección:</strong> Av. Conde de Fenosa, 18, 32300 O Barco Orense</p>
-      <p><strong>📞 Teléfono:</strong> 698 17 66 95</p>
-      <p><strong>✉️ Email:</strong> info@amicar.com</p>
-    </div>
-
-
-  <div class="footer-social">
-    <h4>Síguenos</h4>
-    <div class="social-icons">
-      <a target="_blank" href="https://www.facebook.com/p/Amicar-Formaci%C3%B3n-100044451739049/?locale=es_ES"><img src="./image/facebookIcono.png" alt="Facebook"> Facebook</a>
-      <a target="_blank" href="https://www.instagram.com/formacion.amicar/"><img src="./image/instagran.png" alt="Instagram"> Instagram</a>
-      <a target="_blank" href="https://www.tiktok.com/@autoescuela.amicark"><img src="./image/tiktok.png" alt="TikTok"> TikTok</a>
-      <!-- <a href="#"><img src="./image/twiterIcono.png" alt="Twitter"> Twitter</a>-->
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>© 2025 Autoescuela Amícar · Todos los derechos reservados</p>
-  </div>
-</footer>
-<!-- --------------------------------------FIN PIE DE PAGINA--------------------------------------------------->
-
-
-    <script>// script para que aparezca el menu estilo 'hamburguesa' en el movil, permanece oculto en el ordenador
-        document.addEventListener("DOMContentLoaded", () => {
-            const toggle = document.getElementById("menu-toggle");
-            const navLinks = document.getElementById("nav-links");
-            toggle.addEventListener("click", () => {
-            navLinks.classList.toggle("active");
-            });
-        });
-    </script>
-    <script>
-    // script para señalizar con un subrayado en el hero  la pagina donde estas navegando
-    // Obtener todos los enlaces del nav
-    const navLinks = document.querySelectorAll('nav a');
-
-    // Obtener la URL actual
-    const currentURL = window.location.pathname.split("/").pop();
-
-    navLinks.forEach(link => {
-        const linkHref = link.getAttribute('href');
-
-        // Si coincide con la página actual, añadir clase 'active'
-        if(linkHref === currentURL) {
-        link.classList.add('active');
-        }
-    });
-    </script>
-    <!-- SCRIP PARA ENVIAR LA INFORMACION POR EMAIL--> 
-    <script>
-        const form = document.getElementById("contact-form");
-        const statusMsg = document.getElementById("form-status");
-
-        form.addEventListener("submit", async (e) => {
-        e.preventDefault();
-        const data = new FormData(form);
-        const response = await fetch(form.action, {
-            method: form.method,
-            body: data,
-            headers: { Accept: "application/json" }
-        });
-        if (response.ok) {
-            statusMsg.textContent = "✅ Tu mensaje ha sido enviado correctamente.";
-            statusMsg.className = "form-status success";
-            form.reset();
-        } else {
-            statusMsg.textContent = "❌ Ocurrió un error. Inténtalo de nuevo.";
-            statusMsg.className = "form-status error";
-        }
-        });
-    </script>
+      form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const response = await fetch(form.action, {
+          method: form.method,
+          body: data,
+          headers: { Accept: "application/json" }
+      });
+      if (response.ok) {
+          statusMsg.textContent = "✅ Tu mensaje ha sido enviado correctamente.";
+          statusMsg.className = "form-status success";
+          form.reset();
+      } else {
+          statusMsg.textContent = "❌ Ocurrió un error. Inténtalo de nuevo.";
+          statusMsg.className = "form-status error";
+      }
+      });
+  </script>
 
 
 </body>

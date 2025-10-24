@@ -652,6 +652,7 @@ footer {
   opacity: 0;
   transform: translateY(-50px) scale(0.8);
   transition: all 0.5s ease;
+
 }
 
 /* ABRIR MODAL */

@@ -1414,7 +1414,7 @@ footer {
   position: relative;
   display: inline-block;
   cursor: pointer;
-  width: 270px;
+  width: 290px;
 }
 
 /* Imagen dentro del tooltip */
@@ -1724,7 +1724,7 @@ footer {
     top: 100%;
     left: 0;
     transform: none;
-    width: 110%;
+    width: 120%;
     font-size: 13px;
     z-index: 10000;
     margin-bottom: 50px;

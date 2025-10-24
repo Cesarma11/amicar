@@ -20,17 +20,17 @@
     font-family: Arial, sans-serif;
     width: 80%;
   }
-button{
-  width: 100px;
-  border: 2px solid black;
-  border-radius: 10px;
-}
 label{
   text-align: center;
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-top: 0px;
 }
 a img{
   width: 100px;
+}
+a img:hover{
+  border: 2px solid black;
+  border-radius: 20px;
 }
 .arrow-button {
   display: inline-flex;
@@ -46,10 +46,15 @@ a img{
   cursor: pointer;
   position: relative;
   transition: background-color 0.3s;
+  margin-left:50px;
+  width:300px;
+  height: 70px;
 }
 
 .arrow-button:hover {
   background-color: #2980b9;
+  border: 2px solid black;
+  border-radius: 20px;
 }
 
 /* Flecha hacia la izquierda */
@@ -67,7 +72,10 @@ a img{
 <body>
   <a href="index.html"><img src="./image/logo.png" alt="Logo Amicar"></a>
 
-  <label for="" >AM¡CAR — Estamos trabajando en ello 🏗️</label>
+  <label for="" >AM¡CAR </label>
+  <img src="./image/obras.gif" alt="">
+  <br>
+  <label for=""> Estamos trabajando en ello </label>
   <br>
 <a href="index.html"><button class="arrow-button">Atrás</button></a>
 

@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Am¡car</title>
-  <!-- INCLUIMOS EN ENCABEZADO QUE ES IGUAL EN TODAS LAS PAGINAS-->
   <meta charset="UTF-8">
   <link rel="stylesheet" href="style.css">
-<div data-include="encabezadoPagina.html"></div>
 </head>
 <body>
+  <!-- =================== ENCABEZADO =================== -->
+  <!-- Este div incluirá el encabezado común en todas las páginas -->
+  <div data-include="encabezadoPagina.html"></div>
+  <!-- =================== FIN ENCABEZADO =================== -->
   <main>
     <!-- *********************************************VENTANA EMERGENTE -**************************************** -->
     <!-- VENTANA EMERGENTE -->
@@ -22,10 +24,11 @@
             </div>
         </div>
     <!-- **************************************FIN ESPACIO VENTANA EMERGENTE ******************************************  -->
-    <!----------------------- INICIO SECTION --------------------------------------------- -->
-
+    <!----------------------- INICIO SECTION PERMISOS--------------------------------------------- -->
     <section style="margin-bottom: 10px;margin-top: 160px;   " >
       <h1 style=" text-align:center;" >PERMISOS</h1>  
+
+      <!-- ======= Primera fila de permisos ======= -->
       <div class="contenedor1">
       <!----------------------------------------ESPACIO PERMISO B------------------>
       <div class="box1">  
@@ -141,6 +144,7 @@
         <h3>AMAXOFOBIA</h3>
       </div>
       </div>
+       <!------------------------------- ======= Segunda fila de permisos =======----------------------- -->     
       <div class="contenedor1"> 
       <!----------------------------------------ESPACIO PERMISO A1------------------>
       <div class="box1">  
@@ -245,6 +249,8 @@
             <h3>PERMISO A</h3>
           </div>
           </div>
+
+        <!--------------------- ======= Tercera fila de permisos ======= ------------------->  
         <div class="contenedor1">
           <!----------------------------------------ESPACIO PERMISO C-------------------->
           <div class="box1">  
@@ -349,7 +355,7 @@
       <h1 style="margin-top: -20PX;" >NUESTROS CENTROS</h1>
 
       <div class="centros-container">
-        <!-- O BARCO -->
+      <!-- ================== O BARCO ================== -->
         <div class="centro">
                 <div class="info">
                 <img src="./image/galicia.png" alt="Galicia" />
@@ -362,7 +368,7 @@
 
         </div>
 
-        <!-- A RÚA -->
+      <!-- ================== A RUA ================== -->
         <div class="centro">
             <div class="info">
                 <img src="./image/galicia.png" alt="Galicia" />
@@ -436,6 +442,7 @@
         </div>
     </div>
     </section>
+  <!-------------------- ================== FIN SECCIÓN CENTROS ================== --------------------------------------------->  
   </main>
   <!---------------------- INCLUIMOS EL PIE DE PAGINA QUE ES IGUAL EN TODAS LAS PAGINAS----------------------------->
   <div data-include="piePagina.html"></div>

@@ -1,144 +1,148 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- =================== HEAD =================== -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Am¡car</title>
-  <!-- INCLUIMOS EN ENCABEZADO QUE ES IGUAL EN TODAS LAS PAGINAS-->
-  <meta charset="UTF-8">
+  <title>Am¡car – Sobre Nosotros</title>
   <link rel="stylesheet" href="style.css">
-<div data-include="encabezadoPagina.html"></div>
+  <!-- =================== FIN HEAD =================== -->
 </head>
 <body>
 
-<section style="margin-top: 200px;">
-  <div class="contenedor1">
-    <div class="caja1">
-      <h2>SOBRE NOSOTROS</h2>
-      <br><br>
-      <h3>Forma parte de la familia Amicar</h3>
-      <br><br>        
-      <label> 60 años de experiencia. ¿Es lo que nos avala?</label>
-      <br>
-      <label>Creemos que la palabra que nos define por excelencia es: CAMBIOS. Y estos cambios representan una evolución.
-      <strong>60 años de evolución</strong>. Amicar es un centro que ha ido formando parte de las familias como un bien heredado:
-      de bisabuelos, a abuelos, de abuelos a padres, y de padres a hijos, nietos, sobrinos… 
-      Hemos sido imagen del pasado y hemos crecido poco a poco hasta lo que somos en el presente y lo que seremos en el futuro:
-      tu centro de formación de confianza.
-      </label>
-      <br><br>
-      <label>
-      Aun así, no sabemos echar el freno y queremos seguir avanzando e inculcando nuestras enseñanzas para crecer juntos. Pero toda carrera es mejor si se hace acompañado.
-      </label>
-      <br><br>
-      <label>¿Te unes de copiloto? </label>  
-    </div>
-    <img src="./image/nosotros.jpeg" alt="Imagen sobre nosotros" class="imagen1">
+  <!-- =================== ENCABEZADO =================== -->
+  <!-- Se incluye el encabezado común en todas las páginas -->
+  <div data-include="encabezadoPagina.html"></div>
+  <!-- =================== FIN ENCABEZADO =================== -->
 
-  </div>
-</section>
-
-<!-- CONTENEDOR PRINCIPAL DE LOS NÚMEROS -->
-<!-- TÍTULO DE LA SECCIÓN -->
-<section class="counters-section">
-<h1 class="counters-title">NUESTRAS CUENTAS</h1>
-  <div class="counters-row">
-    <div class="counter-container">
-      <div class="counter-box experience">
-        <div class="counter" id="counter1"></div>
+  <!-- =================== SECCIÓN SOBRE NOSOTROS =================== -->
+  <section style="margin-top: 200px;">
+    <div class="contenedor1">
+      <div class="caja1">
+        <h2>SOBRE NOSOTROS</h2>
+        <br><br>
+        <h3>Forma parte de la familia Amicar</h3>
+        <br><br>
+        <p>60 años de experiencia. ¿Es lo que nos avala?</p>
+        <p>Creemos que la palabra que nos define por excelencia es: CAMBIOS. Y estos cambios representan una evolución. 
+        <strong>60 años de evolución</strong>. Amicar es un centro que ha ido formando parte de las familias como un bien heredado:
+        de bisabuelos, a abuelos, de abuelos a padres, y de padres a hijos, nietos, sobrinos… 
+        Hemos sido imagen del pasado y hemos crecido poco a poco hasta lo que somos en el presente y lo que seremos en el futuro:
+        tu centro de formación de confianza.</p>
+        <p>Aun así, no sabemos echar el freno y queremos seguir avanzando e inculcando nuestras enseñanzas para crecer juntos. 
+        Pero toda carrera es mejor si se hace acompañado.</p>
+        <br>
+        <p>¿Te unes de copiloto?</p>
       </div>
-      <div class="message">Años de experiencia</div>
-    </div>
 
-    <div class="counter-container">
-      <div class="counter-box students">
-        <div class="counter" id="counter2"></div>
+      <!-- Imagen representativa sobre nosotros -->
+      <img src="./image/nosotros.jpeg" alt="Imagen sobre nosotros" class="imagen1">
+    </div>
+  </section>
+  <!-- =================== FIN SECCIÓN SOBRE NOSOTROS =================== -->
+
+  <!-- =================== SECCIÓN CONTADORES =================== -->
+  <section class="counters-section">
+    <h1 class="counters-title">NUESTRAS CUENTAS</h1>
+    <div class="counters-row">
+      <!-- Contador 1: Años de experiencia -->
+      <div class="counter-container">
+        <div class="counter-box experience">
+          <div class="counter" id="counter1"></div>
+        </div>
+        <div class="message">Años de experiencia</div>
       </div>
-      <div class="message">Estudiantes</div>
-    </div>
 
-    <div class="counter-container">
-      <div class="counter-box approved">
-        <div class="counter" id="counter3"></div>
+      <!-- Contador 2: Estudiantes -->
+      <div class="counter-container">
+        <div class="counter-box students">
+          <div class="counter" id="counter2"></div>
+        </div>
+        <div class="message">Estudiantes</div>
       </div>
-      <div class="message">Aprobados</div>
-    </div>
 
-    <div class="counter-container">
-      <div class="counter-box centers">
-        <div class="counter" id="counter4"></div>
+      <!-- Contador 3: Aprobados -->
+      <div class="counter-container">
+        <div class="counter-box approved">
+          <div class="counter" id="counter3"></div>
+        </div>
+        <div class="message">Aprobados</div>
       </div>
-      <div class="message">Centros de formación y autoescuelas</div>
+
+      <!-- Contador 4: Centros -->
+      <div class="counter-container">
+        <div class="counter-box centers">
+          <div class="counter" id="counter4"></div>
+        </div>
+        <div class="message">Centros de formación y autoescuelas</div>
+      </div>
     </div>
-  </div>
-  <h4>Tu aprobado es posible gracias a nuestros profesionales. El compromiso y la vocación de nuestros docentes
-     nos ayudan a mantener un alto porcentaje de aprobados.</h4>
-</section>
+    <h4>Tu aprobado es posible gracias a nuestros profesionales. El compromiso y la vocación de nuestros docentes
+       nos ayudan a mantener un alto porcentaje de aprobados.</h4>
+  </section>
+  <!-- =================== FIN SECCIÓN CONTADORES =================== -->
 
-<!---------------------- INCLUIMOS EL PIE DE PAGINA QUE ES IGUAL EN TODAS LAS PAGINAS----------------------------->
-<div data-include="piePagina.html"></div>
-<!----------------------------------------- ZONA DE SCRIPTS--------------------------->
-<script src="include.js"></script>
+  <!-- =================== PIE DE PÁGINA =================== -->
+  <!-- Se incluye el pie común en todas las páginas -->
+  <div data-include="piePagina.html"></div>
+  <!-- =================== FIN PIE DE PÁGINA =================== -->
 
-<script>
-  // Función para animar los contadores
-  function startCounter(id, target, finalText = '', interval = 80) {
-    const counterDiv = document.getElementById(id);
-    const itemHeight = 120;
+  <!-- =================== SCRIPTS =================== -->
+  <!-- Script para incluir encabezado y pie -->
+  <script src="include.js"></script>
 
-    // Crear números del 0 al target-1
-    for (let i = 0; i < target; i++) {
-      const span = document.createElement("span");
-      span.textContent = i;
-      counterDiv.appendChild(span);
-    }
+  <!-- Script para animar contadores -->
+  <script>
+    // Función para animar los contadores
+    function startCounter(id, target, finalText = '', interval = 80) {
+      const counterDiv = document.getElementById(id);
+      const itemHeight = 120;
 
-    let current = 0;
+      for (let i = 0; i < target; i++) {
+        const span = document.createElement("span");
+        span.textContent = i;
+        counterDiv.appendChild(span);
+      }
 
-    function animate() {
-      if (current < target) {
-        counterDiv.style.transform = `translateY(${-current * itemHeight}px)`;
-        current++;
-        if (current === target) {
-          setTimeout(() => {
-            counterDiv.innerHTML = `<span class="final">${finalText}</span>`;
-            const finalSpan = counterDiv.querySelector('.final');
-            // Activar efecto zoom después de una pequeña pausa
-            setTimeout(() => finalSpan.classList.add('show'), 50);
-            counterDiv.style.transform = "translateY(0)";
-          }, interval / 2);
-        } else {
-          setTimeout(animate, interval);
+      let current = 0;
+
+      function animate() {
+        if (current < target) {
+          counterDiv.style.transform = `translateY(${-current * itemHeight}px)`;
+          current++;
+          if (current === target) {
+            setTimeout(() => {
+              counterDiv.innerHTML = `<span class="final">${finalText}</span>`;
+              const finalSpan = counterDiv.querySelector('.final');
+              setTimeout(() => finalSpan.classList.add('show'), 50);
+              counterDiv.style.transform = "translateY(0)";
+            }, interval / 2);
+          } else {
+            setTimeout(animate, interval);
+          }
         }
       }
+      animate();
     }
+    // Animar título y contadores al hacer scroll
+    const title = document.querySelector('.counters-title');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          title.classList.add('show');
+          startCounter('counter1', 60, '+60');
+          startCounter('counter2', 10, '10k', 150);
+          startCounter('counter3', 80, '80%');
+          startCounter('counter4', 6, '6');
 
-    animate();
-  }
+          observer.unobserve(title);
+        }
+      });
+    }, { threshold: 0.5 });
 
-  // Animar título al hacer scroll
-  const title = document.querySelector('.counters-title');
-  const countersRow = document.querySelector('.counters-row');
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Mostrar título
-        title.classList.add('show');
-
-        // Iniciar los contadores solo cuando se ven
-        startCounter('counter1', 60, '+60');
-        startCounter('counter2', 10, '10k', 150);
-        startCounter('counter3', 80, '80%');
-        startCounter('counter4', 6, '6');
-
-        observer.unobserve(title); // Solo una vez
-      }
-    });
-  }, { threshold: 0.5 });
-
-  observer.observe(title);
-</script>
+    observer.observe(title);
+  </script>
+  <!-- =================== FIN SCRIPTS =================== -->
 
 </body>
 </html>

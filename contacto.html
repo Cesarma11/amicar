@@ -3,110 +3,136 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Am¡car</title>
-  <!-- INCLUIMOS EN ENCABEZADO QUE ES IGUAL EN TODAS LAS PAGINAS-->
-  <meta charset="UTF-8">
+  <title>Am¡car – Contacto</title>
   <link rel="stylesheet" href="style.css">
-<div data-include="encabezadoPagina.html"></div>
 </head>
 <body>
-<main>
-  <section class="contacto-section">
-    <div class="contacto-container">
-      <!-- COLUMNA IZQUIERDA: INFO -->
-      <div class="contacto-info">
-        <h2>📍 Nuestras sedes</h2>
-        <div class="sede">
-          <h3>O BARCO</h3>
-          <p>Av. Conde de Fenosa, 18</p>
-          <p>📞 698 17 66 95</p>
-        </div>
-        <div class="sede">
-          <h3>A RÚA</h3>
-          <p>C/ Progreso, 10</p>
-          <p>📞 988 68 57 20</p>
-        </div>
-        <div class="sede">
-          <h3>VIANA DO BOLO</h3>
-          <p>C/ San Roque, 5</p>
-          <p>📞 665 84 77 34</p>
-        </div>
-        <div class="sede">
-          <h3>VERÍN</h3>
-          <p>Av. de Castilla, 56</p>
-          <p>📞 604 02 31 46</p>
-        </div>
-        <div class="sede">
-          <h3>XINZO</h3>
-          <p>Avenida Ourense nº12 </p>
-          <p>📞 </p>
-        </div>
-        <div class="sede">
-          <h3>PONFERRADA</h3>
-          <p>C/ Camino de Santiago, 22</p>
-          <p>📞 600 83 63 06</p>
+
+  <!-- =================== ENCABEZADO =================== -->
+  <!-- Este div incluirá el encabezado común en todas las páginas -->
+  <div data-include="encabezadoPagina.html"></div>
+  <!-- =================== FIN ENCABEZADO =================== -->
+
+  <main>
+    <section class="contacto-section">
+      <div class="contacto-container">
+
+        <!-- COLUMNA IZQUIERDA: INFORMACIÓN DE SEDES -->
+        <div class="contacto-info">
+          <h2>📍 Nuestras sedes</h2>
+
+          <!-- SEDE O BARCO -->
+          <div class="sede">
+            <h3>O BARCO</h3>
+            <p>Av. Conde de Fenosa, 18</p>
+            <p>📞 698 17 66 95</p>
+          </div>
+
+          <!-- SEDE A RÚA -->
+          <div class="sede">
+            <h3>A RÚA</h3>
+            <p>C/ Progreso, 10</p>
+            <p>📞 988 68 57 20</p>
+          </div>
+
+          <!-- SEDE VIANA DO BOLO -->
+          <div class="sede">
+            <h3>VIANA DO BOLO</h3>
+            <p>C/ San Roque, 5</p>
+            <p>📞 665 84 77 34</p>
+          </div>
+
+          <!-- SEDE VERÍN -->
+          <div class="sede">
+            <h3>VERÍN</h3>
+            <p>Av. de Castilla, 56</p>
+            <p>📞 604 02 31 46</p>
+          </div>
+
+          <!-- SEDE XINZO -->
+          <div class="sede">
+            <h3>XINZO</h3>
+            <p>Avenida Ourense nº12</p>
+            <p>📞 -</p>
+          </div>
+
+          <!-- SEDE PONFERRADA -->
+          <div class="sede">
+            <h3>PONFERRADA</h3>
+            <p>C/ Camino de Santiago, 22</p>
+            <p>📞 600 83 63 06</p>
+          </div>
+
+          <hr>
+
+          <!-- CONTACTO GENERAL -->
+          <p><strong>✉️ Email:</strong> info@amicar.es</p>
+          <p><strong>💬 WhatsApp:</strong> 698 17 66 95</p>
         </div>
 
-        <hr>
+        <!-- COLUMNA DERECHA: FORMULARIO DE CONTACTO -->
+        <div class="contacto-form">
+          <h2>📩 Envíanos un mensaje</h2>
+          <form id="contact-form" action="https://formspree.io/f/mzzbbpqq" method="POST">
 
-        <p><strong>✉️ Email:</strong> info@amicar.es</p>
-        <p><strong>💬 WhatsApp:</strong> 698 17 66 95</p>
+            <!-- CAMPO NOMBRE -->
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <!-- CAMPO TELÉFONO -->
+            <label for="telefono">Teléfono</label>
+            <input type="text" id="telefono" name="telefono">
+
+            <!-- CAMPO EMAIL -->
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- CAMPO MENSAJE -->
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+            <!-- BOTÓN ENVIAR -->
+            <input type="submit" value="Enviar mensaje" class="btn-enviar">
+          </form>
+
+          <!-- MENSAJE DE ESTADO -->
+          <p id="form-status" class="form-status"></p>
+        </div>
+
       </div>
+    </section>
+  </main>
 
-      <!-- COLUMNA DERECHA: FORMULARIO -->
-      <div class="contacto-form">
-        <h2>📩 Envíanos un mensaje</h2>
-        <form id="contact-form" action="https://formspree.io/f/mzzbbpqq" method="POST">
-          <label>Nombre</label>
-          <input type="text" name="nombre" required>
+  <!-- INCLUIMOS PIE DE PÁGINA -->
+  <div data-include="piePagina.html"></div>
 
-          <label>Teléfono</label>
-          <input type="text" name="telefono">
+  <!-- SCRIPTS -->
+  <script src="include.js"></script>
 
-          <label>Email</label>
-          <input type="email" name="email" required>
-
-          <label>Mensaje</label>
-          <textarea name="mensaje" rows="5" required></textarea>
-
-          <input type="submit" value="Enviar mensaje" class="btn-enviar">
-        </form>
-
-        <!-- MENSAJE DE CONFIRMACIÓN -->
-        <p id="form-status" class="form-status"></p>
-      </div>
-    </div>
-  </section>
-</main>
-<!---------------------- INCLUIMOS EL PIE DE PAGINA QUE ES IGUAL EN TODAS LAS PAGINAS----------------------------->
-<div data-include="piePagina.html"></div>
-<!----------------------------------------- ZONA DE SCRIPTS--------------------------->
-<script src="include.js"></script>
-
-  <!-- SCRIP PARA ENVIAR LA INFORMACION POR EMAIL--> 
+  <!-- SCRIPT ENVÍO DE FORMULARIO -->
   <script>
-      const form = document.getElementById("contact-form");
-      const statusMsg = document.getElementById("form-status");
+    const form = document.getElementById("contact-form");
+    const statusMsg = document.getElementById("form-status");
 
-      form.addEventListener("submit", async (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const data = new FormData(form);
       const response = await fetch(form.action, {
-          method: form.method,
-          body: data,
-          headers: { Accept: "application/json" }
+        method: form.method,
+        body: data,
+        headers: { Accept: "application/json" }
       });
-      if (response.ok) {
-          statusMsg.textContent = "✅ Tu mensaje ha sido enviado correctamente.";
-          statusMsg.className = "form-status success";
-          form.reset();
-      } else {
-          statusMsg.textContent = "❌ Ocurrió un error. Inténtalo de nuevo.";
-          statusMsg.className = "form-status error";
-      }
-      });
-  </script>
 
+      if (response.ok) {
+        statusMsg.textContent = "✅ Tu mensaje ha sido enviado correctamente.";
+        statusMsg.className = "form-status success";
+        form.reset();
+      } else {
+        statusMsg.textContent = "❌ Ocurrió un error. Inténtalo de nuevo.";
+        statusMsg.className = "form-status error";
+      }
+    });
+  </script>
 
 </body>
 </html>

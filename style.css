@@ -1219,7 +1219,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.9);
   }
 
   /* Colores para cada caja */
@@ -1356,10 +1356,9 @@ footer {
   max-width: 350px;            /* tamaño máximo por caja */
   background-color: #fff;      /* fondo blanco para resaltar*/
   border-radius: 10px;           /* Bordes suaves */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.9);
   text-align: justify;
   padding: 20px;
-  /*display: flex;*/
   display: inline-block;  
   flex-direction: column;      /* mantiene orden vertical */
   justify-content: flex-start; /* textos alineados arriba */
@@ -1389,7 +1388,7 @@ footer {
 .box1:hover {
   transform: translateY(-5px); 
   transform: scale(1.03);   /* Pequeño zoom */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);/* Sombra al pasar el ratón */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.9);/* Sombra al pasar el ratón */
 }
 
 .box1:hover img {
@@ -1752,6 +1751,7 @@ footer {
 }
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
+
 
 
 

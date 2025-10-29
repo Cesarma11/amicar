@@ -117,25 +117,45 @@ header {
   margin-left: 15px; /* separa los títulos del logo */
   margin-top: -55px; /* sube un poco los títulos */ 
 }
+.titles h1{
+  font-size: 28px;
+  margin-left: -20px;
+}
+/* h1 Amicar */
+.titles .titlesh{
+  font-size: 55px;
+}
 
 /* Estilos para el enlace 'permiso de residencia para extranjeros' */
 .titles2 {
   position: absolute;
-  top: 10px;
+  top: 15px;
   right: 0;
   padding: 15px 30px;
-  background: linear-gradient(90deg, white, #ff6600, #ff0055);
+  background: linear-gradient(90deg, #fff8e7, #ff9f1c, #d72638);
+  /*background: linear-gradient(90deg, white, #ff6600, #ff0055);*/
   background-size: 300% 300%;
   border-bottom-left-radius: 25px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   animation: moveGradient 6s ease infinite, slideIn 1.2s ease forwards;
   animation-delay: 0s, 0.2s; /* empieza el deslizamiento después de un momento */
   opacity: 0;
+  width: 600px;
+  height: 50px;
+  display: flex;
+  align-items: center;      /* centra verticalmente */
+  justify-content: center;  /* opcional: centra el texto y la imagen */
+  gap: 10px;                /* separa el texto de la imagen */
 }
 
 /* animacion al pasar el raton por el enlace 'permiso de residencia para extranjeros' */
 .titles2:hover{
    border: 2px solid black; 
+}
+/* ------------------bandera de españa al lado del la etiqueta 'permiso para extranjeros' -----------------------*/
+.titles2 img{
+  width: 18%;
+  filter: drop-shadow(0 0 1px black) drop-shadow(2px 2px 3px rgba(0,0,0,0.8));/* añade borde a la imagen de españa y le da sombra*/
 }
 
 .titles2 a {
@@ -188,12 +208,19 @@ header {
     padding: 10px 15px;
     border-bottom-left-radius: 15px;
     animation: moveGradient 6s ease infinite, slideInMobile 1s ease forwards;
+    width: 75%;
+  }
+  .titles2 img{
+    display: none;
   }
 
   .titles2 a {
     font-size: 1.0rem; /* más pequeño para móviles */
     white-space: nowrap; /* que no se divida en varias líneas */
   }
+.titles .titlesh{
+  font-size: 30px;
+}
 }
 
 /* Animación lateral más suave para móviles */

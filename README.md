@@ -1,10 +1,10 @@
 # 🚗 Amicar · Centro de Formación Integral
 
 ## 🌐 Sitio web oficial
-**URL:** [https://www.autoescuelaponferrada.com](https://www.autoescuelaponferrada.com)  
+**URL:** [http://localhost/amicar/index.html](https://cesarma11.github.io/amicar/index.html)  
 **Tipo de proyecto:** Sitio web estático (HTML, CSS y JavaScript)  
-**Alojamiento:** Hostinger  
-**Dominio:** autoescuelaponferrada.com  
+**Alojamiento:** localhost/github  
+**Dominio:** amicar.es 
 
 ---
 
@@ -30,28 +30,26 @@ El sitio no incluye backend ni base de datos: toda la estructura está desarroll
 
 ## 🏗️ Estructura del proyecto
 
-
-
-## 🏗️ Estructura del proyecto
-
 📁 /amicar
 ├── index.html # Página principal
-├── cursos.html # Listado de cursos y descripciones
-├── contacto.html # Formulario de contacto
+--
+├── Autoescuela.html # Descripción de diferentes permisos y listado de autoescuelas
+├── Formación.html # listado de centros de formación, enlace a 'online' y descipción de cursos CAP y ADR
+│   └──Online.html # Descripción de los distintos cursos Online 
+├── Cursos.html # falta contenido
+├── permisos.html # falta contenido
+│--
+├──Nosotros.html # Breve historia de la autoescuela y centro de formación
+├──noticias.html # Apartado con distintos enlaces externos y breve descripción de últimas señales de trafico anexionadas
+├──contacto.html # Formulario de contacto
+├──encabezadoPagina.html # Encabezado de todas la páginas con header y links a los distintos apartados
+├──PiePagina.html # Pie de página compartido por todos los archivos con links a los distitos apattados y enlades  externos
+│--
+├──style.css # Estilos generales
+│    └── responsive.css # Adaptación a móviles
 │
-├── css/
-│ ├── style.css # Estilos generales
-│ └── responsive.css # Adaptación a móviles
+├── include.js # Navegación, animaciones
 │
-├── js/
-│ ├── main.js # Navegación, animaciones
-│ └── form-validation.js # Validación del formulario
-│
-├── php/
-│ └── contacto.php # Procesamiento del formulario
-│
-├── assets/
-│ ├── img/ # Imágenes del sitio
-│ └── icons/ # Iconos o logotipos
+├── image/# Imágenes del sitio e iconos
 │
 └── README.md # Documentación del proyecto

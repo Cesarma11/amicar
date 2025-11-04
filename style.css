@@ -1782,5 +1782,56 @@ footer {
 
 /* ---------------------------------------- FIN FORMACION --------------------------------*/
 
+/*---------------------------ESPACIO CURSOS Y AYUDAS --------------------------------------*/
+/* CAJA DONDE VAN LOS ANUNCIOS DE CURSOS-----------*/
+.box {
+  flex: 1 1 300px;             /* se adaptan al ancho disponible */
+  max-width: 350px;            /* tamaño máximo por caja */
+  background-color: #fff;      /* fondo blanco para resaltar*/
+  border-radius: 10px;           /* Bordes suaves */
+  box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  text-align: justify;
+  padding: 20px;
+  /*display: flex;*/
+  display: inline-block;  
+  flex-direction: column;      /* mantiene orden vertical */
+  justify-content: flex-start; /* textos alineados arriba */
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /*overflow: hidden;*/
+  overflow: visible; /* permite que el tooltip se vea completo */  
+  margin: auto;
+  position: relative;
+  vertical-align: top;
+  margin-bottom: 50px;
+  height: 550px;
+}
+/* 🖼️ Todas las imágenes iguales */
+/* Opcional: efecto suave en la imagen también */
+.box img {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;     /* muestra toda la imagen sin recortar */
+  background-color: #f5f5f5;  /* fondo neutro para imágenes más pequeñas */
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+  border-bottom: 2px solid #eee; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+}
 
+/* ✨ Efecto hover para las cajas de cursos */
+.box:hover {
+  transform: translateY(-5px); 
+  transform: scale(1.03);   /* Pequeño zoom */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.9);/* Sombra al pasar el ratón */
+}
+
+.box:hover img {
+  transform: scale(1.20);       /* Zoom solo en la imagen */
+}
+
+
+
+
+/*-------------------------- FIN ESPACIO CURSOS Y AYUDAS --------------------------------------*/
 

@@ -1330,6 +1330,7 @@ footer {
   border: 2px solid #ccc;  /* marco general del bloque */
   padding: 10px;
   margin-top: 50px;
+
 }
 
 .caja1 {
@@ -1827,11 +1828,66 @@ footer {
 }
 
 .box:hover img {
-  transform: scale(1.20);       /* Zoom solo en la imagen */
+  transform: scale(1.20);     /* Zoom solo en la imagen */
 }
 
-
-
-
 /*-------------------------- FIN ESPACIO CURSOS Y AYUDAS --------------------------------------*/
+/*-------------------------- INICIO ESPACIO TIENDA --------------------------------------*/
+.box2 {
+  flex: 1 1 300px;             /* se adaptan al ancho disponible */
+  max-width: 500px;            /* tamaño máximo por caja */
+  background-color: #fff;      /* fondo blanco para resaltar*/
+  border-radius: 10px;           /* Bordes suaves */
+  box-shadow: 0 0 10px rgba(0,0,0,0.9);
+  text-align: justify;
+  padding: 20px;
+  /*display: flex;*/
+  display: inline-block;  
+  flex-direction: column;      /* mantiene orden vertical */
+  justify-content: flex-start; /* textos alineados arriba */
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /*overflow: hidden;*/
+  overflow: visible; /* permite que el tooltip se vea completo */  
+  margin: auto;
+  position: relative;
+  vertical-align: top;
+  margin-bottom: 50px;
+  margin-top: -100px;
+  height: 1150px;
+}
+
+.box2 img {
+  width: 250%;
+  height: auto;
+  object-fit: contain;     /* muestra toda la imagen sin recortar */
+  background-color: #f5f5f5;  /* fondo neutro para imágenes más pequeñas */
+  border-radius: 8px;
+  transition: transform 0.4s ease;
+  border-bottom: 2px solid #eee; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+}
+  .box2 center {
+    font-size: 1rem;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 5px;
+    width: 450px;
+  }
+  .box2 .tooltip img {
+
+    display: block;
+    margin-bottom: 5px;
+    max-width:  450px;
+  }
+  .pie{
+    display: block;
+    background-color: #ffdf00;
+    color: black;
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+  }
+/*-------------------------- FIN ESPACIO TIENDA --------------------------------------*/
 

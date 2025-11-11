@@ -799,6 +799,26 @@ footer {
 .social-icons a:hover img {
   filter: brightness(1.2) saturate(2); /* efecto al pasar el ratón */
 }
+
+    /* Logo */
+  .pieLogo {
+  width: 75px;
+  height: auto;
+  display: block;
+  }
+
+.pieLogo:hover{
+  transform: scale(1.14);
+  box-shadow: 0 6px 25px rgba(255, 111, 0, 0.6);
+  border: 5px solid rgba(255, 111, 0, 2);
+  border-radius: 10px;
+}
+
+
+
+
+
+
 /* ================= ICONOS VISIBLES EN MÓVIL ================= */
 @media (hover: none) and (pointer: coarse) {
   .social-icons img {
@@ -1880,6 +1900,7 @@ footer {
     margin-bottom: 5px;
     max-width:  450px;
   }
+
   .pie{
     display: block;
     background-color: #ffdf00;

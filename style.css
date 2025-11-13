@@ -12,6 +12,9 @@ body {
   background-color: #e1d8ea;
   color: #333;
 }
+main{
+  margin-top: 120px;
+}
 .contenedor {
   display: flex;
   align-items: center;
@@ -59,7 +62,7 @@ body {
 /* ===== HEADER ===== */
 header {
   width: 100%;
-  height:30%;
+  height:20%;
   position: fixed;
   top: 0;
   background: url("./image/banner8.png") no-repeat center;
@@ -401,8 +404,8 @@ nav a.active {
 .hero {
   position: relative;     /* necesario para overlays y pseudo-elementos */
   width: 100%;            /* ocupa todo el ancho disponible */
-  height: 100vh;          /* o el alto que necesites */
-  margin: 50px 0 0 0;     /* sube un poco (ajusta 50px según necesites) */
+  height: 100%;          /* o el alto que necesites */
+  /*margin: 50px 0 0 0;     /* sube un poco (ajusta 50px según necesites) */
   padding: 0;
   display: flex;          
   align-items: center;    /* mantiene centrado verticalmente el contenido */
@@ -412,6 +415,7 @@ nav a.active {
   background-color: #F5B027;
   min-height: 100vh; /* ocupa toda la altura visible del móvil */
   padding: 40px 0;
+
 }
 
 .hero::before {
@@ -420,7 +424,6 @@ nav a.active {
   inset: 0;
   /*opacity: 0.1;*/
   background-color:#F5B027 ;
-  /*background: rgba(0, 0, 0, 0.5);*/
   pointer-events: none; /* 🔹 esta línea es para hacer efectivo en enlace al pulsar sobre el en responsive */
 }
 .hero-content {
@@ -455,6 +458,9 @@ nav a.active {
   transition: transform 0.3s ease;
   box-sizing: border-box;
   opacity: 0.9; /* 0 = totalmente invisible, 1 = totalmente opaca */
+  border-radius: 20px;
+  margin: 0px 20px;
+
 }
 
 /* --- Texto dentro --- */
@@ -467,6 +473,7 @@ nav a.active {
   margin:  auto;
   max-width: 400px;
   border: 2px solid #F5B027;
+
 }
 .hero a{
   text-decoration: none;
@@ -917,12 +924,12 @@ footer {
 /* ---------------------------------------- INICIO PAGINA CONTACTO ------------------------------------*/
 /* === SECCIÓN DE CONTACTO === */
 .contacto-section {
-  background: #f9f9f9;
+
   padding: 60px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+  margin-top: -40px;
 }
 
 .contacto-container {
@@ -1349,7 +1356,7 @@ footer {
   width: 100%;
   border: 2px solid #ccc;  /* marco general del bloque */
   padding: 10px;
-  margin-top: 50px;
+
 
 }
 
@@ -1358,16 +1365,20 @@ footer {
   padding: 10px;
   background-color: lightblue;
   border-right: 2px solid #888; /* línea de separación entre texto e imagen */
-  height: 500px;
+  border-radius: 20px;
+  height: 470px;
+  margin-top: -100px;
 }
 
 .imagen1 {
   flex: 1;                 
-  width: 100%;
+  width: 80%;
   height: auto;
   object-fit: cover;
   border-left: 2px solid #888;  /* opcional, para simetría */
-  padding-left: 10px;           /* separa la imagen del borde */
+  /*padding-left: 10px;            separa la imagen del borde */
+  margin-top: -100px;
+  border-radius: 20px;
 }
 @media (max-width: 768px) {
   .contenedor1 {
@@ -1418,7 +1429,7 @@ footer {
   margin: auto;
   position: relative;
   vertical-align: top;
-  margin-bottom: 50px;
+  margin-bottom: 60px;
   height: 450px;
 }
 /* 🖼️ Todas las imágenes iguales */
@@ -1476,11 +1487,11 @@ footer {
 /* Tooltip desplegable hacia abajo */
 .tooltip .tooltiptext {
   width: 130%; /* un poco más ancho que el box1 */
-  max-height: 400px; /* altura máxima */
+  max-height: 490px; /* altura máxima */
   overflow-y: auto; /* permite scroll si es más alto */
   position: absolute;
   z-index: 9999;
-  top: 40%; 
+  top: 10%; 
   left: -35px;
   background-color: #ffdf00;
   color: black;
@@ -1646,7 +1657,7 @@ footer {
     margin-top: 200px;
    }
   section{
-    margin-top: 250px;
+    margin-top: 120px;
   }
   section h1{
     margin-top: 250px;
@@ -1825,6 +1836,7 @@ footer {
   position: relative;
   vertical-align: top;
   margin-bottom: 50px;
+  margin-top: -80px;
   height: 550px;
 }
 /* 🖼️ Todas las imágenes iguales */

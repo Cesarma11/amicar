@@ -9,6 +9,97 @@
   <link rel="stylesheet" href="style.css">
   <!-- =================== FIN HEAD =================== -->
 </head>
+<style>
+
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+  .table-container {
+    overflow-x: auto;
+    /*background: #fff;*/
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 60%;
+    min-width: 600px;
+  }
+
+  thead {
+    background-color: #0056b3;
+    color: #fff;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 1px solid #e0e0e0;
+    vertical-align: top;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  th:first-child, td:first-child {
+    text-align: center;
+    width: 6%;
+    white-space: nowrap;
+  }
+
+  th:last-child, td:last-child {
+    text-align: center;
+    width: 10%;
+    font-weight: bold;
+  }
+
+  /* Responsive diseño para móvil */
+  @media (max-width: 700px) {
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 15px;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      padding: 10px;
+    }
+
+    td {
+      border: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+    }
+
+    td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: #0056b3;
+      flex-basis: 45%;
+      text-align: left;
+    }
+
+    td:last-child {
+      font-weight: 700;
+      color: #222;
+    }
+  }
+</style>
+
+
 <body>
   <!-- SCRIPTS -->
   <script src="include.js"></script>
@@ -20,7 +111,7 @@
   <!-- =================== SECCIÓN HERO / ENLACES ÚTILES =================== -->
   <section class="hero" id="inicio">
     <div class="hero-content">
-      <div class="hero-grid">
+      <div class="hero-grid" style="height: 300px;">
         <!-- Incidencias de tráfico -->
         <div class="hero-item" style="background-image: url('image/incidenciasTrafico.jpg');">
           <br>
@@ -50,9 +141,145 @@
     </div>
   </section>
   <!-- =================== FIN SECCIÓN HERO =================== -->
+  <!------------------------------------- SECCIÓN PUNTOS --------------------------------------------------------->
+  <section style="margin: 40px auto; max-width: 1200px; text-align: center;">
+
+    <h2 style="margin-bottom: 20px;">Conoce los tipos de infracciones y sanciones</h2>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 50px;">
+
+      <div style="max-width: 1000px; text-align: justify;">
+        <h4>
+          Conducir excediendo los límites de velocidad, tras el consumo de alcohol o sin cinturón de seguridad 
+          son infracciones por las que pueden multarte. Hay otras infracciones que pueden ser desconocidas para ti, 
+          te explicamos todo lo que necesitas saber sobre las sanciones.
+        </h4>
+      </div>
+
+      <img src="./image/tiposInfracciones.png" alt="Tipos de infracciones" 
+          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+      <div style="max-width: 1000px; text-align: justify;">
+        <h4>
+          Las infracciones más comunes y que generan un mayor número de sanciones son las referentes a: <br><br>
+          ✓ Exceso de velocidad <br>
+          ✓ Consumo de alcohol y drogas <br>
+          ✓ No llevar puesto el cinturón <br>
+          ✓ Uso del teléfono móvil <br><br>
+          También son generalizadas las sanciones por conducir con el permiso caducado, no tener la ITV al día o conducir sin el seguro obligatorio del vehículo.
+        </h4>    
+      </div>
+
+      <img src="./image/sanciones.png" alt="Sanciones" 
+          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+      <div style="max-width: 1000px; text-align: justify;">
+        <h4>
+          Por la gravedad de los hechos es posible que la sanción económica llegue a ser mayor. Puedes consultar los detalles de cada tipo de infracción más abajo.
+          Vamos a repasar las principales infracciones que se cometen al volante, la cuantía de las multas y los puntos del permiso que se pierden. No olvides que, cuando no
+          se respetan las reglas de tráfico, nos arriesgamos a perder algo mucho más valioso que algo de dinero y/o unos puntos.
+        </h4>
+      </div>
+
+      <div style="text-align: left; width: 1000px;">
+        <h4>Exceso de velocidad:</h4>
+      </div>
+
+      <img src="./image/tiposSancion.png" alt="Tipos de sanción" 
+          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+      <div style="text-align: left; width: 1000px;">
+        <h4>Alcohol y drogas:</h4>
+      </div>
+
+      <img src="./image/sancionAlcohol.png" alt="Tipos de sanción" 
+          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+      <div style="text-align: left; width: 1000px;">
+        <h4>Dispositivos móviles:</h4>
+      </div>
+
+      <img src="./image/sancionMoviles.png" alt="Tipos de sanción" 
+          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+      <div style="text-align: left; width: 1000px;">
+        <h4>Casco, cinturón y SRI:</h4>
+      </div>
+
+      <img src="./image/sancionCasco.png" alt="Tipos de sanción" 
+          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+      <div style="text-align: left; width: 1000px;">
+        <h4>Circulación prohibida o contraria:</h4>
+      </div>
+
+      <img src="./image/sancionCirculacion.png" alt="Tipos de sanción" 
+          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+      <div style="text-align: left; width: 1000px;">
+        <h4>Distancia de seguridad:</h4>
+      </div>
+
+      <img src="./image/sancionDistancia.png" alt="Tipos de sanción" 
+          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+
+      <div style="text-align: left; width: 1000px;">
+        <h4>Ciclistas y peatones:</h4>
+      </div>
+
+      <img src="./image/sancionCiclista.png" alt="Tipos de sanción" 
+          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    </div>
+  </section>
+  <h2>Infracciones y Pérdida de Puntos</h2>
+  <div class="table-container">
+  <center>
+      <table>
+      <thead>
+          <tr>
+          <th>Nº</th>
+          <th>Infracción</th>
+          <th>Puntos</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr><td data-label="Nº">1a</td><td data-label="Infracción">Conducir con ingesta de alcohol superior a la establecida por la ley: no superar unos valores mg/l aire espirado de 0,50 (hasta 0,30 mg/l aquellos profesionales y titulares de permisos de conducción con menos de dos años de antigüedad).</td><td data-label="Puntos">6</td></tr>
+          <tr><td data-label="Nº">1b</td><td data-label="Infracción">No rebasar valores mg/l aire aspirado desde 0,25 hasta 0,50 (desde 0,15 hasta 0,30 mg/l aquellos profesionales y titulares de permisos de conducción con menos de dos años de antigüedad).</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">2</td><td data-label="Infracción">Conducir bajo los efectos de las drogas (estupefacientes, psicotrópicos, estimulantes y otras sustancias de efectos análogos).</td><td data-label="Puntos">6</td></tr>
+          <tr><td data-label="Nº">3</td><td data-label="Infracción">No someterse a la obligación de realizar las pruebas de detección del grado de alcoholemia, estupefacientes, psicotrópicos, estimulantes y otras sustancias de efectos análogos.</td><td data-label="Puntos">6</td></tr>
+          <tr><td data-label="Nº">4</td><td data-label="Infracción">Conducción manifiestamente temeraria, circular en sentido contrario al establecido o competiciones y carreras no autorizadas.</td><td data-label="Puntos">6</td></tr>
+          <tr><td data-label="Nº">5</td><td data-label="Infracción">Circular por autopistas o autovías con vehículos expresamente prohibidos para ello.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">6</td><td data-label="Infracción">Conducir a más de un 50% de la velocidad máxima autorizada en dicha vía, siempre que suponga superar al menos en 30 km/h la velocidad máxima permitida.</td><td data-label="Puntos">6</td></tr>
+          <tr><td data-label="Nº">7</td><td data-label="Infracción">Excederse en más del 50% en los tiempos máximos de conducción o reducir en más del 50% los tiempos mínimos de descanso establecidos en la ley.</td><td data-label="Puntos">6</td></tr>
+          <tr><td data-label="Nº">8</td><td data-label="Infracción">Conducir un vehículo con un número de pasajeros superior al 50% o más del número de plazas autorizadas (salvo autobuses urbanos o interurbanos).</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">9</td><td data-label="Infracción">Conducir un vehículo sin contar con el permiso o la licencia específica y pertinente para ello.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">10</td><td data-label="Infracción">Conducir negligentemente, siendo o creando un riesgo cierto y relevante para otros conductores.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">11a</td><td data-label="Infracción">Conducir a mayor velocidad de los límites máximos establecidos: más de 40 km/h salvo que esté incurso en lo indicado en el apartado.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">11b</td><td data-label="Infracción">Más de 30 km/h hasta 40 km/h.</td><td data-label="Puntos">3</td></tr>
+          <tr><td data-label="Nº">11c</td><td data-label="Infracción">Más de 20 km/h hasta 30 km/h.</td><td data-label="Puntos">2</td></tr>
+          <tr><td data-label="Nº">12</td><td data-label="Infracción">Infringir o ignorar las disposiciones legales sobre prioridad de paso, señal de stop o semáforos con la luz roja encendida.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">13</td><td data-label="Infracción">Realizar adelantamientos en los que se ponga en peligro o entorpezca a otros conductores en sentido contrario, o en lugares o circunstancias de visibilidad reducida.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">14</td><td data-label="Infracción">Realizar adelantamientos en los que se entorpezca o se ponga en peligro a ciclistas.</td><td data-label="Puntos">6</td></tr>
+          <tr><td data-label="Nº">15</td><td data-label="Infracción">Realizar un cambio de sentido incumpliendo las disposiciones legales y los términos establecidos reglamentariamente.</td><td data-label="Puntos">3</td></tr>
+          <tr><td data-label="Nº">16</td><td data-label="Infracción">Circular marcha atrás en autopistas y autovías.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">17</td><td data-label="Infracción">Dificultar o impedir el adelantamiento a otro conductor aumentando la velocidad o efectuando maniobras para dicho propósito.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">18</td><td data-label="Infracción">No respetar las señales de los agentes que regulan la circulación.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">19</td><td data-label="Infracción">Mantener una distancia de seguridad con el vehículo que le precede inferior al mínimo establecido por ley.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">20</td><td data-label="Infracción">Conducir utilizando cualquier tipo de casco de audio, auriculares o dispositivos de telefonía móvil que disminuyan la atención a la conducción.</td><td data-label="Puntos">3</td></tr>
+          <tr><td data-label="Nº">21</td><td data-label="Infracción">Conducir vehículos con sistemas o mecanismos para eludir la vigilancia o detección de radares.</td><td data-label="Puntos">6</td></tr>
+          <tr><td data-label="Nº">22</td><td data-label="Infracción">Conducir sin cinturón de seguridad, casco u otros elementos de protección reglamentarios.</td><td data-label="Puntos">4</td></tr>
+          <tr><td data-label="Nº">23</td><td data-label="Infracción">Circular con menores de 12 años como pasajeros de motocicletas o ciclomotores, salvo excepciones.</td><td data-label="Puntos">2</td></tr>
+          <tr><td data-label="Nº">24</td><td data-label="Infracción">Utilizar, sujetando con la mano, dispositivos de telefonía móvil mientras se conduce.</td><td data-label="Puntos">6</td></tr>
+      </tbody>
+      </table>
+  </center>
+
+  <!------------------------------------- FIN SECCION PUNTOS --------------------------------------------------------->
 
   <!-- =================== SECCIÓN IMÁGENES DE SEÑALES =================== -->
-  <h1>LAS 20 MÁS NOVEDOSAS</h1>
+  <br><br>
+  <center><h1>LAS 20 SEÑALES MÁS NOVEDOSAS</h1></center>
+  <br><br>
 
   <!-- Contenedores de imágenes, se pueden agrupar por filas -->
   <div class="contenedor-imagenes">

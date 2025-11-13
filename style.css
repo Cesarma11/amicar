@@ -121,12 +121,12 @@ header {
   margin-top: -55px; /* sube un poco los títulos */ 
 }
 .titles h1{
-  font-size: 22px;
+  font-size: 24px;
   margin-left: -20px;
 }
 /* h1 Amicar */
 .titles .titlesh{
-  font-size: 45px;
+  font-size: 50px;
 }
 
 /* Estilos para el enlace 'permiso de residencia para extranjeros' */
@@ -1696,7 +1696,7 @@ footer {
     max-height: 100vh;
     font-size: 13px;
     padding: 8px;
-    z-index: 99999999;
+    z-index: 9999999;
   }
   .special-tooltip .tooltip-wrapper {
     flex-direction: column;
@@ -1708,11 +1708,11 @@ footer {
     margin-top: 10px;
   }
 
-@media (max-width: 768px) {
   .special-tooltip.open {
     margin-bottom: 700px; /* o auto según el contenido */
-    z-index: 9999;
+    z-index: 999999;
   }
+  
 }
 /* =================== TOOLTIP NORMAL =================== */
 .tooltip {
@@ -1923,7 +1923,4 @@ footer {
     border-radius: 20px;
   }
 /*-------------------------- FIN ESPACIO TIENDA --------------------------------------*/
-
-
-
 

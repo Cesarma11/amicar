@@ -121,12 +121,12 @@ header {
   margin-top: -55px; /* sube un poco los títulos */ 
 }
 .titles h1{
-  font-size: 28px;
+  font-size: 24px;
   margin-left: -20px;
 }
 /* h1 Amicar */
 .titles .titlesh{
-  font-size: 55px;
+  font-size: 50px;
 }
 
 /* Estilos para el enlace 'permiso de residencia para extranjeros' */

@@ -1490,7 +1490,7 @@ footer {
   max-height: 490px; /* altura máxima */
   overflow-y: auto; /* permite scroll si es más alto */
   position: absolute;
-  z-index: 9999;
+  z-index: 99999;
   top: 10%; 
   left: -35px;
   background-color: #ffdf00;
@@ -1696,7 +1696,7 @@ footer {
     max-height: 100vh;
     font-size: 13px;
     padding: 8px;
-    z-index: 10000;
+    z-index: 99999999;
   }
   .special-tooltip .tooltip-wrapper {
     flex-direction: column;
@@ -1923,6 +1923,7 @@ footer {
     border-radius: 20px;
   }
 /*-------------------------- FIN ESPACIO TIENDA --------------------------------------*/
+
 
 
 

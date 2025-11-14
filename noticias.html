@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="style.css">
   <!-- =================== FIN HEAD =================== -->
 </head>
+
 <style>
 
   h2 {
@@ -19,15 +20,16 @@
 
   .table-container {
     overflow-x: auto;
-    /*background: #fff;*/
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
+  /* ======= TABLA EN ESCRITORIO ======= */
   table {
     border-collapse: collapse;
     width: 60%;
     min-width: 600px;
+    margin: 0 auto;
   }
 
   thead {
@@ -40,6 +42,7 @@
     padding: 12px 10px;
     border-bottom: 1px solid #e0e0e0;
     vertical-align: top;
+    white-space: normal;
   }
 
   tr:nth-child(even) {
@@ -58,10 +61,14 @@
     font-weight: bold;
   }
 
-  /* Responsive diseño para móvil */
-  @media (max-width: 700px) {
-    table, thead, tbody, th, td, tr {
-      display: block;
+
+  /* ======= RESPONSIVE MÓVIL ======= */
+  @media (max-width: 769px) {
+
+    table {
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
     }
 
     thead {
@@ -69,48 +76,117 @@
     }
 
     tr {
-      margin-bottom: 15px;
-      border-radius: 10px;
-      background: #fff;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+      display: block;
+      width: 100% !important;
+      margin-bottom: 20px;
       padding: 10px;
+      background: #fff;
+      border-radius: 10px;
+      box-sizing: border-box;
     }
 
     td {
-      border: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 0;
+      display: block;
+      width: 100% !important;
+      box-sizing: border-box;
+      white-space: normal !important;
+      overflow-wrap: break-word !important;
+      word-wrap: break-word !important;
+      word-break: break-word !important;
     }
 
     td::before {
       content: attr(data-label);
-      font-weight: 600;
+      display: block;
+      font-weight: bold;
       color: #0056b3;
-      flex-basis: 45%;
-      text-align: left;
-    }
-
-    td:last-child {
-      font-weight: 700;
-      color: #222;
+      margin-bottom: 4px;
+      white-space: normal !important;
     }
   }
+
+
+  /* ================= CONTENIDO GENERAL ================= */
+
+  .infracciones-section {
+    margin: 40px auto;
+    max-width: 1200px;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .infracciones-section h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+
+  .section-content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .text-block {
+    max-width: 1000px;
+    text-align: justify;
+    margin: 0 auto;
+  }
+
+  .section-image {
+    width: 100%;
+    max-width: 1100px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    .section-content {
+      gap: 30px;
+    }
+
+    .text-block {
+      max-width: 95%;
+    }
+
+    .section-image {
+      max-width: 90%;
+    }
+
+    .infracciones-section h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  /* Permite que nada fuerce ampliación del layout */
+  * {
+    min-width: 0 !important;
+  }
+
 </style>
 
 
+
 <body>
-  <!-- SCRIPTS -->
-  <script src="include.js"></script>
-  <!-- =================== ENCABEZADO =================== -->
-  <!-- Este div incluirá el encabezado común en todas las páginas -->
-  <div data-include="encabezadoPagina.html"></div>
-  <!-- =================== FIN ENCABEZADO =================== -->
+  <!-- =================== ENCABEZADO PÁGINA =================== -->
+  <header>
+    <!-- =================== HEADER =================== -->
+    <!-- =================== SCRIPTS =================== -->
+    <script src="include.js"></script>
+    <!-- =================== FIN SCRIPTS =================== -->
+    <!-- =================== ENCABEZADO =================== -->
+    <!-- Este div incluirá el encabezado común en todas las páginas -->
+    <div data-include="encabezadoPagina.html"></div>
+    <!-- =================== FIN ENCABEZADO PÁGINA =================== -->
+    <!-- =================== FIN HEADER =================== -->
+  </header>
 
   <!-- =================== SECCIÓN HERO / ENLACES ÚTILES =================== -->
-  <section class="hero" id="inicio">
-    <div class="hero-content">
+  <section class="hero2" >
+
       <div class="hero-grid" style="height: 300px;">
         <!-- Incidencias de tráfico -->
         <div class="hero-item" style="background-image: url('image/incidenciasTrafico.jpg');">
@@ -136,103 +212,88 @@
         <!-- Noticias DGT -->
         <div class="hero-item" style="background-image: url('image/dgt.png');">
           <a target="_blank" href="https://www.dgt.es/comunicacion/notas-de-prensa/"><h1>NOTICIAS DE LA DGT</h1></a>
-        </div>
+
       </div>
     </div>
   </section>
   <!-- =================== FIN SECCIÓN HERO =================== -->
   <!------------------------------------- SECCIÓN PUNTOS --------------------------------------------------------->
-  <section style="margin: 40px auto; max-width: 1200px; text-align: center;">
+<section class="infracciones-section">
+  <h2>Conoce los tipos de infracciones y sanciones</h2>
 
-    <h2 style="margin-bottom: 20px;">Conoce los tipos de infracciones y sanciones</h2>
+  <div class="section-content">
 
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 50px;">
-
-      <div style="max-width: 1000px; text-align: justify;">
-        <h4>
-          Conducir excediendo los límites de velocidad, tras el consumo de alcohol o sin cinturón de seguridad 
-          son infracciones por las que pueden multarte. Hay otras infracciones que pueden ser desconocidas para ti, 
-          te explicamos todo lo que necesitas saber sobre las sanciones.
-        </h4>
-      </div>
-
-      <img src="./image/tiposInfracciones.png" alt="Tipos de infracciones" 
-          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-
-      <div style="max-width: 1000px; text-align: justify;">
-        <h4>
-          Las infracciones más comunes y que generan un mayor número de sanciones son las referentes a: <br><br>
-          ✓ Exceso de velocidad <br>
-          ✓ Consumo de alcohol y drogas <br>
-          ✓ No llevar puesto el cinturón <br>
-          ✓ Uso del teléfono móvil <br><br>
-          También son generalizadas las sanciones por conducir con el permiso caducado, no tener la ITV al día o conducir sin el seguro obligatorio del vehículo.
-        </h4>    
-      </div>
-
-      <img src="./image/sanciones.png" alt="Sanciones" 
-          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-
-      <div style="max-width: 1000px; text-align: justify;">
-        <h4>
-          Por la gravedad de los hechos es posible que la sanción económica llegue a ser mayor. Puedes consultar los detalles de cada tipo de infracción más abajo.
-          Vamos a repasar las principales infracciones que se cometen al volante, la cuantía de las multas y los puntos del permiso que se pierden. No olvides que, cuando no
-          se respetan las reglas de tráfico, nos arriesgamos a perder algo mucho más valioso que algo de dinero y/o unos puntos.
-        </h4>
-      </div>
-
-      <div style="text-align: left; width: 1000px;">
-        <h4>Exceso de velocidad:</h4>
-      </div>
-
-      <img src="./image/tiposSancion.png" alt="Tipos de sanción" 
-          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-
-      <div style="text-align: left; width: 1000px;">
-        <h4>Alcohol y drogas:</h4>
-      </div>
-
-      <img src="./image/sancionAlcohol.png" alt="Tipos de sanción" 
-          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-
-      <div style="text-align: left; width: 1000px;">
-        <h4>Dispositivos móviles:</h4>
-      </div>
-
-      <img src="./image/sancionMoviles.png" alt="Tipos de sanción" 
-          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-
-      <div style="text-align: left; width: 1000px;">
-        <h4>Casco, cinturón y SRI:</h4>
-      </div>
-
-      <img src="./image/sancionCasco.png" alt="Tipos de sanción" 
-          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-
-      <div style="text-align: left; width: 1000px;">
-        <h4>Circulación prohibida o contraria:</h4>
-      </div>
-
-      <img src="./image/sancionCirculacion.png" alt="Tipos de sanción" 
-          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-
-      <div style="text-align: left; width: 1000px;">
-        <h4>Distancia de seguridad:</h4>
-      </div>
-
-      <img src="./image/sancionDistancia.png" alt="Tipos de sanción" 
-          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-
-      <div style="text-align: left; width: 1000px;">
-        <h4>Ciclistas y peatones:</h4>
-      </div>
-
-      <img src="./image/sancionCiclista.png" alt="Tipos de sanción" 
-          style="width: 100%; max-width: 1100px; height: auto; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+    <div class="text-block">
+      <h4>
+        Conducir excediendo los límites de velocidad, tras el consumo de alcohol o sin cinturón de seguridad 
+        son infracciones por las que pueden multarte. Hay otras infracciones que pueden ser desconocidas para ti, 
+        te explicamos todo lo que necesitas saber sobre las sanciones.
+      </h4>
     </div>
-  </section>
+
+    <img src="./image/tiposInfracciones.png" alt="Tipos de infracciones" class="section-image">
+
+    <div class="text-block">
+      <h4>
+        Las infracciones más comunes y que generan un mayor número de sanciones son las referentes a: <br><br>
+        ✓ Exceso de velocidad <br>
+        ✓ Consumo de alcohol y drogas <br>
+        ✓ No llevar puesto el cinturón <br>
+        ✓ Uso del teléfono móvil <br><br>
+        También son generalizadas las sanciones por conducir con el permiso caducado, no tener la ITV al día o conducir sin el seguro obligatorio del vehículo.
+      </h4>    
+    </div>
+
+    <img src="./image/sanciones.png" alt="Sanciones" class="section-image">
+
+    <div class="text-block">
+      <h4>
+        Por la gravedad de los hechos es posible que la sanción económica llegue a ser mayor. Puedes consultar los detalles de cada tipo de infracción más abajo.
+        Vamos a repasar las principales infracciones que se cometen al volante, la cuantía de las multas y los puntos del permiso que se pierden. No olvides que, cuando no
+        se respetan las reglas de tráfico, nos arriesgamos a perder algo mucho más valioso que algo de dinero y/o unos puntos.
+      </h4>
+    </div>
+
+    <!-- Ejemplos de sanciones -->
+    <div class="text-block">
+      <h4>Exceso de velocidad:</h4>
+    </div>
+    <img src="./image/tiposSancion.png" alt="Tipos de sanción" class="section-image">
+
+    <div class="text-block">
+      <h4>Alcohol y drogas:</h4>
+    </div>
+    <img src="./image/sancionAlcohol.png" alt="Tipos de sanción" class="section-image">
+
+    <div class="text-block">
+      <h4>Dispositivos móviles:</h4>
+    </div>
+    <img src="./image/sancionMoviles.png" alt="Tipos de sanción" class="section-image">
+
+    <div class="text-block">
+      <h4>Casco, cinturón y SRI:</h4>
+    </div>
+    <img src="./image/sancionCasco.png" alt="Tipos de sanción" class="section-image">
+
+    <div class="text-block">
+      <h4>Circulación prohibida o contraria:</h4>
+    </div>
+    <img src="./image/sancionCirculacion.png" alt="Tipos de sanción" class="section-image">
+
+    <div class="text-block">
+      <h4>Distancia de seguridad:</h4>
+    </div>
+    <img src="./image/sancionDistancia.png" alt="Tipos de sanción" class="section-image">
+
+    <div class="text-block">
+      <h4>Ciclistas y peatones:</h4>
+    </div>
+    <img src="./image/sancionCiclista.png" alt="Tipos de sanción" class="section-image">
+
+  </div>
+</section>
   <h2>Infracciones y Pérdida de Puntos</h2>
-  <div class="table-container">
+<div class="table-container">
   <center>
       <table>
       <thead>
@@ -273,7 +334,7 @@
       </tbody>
       </table>
   </center>
-
+</div>
   <!------------------------------------- FIN SECCION PUNTOS --------------------------------------------------------->
 
   <!-- =================== SECCIÓN IMÁGENES DE SEÑALES =================== -->

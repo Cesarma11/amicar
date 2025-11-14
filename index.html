@@ -10,53 +10,66 @@
   <!-- =================== FIN HEAD =================== -->
 </head>
 <body>
-  <!-- =================== SCRIPTS =================== -->
-  <script src="include.js"></script>
-  <!-- =================== FIN SCRIPTS =================== -->
-  <!-- =================== ENCABEZADO =================== -->
-  <!-- Este div incluirá el encabezado común en todas las páginas -->
-  <div data-include="encabezadoPagina.html"></div>
-  <!-- =================== FIN ENCABEZADO =================== -->
+  
+  <!-- =================== ENCABEZADO PÁGINA =================== -->
+  <header>
+    <!-- =================== HEADER =================== -->
+    <!-- =================== SCRIPTS =================== -->
+    <script src="include.js"></script>
+    <!-- =================== FIN SCRIPTS =================== -->
+    <!-- =================== ENCABEZADO =================== -->
+    <!-- Este div incluirá el encabezado común en todas las páginas -->
+    <div data-include="encabezadoPagina.html"></div>
+    <!-- =================== FIN ENCABEZADO PÁGINA =================== -->
+    <!-- =================== FIN HEADER =================== -->
+  </header>
+
+
 
   <!-- =================== CONTENIDO PRINCIPAL =================== -->
 
     <!-- =================== HERO / SECCIÓN PRINCIPAL TRES CUADROS PRINCIPALES=================== -->
-    <section class="hero" id="inicio">
-      <div class="hero-content">
-        <div class="hero-grid">
-          <!-- Item Autoescuelas -->
-          <div class="hero-item" style="background-image: url('image/autoescuela3.png');">
-            <br>
-            <a href="autoescuela.html"><h1>AUTOESCUELAS</h1></a>
-          </div>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <div class="hero-grid">
+        <!-- Item Autoescuelas -->
+        <div class="hero-item" style="background-image: url('image/autoescuela3.png');">
+          <br>
+          <a href="autoescuela.html"><h1>AUTOESCUELAS</h1></a>
+        </div>
 
-          <!-- Item Formación -->
-          <div class="hero-item" style="background-image: url('image/formacion2.png');">
-            <div class="hero-text" style="flex-direction: column;">
-              <a href="formacion.html"><h1>FORMACIÓN</h1></a>  
-              <!--        
-              <a class="hero2" href="online.html">
-                <img src="image/online.png" alt="Formación Online">
-              </a>-->
-            </div>
-          </div>
-
-          <!-- Item Cursos gratuitos -->
-          <div class="hero-item" style="background-image: url('image/cursos.png'); background-size: 65%;">
-            <a href="cursos.html"><h1>CURSOS GRATUITOS y AYUDAS</h1></a>
+        <!-- Item Formación -->
+        <div class="hero-item" style="background-image: url('image/formacion2.png');">
+          <div class="hero-text" style="flex-direction: column;">
+            <a href="formacion.html"><h1>FORMACIÓN</h1></a>  
+            <!--        
+            <a class="hero2" href="online.html">
+              <img src="image/online.png" alt="Formación Online">
+            </a>-->
           </div>
         </div>
-      </div>
-    </section>
-    <!-- =================== FIN HERO / SECCIÓN PRINCIPAL =================== -->
 
-  <!-- =================== FIN CONTENIDO PRINCIPAL =================== -->
+        <!-- Item Cursos gratuitos -->
+        <div class="hero-item" style="background-image: url('image/cursos.png'); background-size: 65%;">
+          <a href="cursos.html"><h1>CURSOS GRATUITOS y AYUDAS</h1></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- =================== FIN HERO / SECCIÓN PRINCIPAL =================== -->
 
   <!-- =================== PIE DE PÁGINA =================== -->
   <!-- Este div incluirá el pie común en todas las páginas -->
   <div data-include="piePagina.html"></div>
   <!-- =================== FIN PIE DE PÁGINA =================== -->
 
+<script>
+  const hamburger = document.getElementById("hamburger");
+  const menu = document.getElementById("menu");
 
+  hamburger.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+</script>
 </body>
 </html>

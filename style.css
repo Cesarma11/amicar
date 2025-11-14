@@ -7,7 +7,7 @@
 /* Espacio general debajo del header (para escritorio) */
 body {
   margin: 0;
-  padding-top: 100px; /* Ajusta a la altura de tu header */
+  padding-top: 0px; /* Ajusta la altura del header */
   font-family: Arial, sans-serif;
   background-color: #e1d8ea;
   color: #333;
@@ -56,127 +56,10 @@ main{
 @media (max-width: 768px) {
   body {
     padding-top: 40px;
+    margin-top: 0px;
   }
 }
 
-/* ===== HEADER ===== */
-header {
-  width: 100%;
-  height:20%;
-  position: fixed;
-  top: 0;
-  background: url("./image/banner8.png") no-repeat center;
-  background-size: cover;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  z-index: 1000;
-}
-
-
-/* Top bar: logo + h1 + hamburguesa */
-.top-bar {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  flex-grow: 1;           /* ocupa todo el espacio disponible */
-  justify-content: flex-start; /* todo pegado a la izquierda */; 
-  padding: 10px 20px;   
-}
-
-/* Logo *//* Ajuste del logo principal */
-.top-bar a img {
-  width: 140px;
-  height: auto;
-  display: block;
-}
-/* EFECTO ZOOM AL ACERCAR EL RATON AL LOGO */
-.top-bar a img:hover {
-  transform: scale(1.14);
-  box-shadow: 0 6px 25px rgba(255, 111, 0, 0.6);
-  border: 5px solid rgba(255, 111, 0, 2);
-  border-radius: 10px;
-}
-
-/* Estilo de los títulos */
-.top-bar h1 {
-  font-size: 20px;
-  color: red;
-  margin: 0;
-  line-height: 1.1;
-  white-space: nowrap;
-  text-align: center;
-  text-shadow: 
-    1px 1px 2px black,
-    0 0 10px rgba(255,0,0,0.5);/*efecto sombra brillante*/
-}
-/*------------------------------------------------------------inicio espacio titles2 enlace encabezado-------------------------*/
-/* Estilo de los títulos */
-.titles {
-  display: flex;
-  flex-direction: column; /* ← esto apila los h1 verticalmente */
-  margin-left: 15px; /* separa los títulos del logo */
-  margin-top: -55px; /* sube un poco los títulos */ 
-}
-.titles h1{
-  font-size: 24px;
-  margin-left: -20px;
-}
-/* h1 Amicar */
-.titles .titlesh{
-  font-size: 50px;
-}
-
-/* Estilos para el enlace 'permiso de residencia para extranjeros' */
-.titles2 {
-  position: absolute;
-  top: 15px;
-  right: 0;
-  padding: 15px 30px;
-  background: linear-gradient(90deg, #fff8e7, #ff9f1c, #d72638);
-  /*background: linear-gradient(90deg, white, #ff6600, #ff0055);*/
-  background-size: 300% 300%;
-  border-bottom-left-radius: 25px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-  animation: moveGradient 6s ease infinite, slideIn 1.2s ease forwards;
-  animation-delay: 0s, 0.2s; /* empieza el deslizamiento después de un momento */
-  opacity: 0;
-  width: 600px;
-  height: 50px;
-  display: flex;
-  align-items: center;      /* centra verticalmente */
-  justify-content: center;  /* opcional: centra el texto y la imagen */
-  gap: 10px;                /* separa el texto de la imagen */
-}
-
-/* animacion al pasar el raton por el enlace 'permiso de residencia para extranjeros' */
-.titles2:hover{
-   border: 2px solid black; 
-}
-/* ------------------bandera de españa al lado del la etiqueta 'permiso para extranjeros' -----------------------*/
-.titles2 img{
-  width: 18%;
-  filter: drop-shadow(0 0 1px black) drop-shadow(2px 2px 3px rgba(0,0,0,0.8));/* añade borde a la imagen de españa y le da sombra*/
-}
-
-.titles2 a {
-  display: inline-block;
-  color: black;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
-  transition: all 0.3s ease;
-}
-
-.titles2 a:hover {
-  transform: scale(1.1);
-  text-shadow: 0 0 20px #fff, 0 0 30px #ff6600;
-}
 
 /* 🔥 Animaciones */
 @keyframes moveGradient {
@@ -202,29 +85,7 @@ header {
     filter: brightness(1);
   }
 }
-/* responsive para movil */
-@media (max-width: 768px) {
 
-  .titles2 {
-    top: 10px;
-    right: 80px; /*  más a la izquierda para no tapar el menú */
-    padding: 10px 15px;
-    border-bottom-left-radius: 15px;
-    animation: moveGradient 6s ease infinite, slideInMobile 1s ease forwards;
-    width: 75%;
-  }
-  .titles2 img{
-    display: none;
-  }
-
-  .titles2 a {
-    font-size: 1.0rem; /* más pequeño para móviles */
-    white-space: nowrap; /* que no se divida en varias líneas */
-  }
-.titles .titlesh{
-  font-size: 30px;
-}
-}
 
 /* Animación lateral más suave para móviles */
 @keyframes slideInMobile {
@@ -245,168 +106,17 @@ header {
   }
 }
 
-/* Contenedor que agrupa los títulos y el icono de la "L" */
-.titles-with-icon {
-  display: flex;
-  align-items: center; /* centra verticalmente la imagen respecto a los títulos */
-  margin-left: 5px; /* espacio entre el logo y los títulos */
-}
-
-/* Imagen de la "L" */
-.l-icon {
-  width: 40px; /* ajusta el tamaño a tu gusto */
-  margin-left: 10px; /* separa un poco de los títulos */
-  margin-bottom: 10px;
-}
-
-/* --- Base (por defecto: oculto para móvil) --- */
-.nav-links {
-  display: none;
-  flex-direction: row;
-  position: absolute;
-  top: 60px;
-  right: 10px;
-  background: rgba(0, 64, 128, 0.95);
-  padding: 15px;
-  border-radius: 0 0 8px 8px;
-  z-index: 1000;
-}
-.nav-links.active {
-  display: flex;
-}
-.nav-links a {
-  text-decoration: none;
-  font-weight: bold;
-  color: #444;
-  font-size: 18px;
-  position: relative;
-  transition: color 0.3s, transform 0.3s;
-  white-space: nowrap;   /* evita que las palabras se partan */  
-}
-.nav-links a:hover {
-  color: #ffcc00;
-  transform: scale(1.15);
-}
-.nav-links a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 2px;
-  background: #ffcc00;
-  transition: width 0.3s;
-}
-.nav-links a:hover::after,
-.nav-links a.active::after {
-  width: 100%;
-}
-nav a.active {
-  color: red; /* color rojo al estar en la pagina activa */
-}
-/* ===== HAMBURGUESA MOVIL ===== */
-.menu-toggle {
-  display: none;
-  font-size: 32px;
-  background: rgba(0,0,0,0.3);
-  color: #ffd700;
-  border-radius: 6px;
-  padding: 6px 12px;
-  cursor: pointer;
-}
 
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 15px;
-    height: 33%;
-  }
 
-    /* Logo */
-  .top-bar a img {
-    width: 90px;
-    height: auto;
-    margin-top: -40px;
-    margin-left: -30px;
-  }
-  .top-bar {
-    width: 100%;
-    justify-content: flex-start;
-    gap: 10px;
-    margin-top: 65px;
-
-  }
-
-  .top-bar h1 {
-    font-size: 22px;
-    margin-left: -25px;
-
-  }
-    .l-icon {
-    width: 40px; /* más pequeña en pantallas pequeñas */
-    margin-left: -15px;
-
-  }
-
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-  }
-
-  /* Menú desplegable */
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 220px;
-    background: rgba(0, 64, 128, 0.95);
-    position: absolute;
-    top: 60px; /* debajo del header */
-    right: 10px;
-    border-radius: 0 0 8px 8px;
-    padding: 15px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    font-size: 16px;
-    white-space: nowrap;  
-  }
- 
-}
-
-
-/* --- ESCRITORIO --- */
-@media (min-width: 768px) {
-  .nav-links {
-    display: flex !important;   /* visible solo en escritorio */
-    flex-direction: row;
-    flex-wrap: nowrap;
-    position: static;
-    background: none;
-    padding: 0;
-    gap: 20px; 
-  }
-
-}
 
 /* *********************************************** HERO  parte media de la pantalla ********************************/
 .hero {
   position: relative;     /* necesario para overlays y pseudo-elementos */
   width: 100%;            /* ocupa todo el ancho disponible */
   height: 100%;          /* o el alto que necesites */
-  /*margin: 50px 0 0 0;     /* sube un poco (ajusta 50px según necesites) */
-  padding: 0;
+  margin: 50px 0 0 0;     /* sube un poco (ajusta 50px según necesites) */
   display: flex;          
   align-items: center;    /* mantiene centrado verticalmente el contenido */
   justify-content: flex-start;  /* mueve el contenido hacia la izquierda dentro del hero */
@@ -414,8 +124,7 @@ nav a.active {
   z-index: 1;
   background-color: #F5B027;
   min-height: 100vh; /* ocupa toda la altura visible del móvil */
-  padding: 40px 0;
-
+  padding: 10px 0;
 }
 
 .hero::before {
@@ -433,6 +142,7 @@ nav a.active {
   width: 100%;
   margin: 0 auto;
   padding: 0;
+  background-color: #F5B027;
 }
 
 .hero-grid {
@@ -460,6 +170,7 @@ nav a.active {
   opacity: 0.9; /* 0 = totalmente invisible, 1 = totalmente opaca */
   border-radius: 20px;
   margin: 0px 20px;
+  height: 70%;
 
 }
 
@@ -506,6 +217,23 @@ nav a.active {
    border: 2px solid #F5B027;
    border-radius: 10px;
 }
+
+  .hero2 {
+    background-color: #e1d8ea;
+     /* min-height: 100vh;  asegura al menos altura de la pantalla */
+    height: 500px;        /* que crezca según contenido */
+    padding-top: 60px;
+    padding-bottom: 5px; /* agrega espacio abajo para que llegue al final */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* para que los items empiecen desde arriba */
+    margin-top: 160px;
+    top: 10px;
+  }
+
+
+
+
 /* --- Versión móvil --- */
 @media (max-width: 768px) {
   .hero {
@@ -517,8 +245,11 @@ nav a.active {
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* para que los items empiecen desde arriba */
-    margin-bottom: -70%;
+    margin-bottom: -20%;
     top: 10px;
+  }
+  .hero-content{
+    background-color: #F5B027;
   }
 
   .hero-grid {
@@ -566,6 +297,30 @@ nav a.active {
     background-color: wheat;
     border-radius: 20px;
   }
+
+
+  .hero2 {
+    background-color: #e1d8ea;
+    min-height: 100vh;   /* asegura al menos altura de la pantalla */
+    height: 800px;        /* que crezca según contenido */
+    padding-top: 60px;
+    padding-bottom: 5px; /* agrega espacio abajo para que llegue al final */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* para que los items empiecen desde arriba */
+    margin-bottom: 30%;
+    top: 10px;
+    margin-top: 500px;
+  }
+
+
+
+
+
+
+
+
+
 }
 
 /* Si algún overlay interfiere, fuerza el paso del clic */
@@ -1475,6 +1230,7 @@ footer {
   display: inline-block;
   cursor: pointer;
   width: 300px;
+  text-align: center;  /* 👈 esto centra cualquier contenido inline/block */
 }
 
 /* Imagen dentro del tooltip */
@@ -1490,7 +1246,7 @@ footer {
   max-height: 490px; /* altura máxima */
   overflow-y: auto; /* permite scroll si es más alto */
   position: absolute;
-  z-index: 99999;
+  z-index: 9999;
   top: 10%; 
   left: -35px;
   background-color: #ffdf00;
@@ -1696,7 +1452,7 @@ footer {
     max-height: 100vh;
     font-size: 13px;
     padding: 8px;
-    z-index: 9999999;
+    z-index: 10000;
   }
   .special-tooltip .tooltip-wrapper {
     flex-direction: column;
@@ -1708,11 +1464,11 @@ footer {
     margin-top: 10px;
   }
 
+@media (max-width: 768px) {
   .special-tooltip.open {
     margin-bottom: 700px; /* o auto según el contenido */
-    z-index: 999999;
+    z-index: 9999;
   }
-  
 }
 /* =================== TOOLTIP NORMAL =================== */
 .tooltip {
@@ -1864,63 +1620,99 @@ footer {
 }
 
 /*-------------------------- FIN ESPACIO CURSOS Y AYUDAS --------------------------------------*/
-/*-------------------------- INICIO ESPACIO TIENDA --------------------------------------*/
+/*========================== INICIO ESPACIO TIENDA ==========================*/
 .box2 {
-  flex: 1 1 300px;             /* se adaptan al ancho disponible */
-  max-width: 500px;            /* tamaño máximo por caja */
-  background-color: #fff;      /* fondo blanco para resaltar*/
-  border-radius: 10px;           /* Bordes suaves */
-  box-shadow: 0 0 10px rgba(0,0,0,0.9);
-  text-align: justify;
+  flex: 1 1 300px;             /* Se adapta al ancho disponible */
+  max-width: 500px;            /* Tamaño máximo por caja */
+  background-color: #fff;      /* Fondo blanco para resaltar */
+  border-radius: 10px;         /* Bordes suaves */
+  box-shadow: 0 0 10px rgba(0,0,0,0.9);  
+  text-align: justify;         /* Justifica el texto dentro de la caja */
   padding: 20px;
-  /*display: flex;*/
-  display: inline-block;  
-  flex-direction: column;      /* mantiene orden vertical */
-  justify-content: flex-start; /* textos alineados arriba */
-  align-items: center;
+  display: inline-block;       /* Mantiene la caja en línea con otras si hay varias */
+  flex-direction: column;      /* Orden vertical del contenido */
+  justify-content: flex-start; /* Alinea los textos arriba */
+  align-items: center;         /* Centra horizontalmente elementos flexibles */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /*overflow: hidden;*/
-  overflow: visible; /* permite que el tooltip se vea completo */  
-  margin: auto;
+  overflow: visible;           /* Permite que el tooltip se vea completo */
+  margin: -100px auto 50px auto; /* Margen superior e inferior */
   position: relative;
   vertical-align: top;
-  margin-bottom: 50px;
-  margin-top: -100px;
-  height: 1150px;
+  height: auto;                /* Se ajusta al contenido */
 }
 
+/*========================== IMÁGENES ==========================*/
 .box2 img {
-  width: 250%;
-  height: auto;
-  object-fit: contain;     /* muestra toda la imagen sin recortar */
-  background-color: #f5f5f5;  /* fondo neutro para imágenes más pequeñas */
+  width: 100%;                 /* Ajusta al ancho del contenedor */
+  width: auto;
+  max-width: 450px;            /* Tamaño máximo razonable */
+  height: auto;                /* Mantiene proporción */
+  object-fit: contain;         /* No recorta la imagen */
+  background-color: #f5f5f5;  /* Fondo neutro para imágenes pequeñas */
   border-radius: 8px;
   transition: transform 0.4s ease;
   border-bottom: 2px solid #eee; 
   box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+  display: block;
+  margin: 0 auto 10px auto;    /* Centrado horizontal con margen inferior */
 }
-  .box2 center {
-    font-size: 1rem;
-    line-height: 1.5;
-    display: block;
-    margin-bottom: 5px;
-    width: 450px;
-  }
-  .box2 .tooltip img {
 
-    display: block;
-    margin-bottom: 5px;
-    max-width:  450px;
+/*========================== TOOLTIP ==========================*/
+.tooltip {
+  position: relative;
+  display: inline-flex;        /* Flex para centrar elementos */
+  flex-direction: column;
+  align-items: center;         /* Centra horizontalmente */
+  cursor: pointer;
+  width: 400px;
+  max-width: 90vw;             /* No excede ancho de pantalla en móviles */
+  box-sizing: border-box;      /* Padding incluido en el ancho */
+}
+
+.tooltip img {
+  max-width: 100%;             /* Se adapta al ancho del tooltip */
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/*========================== PIE DE SECCIÓN ==========================*/
+.pie {
+  display: block;
+  background-color: #ffdf00;
+  color: black;
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+/*========================== RESPONSIVE ==========================*/
+@media (max-width: 768px) {
+  .box2 {
+    max-width: 95%;             /* Ajusta la caja al 95% de la pantalla */
+    margin: 10px auto;          /* Centrado y separación superior e inferior */
+    height: auto;               /* Se adapta al contenido */
+    padding: 15px;              /* Menos padding en móvil */
   }
 
+  .box2 img {
+    max-width: 80%;             /* Imagen proporcional al contenedor */
+  }
+
+  .tooltip {
+    width: 90%;                 /* Tooltip casi al 100% del contenedor */
+  }
+
+  .tooltip img {
+    max-width: 100%;            /* Imagen del tooltip se ajusta al ancho */
+    margin-bottom: -200px;
+  }
   .pie{
-    display: block;
-    background-color: #ffdf00;
-    color: black;
-    max-width: 1100px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 20px;
+    margin-top: 60px;
   }
-/*-------------------------- FIN ESPACIO TIENDA --------------------------------------*/
+}
+/*========================== FIN ESPACIO TIENDA ==========================*/
+
 

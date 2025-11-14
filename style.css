@@ -1164,40 +1164,39 @@ footer {
   margin-top: 150px;
   overflow: visible;  
 }
-
-.box1 {
-  flex: 1 1 300px;             /* se adaptan al ancho disponible */
-  max-width: 350px;            /* tamaño máximo por caja */
-  background-color: #fff;      /* fondo blanco para resaltar*/
-  border-radius: 10px;           /* Bordes suaves */
-  box-shadow: 0 0 10px rgba(0,0,0,0.9);
-  text-align: justify;
+.box1{
+  flex: 1 1 300px;             /* Se adapta al ancho disponible */
+  max-width: 500px;            /* Tamaño máximo por caja */
+  background-color: #fff;      /* Fondo blanco para resaltar */
+  border-radius: 10px;         /* Bordes suaves */
+  box-shadow: 0 0 10px rgba(0,0,0,0.9);  
+  text-align: justify;         /* Justifica el texto dentro de la caja */
   padding: 20px;
-  /*display: flex;*/
-  display: inline-block;  
-  flex-direction: column;      /* mantiene orden vertical */
-  justify-content: flex-start; /* textos alineados arriba */
-  align-items: center;
+  display: inline-block;       /* Mantiene la caja en línea con otras si hay varias */
+  flex-direction: column;      /* Orden vertical del contenido */
+  justify-content: flex-start; /* Alinea los textos arriba */
+  align-items: center;         /* Centra horizontalmente elementos flexibles */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  /*overflow: hidden;*/
-  overflow: visible; /* permite que el tooltip se vea completo */  
-  margin: auto;
+  overflow: visible;           /* Permite que el tooltip se vea completo */
+  margin: 100px auto 50px auto; /* Margen superior e inferior */
   position: relative;
   vertical-align: top;
-  margin-bottom: 60px;
-  height: 450px;
+  height: auto;                /* Se ajusta al contenido */
 }
-/* 🖼️ Todas las imágenes iguales */
-/* Opcional: efecto suave en la imagen también */
+/*========================== IMÁGENES ==========================*/
 .box1 img {
-  width: 100%;
-  height: 220px;
-  object-fit: contain;     /* muestra toda la imagen sin recortar */
-  background-color: #f5f5f5;  /* fondo neutro para imágenes más pequeñas */
+  width: 100%;                 /* Ajusta al ancho del contenedor */
+  width: auto;
+  max-width: 450px;            /* Tamaño máximo razonable */
+  height: auto;                /* Mantiene proporción */
+  object-fit: contain;         /* No recorta la imagen */
+  background-color: #f5f5f5;  /* Fondo neutro para imágenes pequeñas */
   border-radius: 8px;
   transition: transform 0.4s ease;
   border-bottom: 2px solid #eee; 
   box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+  display: block;
+  margin: 0 auto 10px auto;    /* Centrado horizontal con margen inferior */
 }
 
 /* ✨ Efecto hover para las cajas de cursos */

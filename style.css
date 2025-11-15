@@ -1111,18 +1111,6 @@ footer {
   width: 100%;
   border: 2px solid #ccc;  /* marco general del bloque */
   padding: 10px;
-
-
-}
-
-.caja1 {
-  flex: 1;                 
-  padding: 10px;
-  background-color: lightblue;
-  border-right: 2px solid #888; /* línea de separación entre texto e imagen */
-  border-radius: 20px;
-  height: 470px;
-  margin-top: -100px;
 }
 
 .imagen1 {
@@ -1143,10 +1131,11 @@ footer {
     margin-top:180px;
   }
 
-  .caja1, .imagen1 {
+  .imagen1 {
     border: none;   /* elimina las líneas de separación vertical */
     padding: 5px;
     margin-top: 80px;
+
   }
 }
 /* ---------------------------------------- FIN NOSOTROS ------------------------------------*/
@@ -1165,8 +1154,8 @@ footer {
   overflow: visible;  
 }
 .box1{
-  flex: 1 1 300px;             /* Se adapta al ancho disponible */
-  max-width: 500px;            /* Tamaño máximo por caja */
+  flex: 1 1 00px;             /* Se adapta al ancho disponible */
+
   background-color: #fff;      /* Fondo blanco para resaltar */
   border-radius: 10px;         /* Bordes suaves */
   box-shadow: 0 0 10px rgba(0,0,0,0.9);  
@@ -1181,12 +1170,13 @@ footer {
   margin: 100px auto 50px auto; /* Margen superior e inferior */
   position: relative;
   vertical-align: top;
-  height: auto;                /* Se ajusta al contenido */
+  height: auto; /* Se ajusta al contenido */
+
 }
 /*========================== IMÁGENES ==========================*/
 .box1 img {
   width: 100%;                 /* Ajusta al ancho del contenedor */
-  width: auto;
+  width: 200px;
   max-width: 450px;            /* Tamaño máximo razonable */
   height: auto;                /* Mantiene proporción */
   object-fit: contain;         /* No recorta la imagen */
@@ -1230,6 +1220,7 @@ footer {
   cursor: pointer;
   width: 300px;
   text-align: center;  /* 👈 esto centra cualquier contenido inline/block */
+  z-index: 9999;
 }
 
 /* Imagen dentro del tooltip */
@@ -1360,14 +1351,16 @@ footer {
 .special-tooltip .tooltip-wrapper {
   position: absolute;
   top: 40%;
-  left: -50%;          /* justo a la derecha de la imagen */
+  left: -50%;
   display: flex;        /* horizontal */
   gap: 10px;
   opacity: 0;
   pointer-events: auto;
-  z-index: 2000;
-  overflow: visible; /* clave para que no haya scroll horizontal */ 
+  z-index: 1000;        /* este z-index está haciendo que flote por encima del header */
+  overflow: visible; 
 }
+
+
 
 .special-tooltip:hover .tooltip-wrapper {
   opacity: 1;
@@ -1381,7 +1374,7 @@ footer {
   box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
   font-size: 16px;
   line-height: 1.4;
-  max-height: 300px;       /* limita altura */
+  max-height: 490px;       /* limita altura */
   overflow-y: auto;        /* scroll vertical */
   flex-shrink: 0;          /* evita que se encoja */
 }
@@ -1420,7 +1413,7 @@ footer {
   .box1 {
     width: 90%;
     max-width: 600px;
-    height: auto; /* muy importante */
+     /*height: auto; muy importante */
     padding: 15px;
     box-sizing: border-box;
     overflow: visible; /* asegura que no se corte contenido interno */
@@ -1452,15 +1445,18 @@ footer {
     font-size: 13px;
     padding: 8px;
     z-index: 10000;
+ 
   }
   .special-tooltip .tooltip-wrapper {
     flex-direction: column;
     top: 100%;
     left: 0;
+    
   }
   .special-tooltip .tooltip-wrapper .tooltiptext {
     width: 100%;
     margin-top: 10px;
+
   }
 
 @media (max-width: 768px) {
@@ -1510,11 +1506,13 @@ footer {
   z-index: 2000;
   white-space: nowrap;
   transition: opacity 0.3s ease;
+
 }
 
 .special-tooltip:hover .tooltip-wrapper {
   opacity: 1;
   pointer-events: auto;
+  
 }
 
 .special-tooltip .tooltip-wrapper .tooltiptext {

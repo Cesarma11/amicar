@@ -9,6 +9,126 @@
   <link rel="stylesheet" href="style.css">
   <!-- =================== FIN HEAD =================== -->
 </head>
+<style>
+/* Contenedor principal */
+/* Contenedor principal */
+.contenedor1 {
+  display: flex;
+  flex-wrap: nowrap;          /* todas en una fila */
+  gap: 10px;
+  overflow-x: auto;           /* scroll horizontal si no caben */
+  padding: 10px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Cajas */
+.box1 {
+  flex: 0 0 auto;             /* no se encogen */
+  width: 16.66%;              /* 6 cajas por fila en escritorio */
+  max-width: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  padding: 15px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.boxf {
+  background-color: white;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  margin: 80px 100px;
+  height: 360px;
+  border-radius: 20px;
+  overflow: visible !important; 
+  position: relative; /* necesario solo si usas tooltips */
+  z-index: auto;      /* no interfiere con el header */
+}
+
+
+.boxf img {
+  max-width: 250px;
+  display: block;
+  z-index: 20;
+}
+
+/* Tooltip container desplegable para ver la informacion de los cursos */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  width: 300px;
+  text-align: center;  /* 👈 esto centra cualquier contenido inline/block */
+  z-index: 999;
+}
+
+/* Tooltip desplegable hacia abajo */
+.tooltip .tooltiptext {
+  width: 120%; /* un poco más ancho que el box1 */
+  max-height: 490px; /* altura máxima */
+  overflow-y: auto; /* permite scroll si es más alto */
+  position: absolute;
+  z-index: 999;
+  top: 20%; 
+  left: -35px;
+  background-color: #ffdf00;
+  color: black;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 15px rgba(0,0,0,0.5);
+  font-size: 16px;
+  line-height: 1.4;
+  white-space: normal;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: auto;
+
+}
+.contenedor1{
+  margin-top: -40px;
+}
+/* Tablet grande: 4 cajas */
+@media (max-width: 1200px) {
+  .box1 {
+    width: 23%;   /* espacio para 4 cajas + gap */
+    max-width: none;
+  }
+}
+
+/* Tablet pequeña: 3 cajas */
+@media (max-width: 992px) {
+  .box1 {
+    width: 31%;   /* 3 cajas + gap */
+  }
+}
+
+/* Móvil grande: 2 cajas */
+@media (max-width: 768px) {
+  .box1 {
+    width: 48%;   /* 2 cajas por fila, casi la mitad del contenedor */
+  }
+}
+
+/* Móvil pequeño: 1 caja */
+@media (max-width: 480px) {
+  .box1 {
+    width: 95%;   /* ocupa casi todo el ancho */
+  }
+}
+
+
+</style>
+
+
+
+
+
 <body>
   <!-- =================== ENCABEZADO PÁGINA =================== -->
   <header>
@@ -25,68 +145,68 @@
 
   <!-- SECCIÓN CENTROS DE FORMACIÓN -->
     <h1 style="margin-top:180px; text-align:center;">CENTROS DE FORMACIÓN</h1>   
-  <section style="margin-top: 120px;" >
+  <section style="margin-top: -60px;" >
 
     <div class="contenedor1" style="margin-top: 20px;">
 
       <!-- O BARCO -->
-      <div class="caja1">
-        <div class="box1 center-content">
+
+        <div class="box1 ">
           <center><h2><strong>AM¡CAR <br> O BARCO</strong></h2></center>
           <h3>Av. Conde de Fenosa, 18, 32300 O Barco, Ourense</h3>
           <h3>📞 698 17 66 95</h3>
           <h3>HORARIO: De lunes a jueves de 10:00-13:30 y de 16:00 a 20:00 horas <br> viernes de 10:00 a 13:30 y de 16:00 a 19:00 horas</h3>
-        </div>
+
       </div>
 
       <!-- A RUA -->
-      <div class="caja1">
-        <div class="box1 center-content">
+
+        <div class="box1 ">
           <center><h2><strong>AM¡CAR <br> A RUA</strong></h2></center>
           <h3>Rúa Felgar, 13, 32350 A Rúa, Ourense</h3>
           <h3>📞 988 50 82 95</h3>
           <h3>HORARIO: De lunes a jueves de 10:00-13:30 y de 16:00 a 20:00 horas <br> viernes de 10:00 a 13:30 y de 16:00 a 19:00 horas</h3>
-        </div>
+
       </div>
 
       <!-- VIANA DO BOLO -->
-      <div class="caja1">
-        <div class="box1 center-content">
+
+        <div class="box1 ">
           <center><h2><strong>AM¡CAR <br> VIANA DO BOLO</strong></h2></center>
           <h3>Rúa Nicolás Tenorio, 1, 32550 Viana do Bolo, Ourense</h3>
           <h3>📞 665 84 77 34</h3>
           <h3>HORARIO: De lunes a viernes de 9:30 a 13:30 horas </h3>
-        </div>
+
       </div>
 
       <!-- VERÍN -->
-      <div class="caja1">
-        <div class="box1 center-content">
+
+        <div class="box1 ">
           <center><h2><strong>AM¡CAR <br> VERÍN</strong></h2></center>
           <h3>Av. Luis Espada, 70, 32600 Verín, Ourense</h3>
           <h3>📞 604 02 31 46</h3>
           <h3>HORARIO: De lunes a jueves de 10:00-13:30 y de 16:00 a 20:00 horas <br> viernes de 10:00 a 13:30 y de 16:00 a 19:00 horas</h3>
-        </div>
+
       </div>
 
       <!-- XINZO DE LIMIA -->
-      <div class="caja1">
-        <div class="box1 center-content">
+
+        <div class="box1 ">
           <center><h2><strong>AM¡CAR <br> XINZO DE LIMIA</strong></h2></center>
           <h3>Av. de Ourense, 12, 32630 Xinzo de Limia, Ourense</h3>
           <h3>📞 -</h3>
           <h3>HORARIO: -- horas</h3>
-        </div>
+
       </div>
 
       <!-- PONFERRADA -->
-      <div class="caja1">
-        <div class="box1 center-content">
+
+        <div class="box1 ">
           <center><h2><strong>AM¡CAR <br> PONFERRADA</strong></h2></center>
           <h3>Calle Obispo Osmundo, 12, 24401 Ponferrada (León)</h3>
           <h3>📞 600 83 63 06</h3>
           <h3>HORARIO: De lunes a viernes 9:30-14:00 / 16:30-20:00</h3>
-        </div>
+
       </div>
 
     </div>
@@ -96,10 +216,10 @@
 
   <!-- SECCIÓN CURSOS -->
 
-    <h1 style="text-align:center; margin-top:30px;">NUESTROS CURSOS</h1>
+    <h1 style="text-align:center;">NUESTROS CURSOS</h1>
     <div class="contenedor1" style=" position:relative; overflow:visible;">
       <!-- CAP -->
-      <div class="box1 special-tooltip" style="position: relative;">
+      <div class="boxf special-tooltip" style="position: relative;">
         <img src="image/CAP.png" alt="Curso CAP" class="tooltip-trigger">
         <h3>CAP</h3>
         <div class="tooltip-wrapper">
@@ -151,7 +271,7 @@
         </div>
       </div>
       <!-- ADR -->
-      <div class="box1 special-tooltip" style="position: relative;">
+      <div class="boxf special-tooltip" style="position: relative;">
         <img src="image/adr.png" alt="Curso ADR" class="tooltip-trigger">
         <h3>ADR</h3>
         <div class="tooltip-wrapper">
@@ -198,7 +318,7 @@
       <div class="contenedor1" style="margin-top: 30px; position: relative; overflow: visible;">
 
         <!-- CARRETILLA ELEVADORA -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/carretilla.png" alt="Imagen CARRETILLA ELEVADORA">
             <div class="tooltiptext">
@@ -223,7 +343,7 @@
         </div>
 
         <!-- ITC MINERA -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/itcMineria.jpg" alt="Imagen ITC MINERA">
             <div class="tooltiptext">
@@ -247,7 +367,7 @@
         </div>
 
         <!-- ITC SILICE Y POLVO -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/itcSilice.png" alt="Imagen ITC SILICE Y POLVO">
             <div class="tooltiptext">
@@ -276,7 +396,7 @@
       <!-- =================== SEGUNDO BLOQUE DE CURSOS =================== -->
       <div class="contenedor1" style="margin-top: 30px; position: relative; overflow: visible;">
         <!-- OPERADOR RETROEXCAVADORA Y PALA -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/retroexcabadora.png" alt="Imagen OPERADOR RETROEXCAVADORA">
             <div class="tooltiptext">
@@ -297,7 +417,7 @@
         </div>
 
         <!-- GRÚA PLUMA -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/gruaPluma.png" alt="Imagen GRÚA PLUMA">
             <div class="tooltiptext">
@@ -322,7 +442,7 @@
         </div>
 
         <!-- PLATAFORMAS MÓVILES -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/plataformaMovil.png" alt="Imagen OPERADOR PLATAFORMAS MÓVILES">
             <div class="tooltiptext">
@@ -347,7 +467,7 @@
       <!-- =================== TERCER BLOQUE DE CURSOS =================== -->
       <div class="contenedor1" style="margin-top: 30px; position: relative; overflow: visible;"> 
         <!-- CARRETILLA TELESCÓPICA MANITOU -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/telescopicaManitou.png" alt="Imagen OPERADOR CARRETILLA TELESCÓPICA">
             <div class="tooltiptext">
@@ -375,7 +495,7 @@
         </div>
 
         <!-- PRL MOVIMIENTOS DE TIERRA -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/miniPalaOruga.png" alt="Imagen PRL MOVIMIENTOS DE TIERRA">
             <div class="tooltiptext">
@@ -398,7 +518,7 @@
         </div>
 
         <!-- CONDUCCIÓN EFICIENTE VEHÍCULOS INDUSTRIALES -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/conduccionEficiente.jpg" alt="Imagen CONDUCCIÓN EFICIENTE INDUSTRIA">
             <div class="tooltiptext">
@@ -423,7 +543,7 @@
       <!-- =================== CUARTO BLOQUE DE CURSOS =================== -->
       <div class="contenedor1" style="margin-top: 30px; position: relative; overflow: visible;"> 
         <!-- CONDUCCIÓN EFICIENTE -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/conduccionEfice.jpg" alt="Imagen CONDUCCIÓN EFICIENTE">
             <div class="tooltiptext">
@@ -443,7 +563,7 @@
         </div>
 
         <!-- CAPACITACIÓN TRANSPORTISTA -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/capacitacionTransporte.png" alt="Imagen CAPACITACIÓN TRANSPORTISTA">
             <div class="tooltiptext">
@@ -467,7 +587,7 @@
         </div>
 
         <!-- PRL MAQUINARIA AGRÍCOLA -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/agricola.jpg" alt="Imagen PRL MAQUINARIA AGRÍCOLA">
             <div class="tooltiptext">
@@ -494,7 +614,7 @@
       <!-- =================== QUINTO BLOQUE DE CURSOS =================== -->
       <div class="contenedor1" style="margin-top: 30px; position: relative; overflow: visible;"> 
         <!-- PRL GENÉRICO -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/PRLGenerico.png" alt="Imagen PRL GENÉRICO">
             <div class="tooltiptext">
@@ -516,7 +636,7 @@
         </div>
 
         <!-- EQUIPOS DE PROTECCIÓN INDIVIDUAL -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/epis.jpg" alt="Imagen EPI">
             <div class="tooltiptext">
@@ -538,7 +658,7 @@
         </div>
 
         <!-- MANIPULADOR DE ALIMENTOS -->
-        <div class="box1">  
+        <div class="boxf">  
           <div class="tooltip">
             <img src="image/manipuladorAlimentos.png" alt="Imagen MANIPULADOR DE ALIMENTOS">
             <div class="tooltiptext">
@@ -567,7 +687,7 @@
 
 <!----------------------------------------------ZONA SCRIPTS--------------------------------------------------->
   <script>
-    // Tooltips escritorio + móvil
+    // Tooltips, despliegue de informacion escritorio + móvil
     document.querySelectorAll('.tooltip-trigger').forEach(img => {
       const tooltip = img.nextElementSibling;
       let timeout;

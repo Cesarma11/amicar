@@ -274,7 +274,7 @@ main{
 
   .hero-item {
     width: 90%;
-    height: 150px;
+    height: 250px;
     background-size: cover;
     background-position: center;
     border-radius: 10px;
@@ -1722,6 +1722,7 @@ footer {
   }
 }
 /*========================== FIN ESPACIO TIENDA ==========================*/
+
 
 
 

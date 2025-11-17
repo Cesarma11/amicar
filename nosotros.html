@@ -7,8 +7,82 @@
   <title>Am¡car - Nosotros</title>
   <link rel="icon" type="image/x-icon" href="image/L.ico">
   <link rel="stylesheet" href="style.css">
+
   <!-- =================== FIN HEAD =================== -->
 </head>
+<style>
+.contenedor3 {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+  border-radius: 12px;
+
+  /* ❤️ esto iguala las alturas automáticamente */
+  align-items: stretch;
+}
+
+.caja1 {
+  flex: 1;
+  padding: 80px 110px; /* deja margen interior amplio para que el texto no toque los bordes */
+  border-radius: 12px;
+  background-image: url("./image/papel-envejecido.png");
+  background-size: contain; /* la imagen se ajusta a la caja sin recortarse */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent; /* elimina el fondo sólido */
+  color: #3b2f1b;
+  /*font-family: "Georgia", serif;*/
+  line-height: 1.7;
+}
+
+p{
+  text-align: justify;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 18px;  line-height: 1.6;
+}
+
+
+/* Contenedor de la imagen */
+.caja-imagen {
+  flex: 1;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+
+  background-image: url("./image/inicoAutoescuela.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 📱 Móvil */
+@media (max-width: 768px) {
+  .contenedor3 {
+    flex-direction: column;
+    gap: 20px; /* espacio entre caja de texto y caja de imagen */
+  }
+
+  .caja1 {
+    padding: 130px 20px;
+    background-size: cover;
+    background-position: center top;
+    height: auto;      /* la caja se adapta al contenido */
+    min-height: 550px; /* opcional, asegura tamaño mínimo */
+  }
+
+  .caja1 p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .caja-imagen {
+    height: auto;       /* deja crecer automáticamente si fuera necesario */
+    min-height: 300px;  /* altura mínima para que se vea la imagen */
+    background-size: cover;
+    background-position: center;
+  }
+}
+</style>
 <body>
   <!-- =================== ENCABEZADO PÁGINA =================== -->
   <header>
@@ -23,15 +97,16 @@
     <!-- =================== FIN HEADER =================== -->
   </header>
 
+
   <!-- =================== SECCIÓN SOBRE NOSOTROS =================== -->
   <section style="margin-top: 180px;">
     <center><h1>SOBRE NOSOTROS</h1> </center>     
-    <div class="contenedor1">
+    <div class="contenedor3">
 
-      <div class="caja1" style="height: 600px;" >
+      <div class="caja1"  >
       
         <p><strong>60 años de experiencia...</strong> </p> 
-        <p style="text-align: justify;font-family: 'Patrick Hand', cursive; font-size: 18px;  line-height: 1.6;">
+        <p >
 
           La autoescuela inició su actividad el 4 de mayo de 1961 bajo el nombre de <strong>Autoescuela y Gestoría Arias</strong> , siendo la primera autoescuela 
           registrada en la Jefatura Provincial de Tráfico de Ourense. <br> Fue fundada por Jesús Cao Cortiñas y Concepción Arias Fernández, y su actividad
@@ -47,7 +122,7 @@
       </div>
 
       <!-- Imagen representativa sobre nosotros -->
-      <img src="./image/inicoAutoescuela.jpg" alt="Imagen sobre nosotros" class="imagen1">
+      <div class="caja-imagen"></div>
     </div>
   </section>
   <!-- =================== FIN SECCIÓN SOBRE NOSOTROS =================== -->

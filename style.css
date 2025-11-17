@@ -108,206 +108,32 @@ main{
 
 
 
-/* ===== RESPONSIVE ===== */
-
-
-/* *********************************************** HERO  parte media de la pantalla ********************************/
-.hero {
-  position: relative;     /* necesario para overlays y pseudo-elementos */
-  width: 100%;            /* ocupa todo el ancho disponible */
-  height: 100%;          /* o el alto que necesites */
-  margin: 50px 0 0 0;     /* sube un poco (ajusta 50px según necesites) */
-  display: flex;          
-  align-items: center;    /* mantiene centrado verticalmente el contenido */
-  justify-content: flex-start;  /* mueve el contenido hacia la izquierda dentro del hero */
-  text-align: center;
-  z-index: 1;
-  background-color: #F5B027;
-  min-height: 100vh; /* ocupa toda la altura visible del móvil */
-  padding: 10px 0;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /*opacity: 0.1;*/
-  background-color:#F5B027 ;
-  pointer-events: none; /* 🔹 esta línea es para hacer efectivo en enlace al pulsar sobre el en responsive */
-}
-.hero-content {
-  position: relative;
-  color: black;
-  z-index: 1;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
-  background-color: #F5B027;
-}
-
-.hero-grid {
-  display: flex;
-  flex-wrap: nowrap;
-  width: 100%;
-  height: 500px;
-  border-collapse: collapse;
-  justify-content: center;
-  gap: 10px;
-}
-
-/* --- Cada cuadro --- */
-.hero-item {
-  flex: 1 1 33.33%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  border: 1px solid #000;
-  transition: transform 0.3s ease;
-  box-sizing: border-box;
-  opacity: 0.9; /* 0 = totalmente invisible, 1 = totalmente opaca */
-  border-radius: 20px;
-  margin: 0px 20px;
-  height: 70%;
-
-}
-
-/* --- Texto dentro --- */
-.hero-item a h1 {
-  /*color: white !important;           fuerza color blanco */
-  font-size: 1.5rem !important;     /* fuerza tamaño más pequeño */
-  background: wheat;
-  padding: 10px 15px;
-  border-radius: 10px;
-  margin:  auto;
-  max-width: 400px;
-  border: 2px solid #F5B027;
-  display: flex;
-  
-}
-.hero-item a {
-
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  text-decoration: none;
-}
-
-/* --- Efecto zoom hover  --- */
-.hero-item:hover {
-  transform: scale(1.03);
-}
-.hero h1:hover {
-  transform: scale(1.05);
-  transition: 0.3s ease;
-  background-color: violet;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  border: 2px solid black;
-  border-radius: 20px;
-  cursor: url('image/volante-cursor.png') 16 16, pointer;
-}
-.hero2:hover img{
-  transform: scale(1.11);
-  transition: 0.3s ease;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  border: 2px solid black;
-  border-radius: 20px;
-  background-color: violet;
-  cursor: url('image/volante-cursor.png') 16 16, pointer;
-}
-.hero2 img{
-  width: 40%;
-   background-color: wheat; 
-   border: 2px solid #F5B027;
-   border-radius: 10px;
-}
-
-  .hero2 {
-    background-color: #e1d8ea;
-     /* min-height: 100vh;  asegura al menos altura de la pantalla */
-    height: 500px;        /* que crezca según contenido */
-    padding-top: 60px;
-    padding-bottom: 5px; /* agrega espacio abajo para que llegue al final */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* para que los items empiecen desde arriba */
-    margin-top: 160px;
-    top: 10px;
-  }
 
 
 
 
-/* --- Versión móvil --- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --- Versión móvil --- *//* ===== RESPONSIVE ===== */
 @media (max-width: 769px) {
-  .hero {
-    background-color: #F5B027;
-    min-height: 100vh;   /* asegura al menos altura de la pantalla */
-    height: 800px;        /* que crezca según contenido */
-    padding-top: 60px;
-    padding-bottom: 5px; /* agrega espacio abajo para que llegue al final */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* para que los items empiecen desde arriba */
-    margin-bottom: -50%;
-    top: 10px;
-  }
-  .hero-content{
-    background-color: #F5B027;
-  }
-  .hero-item a h1{
-    justify-content: center;/*centra horizontalmente */
-    align-items: center;/* centra verticalmente */
-  }
-  .hero-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    width: 100%;
-    padding-bottom: 60px; /* asegura que el último bloque tenga espacio debajo */
-    margin-top: 160px;    
-  }
-
-  .hero-item {
-    width: 90%;
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;/*centra horizontalmente */
-    align-items: center;/* centra verticalmente */
-    text-align: center;
-    padding: 20px;
-    position: relative;
-   }
-
-  /* Ajuste bloque FORMACIÓN */
-  .hero-item:nth-child(2) .hero-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    height: 100%;
-    width: 100%;
-  }
-
-  .hero-item:nth-child(2) .hero-text h1 {
-    margin: 0 !important;
-  }
-
-  .hero-item:nth-child(2) .hero2 img {
-    width: 45%;
-    max-width: 200px;
-    background-color: wheat;
-    border-radius: 20px;
-  }
-
   .hero2 {
     background-color: #e1d8ea;
     min-height: 100vh;   /* asegura al menos altura de la pantalla */
@@ -323,15 +149,100 @@ main{
   }
 
 
+    .hero2-content{
+      background-color: #F5B027;
+    }
+    .hero2-item a h1{
+      justify-content: center;/*centra horizontalmente */
+      align-items: center;/* centra verticalmente */
+    }
+    .hero2-item a{
+      text-decoration: none;
+      justify-content: center;/*centra horizontalmente */
+      align-items: center;/* centra verticalmente */
+    }
+    .hero2-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      width: 100%;
+      padding-bottom: 40px; /* asegura que el último bloque tenga espacio debajo */
+      margin-top: 160px;    
+    }
+
+    .hero2-item {
+      width: 90%;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;/*centra horizontalmente */
+      align-items: center;/* centra verticalmente */
+      text-align: center;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* Ajuste bloque FORMACIÓN */
+    .hero2-item:nth-child(2) .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      height: 100%;
+      width: 100%;
+    }
+
+    .hero2-item:nth-child(2) .hero-text h1 {
+      margin: 0 !important;
+    }
+
+    .hero2-item:nth-child(2) .hero2 img {
+      width: 45%;
+      max-width: 200px;
+      background-color: wheat;
+      border-radius: 20px;
+    }
+
+  .hero2-item {
+    display: flex;
+    justify-content: center;  /* centro horizontal */
+    align-items: center;      /* centro vertical */
+    text-align: center;
+  }
+
+  .hero2-item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  /* opcional, mejora el centrado */
+    height: 100%;
+    text-decoration: none;
+  }
+
+  .hero2-item a h1 {
+    margin: 0;
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+  }
+
+
 
 }
 
-/* Si algún overlay interfiere, fuerza el paso del clic */
-.hero,
-.hero-content,
-.hero-content * {
-  pointer-events: auto;      /* reactiva los clics en todos los hijos */
-}
+
+
+
+
+
+
+
+
+
 
 /* ************************************************* FIN DEL HERO (parte media de la pantalla debajo del banner )********************/
 
@@ -1112,39 +1023,7 @@ footer {
 
 /* ---------------------------------------- INICIO NOSOTROS ------------------------------------*/
 
-.contenedor1 {
-  display: flex;
-  gap: 10px;               /* espacio entre texto e imagen */
-  width: 100%;
-  border: 2px solid #ccc;  /* marco general del bloque */
-  padding: 10px;
-}
 
-.imagen1 {
-  flex: 1;                 
-  width: 80%;
-  height: auto;
-  object-fit: cover;
-  border-left: 2px solid #888;  /* opcional, para simetría */
-  /*padding-left: 10px;            separa la imagen del borde */
-  margin-top: -100px;
-  border-radius: 20px;
-}
-@media (max-width: 768px) {
-  .contenedor1 {
-    flex-direction: column;
-    border-right: none;
-    border-left: none;
-    margin-top:180px;
-  }
-
-  .imagen1 {
-    border: none;   /* elimina las líneas de separación vertical */
-    padding: 5px;
-    margin-top: 80px;
-
-  }
-}
 /* ---------------------------------------- FIN NOSOTROS ------------------------------------*/
 
 /* ---------------------------------------- INICIO FORMACION --------------------------------*/
@@ -1722,10 +1601,4 @@ footer {
   }
 }
 /*========================== FIN ESPACIO TIENDA ==========================*/
-
-
-
-
-
-
 

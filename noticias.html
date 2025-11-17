@@ -12,6 +12,123 @@
 
 <style>
 
+
+.hero2 {
+  position: relative;     /* necesario para overlays y pseudo-elementos */
+  width: 100%;            /* ocupa todo el ancho disponible */
+  height: 100%;          /* o el alto que necesites */
+  margin: 50px 0 0 0;     /* sube un poco (ajusta 50px según necesites) */
+  display: flex;          
+  align-items: center;    /* mantiene centrado verticalmente el contenido */
+  justify-content: flex-start;  /* mueve el contenido hacia la izquierda dentro del hero */
+  text-align: center;
+  z-index: 1;
+  background-color: #F5B027;
+  min-height: 100vh; /* ocupa toda la altura visible del móvil */
+  padding: 10px 0;
+}
+
+.hero2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /*opacity: 0.1;*/
+  background-color:#F5B027 ;
+  pointer-events: none; /* 🔹 esta línea es para hacer efectivo en enlace al pulsar sobre el en responsive */
+}
+.hero2-content {
+  position: relative;
+  color: black;
+  z-index: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #F5B027;
+}
+
+.hero2-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 500px;
+  border-collapse: collapse;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* --- Cada cuadro --- */
+.hero2-item {
+  flex: 1 1 33.33%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid #000;
+  transition: transform 0.3s ease;
+  box-sizing: border-box;
+  opacity: 0.9; /* 0 = totalmente invisible, 1 = totalmente opaca */
+  border-radius: 20px;
+  margin: 0px 20px;
+  height: 110%;
+}
+
+/* --- Texto dentro --- */
+.hero2-item a h1 {
+  /*color: white !important;           fuerza color blanco */
+  font-size: 1.5rem !important;     /* fuerza tamaño más pequeño */
+  background: wheat;
+  padding: 10px 15px;
+  border-radius: 10px;
+  margin:  auto;
+  max-width: 400px;
+  border: 2px solid #F5B027;
+  display: flex;
+  opacity: 0.8;
+  
+}
+.hero2-item a {
+
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: flex;  
+}
+
+/* --- Efecto zoom hover  --- */
+.hero2-item:hover {
+  transform: scale(1.03);
+}
+.hero2 h1:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  background-color: violet;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  border: 2px solid black;
+  border-radius: 20px;
+  cursor: url('image/volante-cursor.png') 16 16, pointer;
+  opacity: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   h2 {
     text-align: center;
     margin-bottom: 20px;
@@ -164,9 +281,7 @@
     .infracciones-section h2 {
       font-size: 1.5rem;
     }
-    .hero2{
-      margin-top: 160px;
-    }
+
   }
 
   /* Permite que nada fuerce ampliación del layout */
@@ -195,30 +310,30 @@
   <!-- =================== SECCIÓN HERO / ENLACES ÚTILES =================== -->
   <center><h1 class="titulo" >NOTICIAS</h1></center>
   <section class="hero2"  >
-    <div class="hero-grid" style="height: 300px;">
+    <div class="hero2-grid" style="height: 300px;">
       <!-- Incidencias de tráfico -->
-      <div class="hero-item" style="background-image: url('image/incidenciasTrafico.jpg');">
+      <div class="hero2-item" style="background-image: url('image/incidenciasTrafico.jpg');">
         <br>
         <a target="_blank" href="https://infocar.dgt.es/etraffic/"><h1>INCIDENCIAS DE TRAFICO</h1></a>
       </div>
 
       <!-- Señales de tráfico -->
-      <div class="hero-item" style="background-image: url('image/senales-de-trafico.jpg');">
+      <div class="hero2-item" style="background-image: url('image/senales-de-trafico.jpg');">
         <a target="_blank" href="https://senalesdetraficoinfo.es"><h1>SEÑALES DE TRAFICO</h1></a>
       </div>
 
       <!-- Consulta tus notas -->
-      <div class="hero-item" style="background-image: url('image/consultar-nota-dgt.png');">
+      <div class="hero2-item" style="background-image: url('image/consultar-nota-dgt.png');">
         <a target="_blank" href="https://sedeclave.dgt.gob.es/WEB_NOTP_CONSULTA/consultaNota.faces"><h1>CONSULTA TUS NOTAS</h1></a>
       </div>
 
       <!-- Exámenes DGT -->
-      <div class="hero-item" style="background-image: url('image/examenes.png');">
+      <div class="hero2-item" style="background-image: url('image/examenes.png');">
         <a target="_blank" href="https://sedeclave.dgt.gob.es/WEB_AUTO-6/examen/Instrucciones.jsf"><h1>EXAMENES DE LA DGT</h1></a>
       </div>
 
       <!-- Noticias DGT -->
-      <div class="hero-item" style="background-image: url('image/dgt.png');">
+      <div class="hero2-item" style="background-image: url('image/dgt.png');">
         <a target="_blank" href="https://www.dgt.es/comunicacion/notas-de-prensa/"><h1>NOTICIAS DE LA DGT</h1></a>
 
     </div>

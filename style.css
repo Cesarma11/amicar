@@ -407,19 +407,18 @@ footer {
 /* ********************ESPACIO VENTANA EMERGENTE INICIO DE PAGINA ***********************+++++
 
 /* Fondo del modal (overlay) */
+
+
 .modal {
   display: none;
   position: fixed;
-  z-index: 6;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.7);
+  inset: 0; /* atajo para top:0, left:0, right:0, bottom:0 */
+  z-index: 999999999;  /* mejor más alto */
+  background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./image/Pistas.jpg');   
+  background-image: url('./image/Pistas.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -441,6 +440,7 @@ footer {
   opacity: 0;
   transform: translateY(-50px) scale(0.8);
   transition: all 0.5s ease;
+  z-index: 99999;
 
 }
 
@@ -1171,6 +1171,7 @@ footer {
   position: relative;
   vertical-align: top;
   height: auto; /* Se ajusta al contenido */
+  max-width: 400px;
 
 }
 /*========================== IMÁGENES ==========================*/
@@ -1220,7 +1221,7 @@ footer {
   cursor: pointer;
   width: 300px;
   text-align: center;  /* 👈 esto centra cualquier contenido inline/block */
-  z-index: 9999;
+  z-index: 999;
 }
 
 /* Imagen dentro del tooltip */
@@ -1228,11 +1229,12 @@ footer {
   display: block;
   max-width: 260px;
   margin: auto;
+  z-index: 30;
 }
 
 /* Tooltip desplegable hacia abajo */
 .tooltip .tooltiptext {
-  width: 130%; /* un poco más ancho que el box1 */
+  width: 100%; /* un poco más ancho que el box1 */
   max-height: 490px; /* altura máxima */
   overflow-y: auto; /* permite scroll si es más alto */
   position: absolute;
@@ -1705,6 +1707,7 @@ footer {
   .tooltip img {
     max-width: 100%;            /* Imagen del tooltip se ajusta al ancho */
     margin-bottom: -200px;
+    z-index: 300;
   }
   .pie{
     margin-top: 60px;

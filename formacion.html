@@ -10,8 +10,7 @@
   <!-- =================== FIN HEAD =================== -->
 </head>
 <style>
-/* Contenedor principal */
-/* Contenedor principal */
+/* Contenedor principal, FONDO DE LOS CONTENEDORES box1 */
 .contenedor1 {
   display: flex;
   flex-wrap: nowrap;          /* todas en una fila */
@@ -19,9 +18,13 @@
   overflow-x: auto;           /* scroll horizontal si no caben */
   padding: 10px;
   -webkit-overflow-scrolling: touch;
+  margin-top: -40px;
 }
 
-/* Cajas */
+
+
+
+/* CAJAS INFORMACION CENTROS DE FORMACION*/
 .box1 {
   flex: 0 0 auto;             /* no se encogen */
   width: 16.66%;              /* 6 cajas por fila en escritorio */
@@ -34,7 +37,7 @@
   box-sizing: border-box;
 }
 
-
+/* CAJAS INFORMACION CURSOS DE FORMACION */
 .boxf {
   background-color: white;
   max-width: 300px;
@@ -58,13 +61,13 @@
   z-index: 20;
 }
 
-/* Tooltip container desplegable para ver la informacion de los cursos */
+/* contenedor de imagenes de los cursos*/
 .tooltip {
   position: relative;
   display: inline-block;
   cursor: pointer;
   width: 300px;
-  text-align: center;  /* 👈 esto centra cualquier contenido inline/block */
+  text-align: center;  /* centra el contenido inline/block */
   z-index: 999;
 }
 
@@ -97,9 +100,7 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
-.contenedor1{
-  margin-top: -40px;
-}
+
 /* Tablet grande: 4 cajas */
 @media (max-width: 1200px) {
   .box1 {

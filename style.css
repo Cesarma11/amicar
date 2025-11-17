@@ -252,7 +252,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: flex-start; /* para que los items empiecen desde arriba */
-    margin-bottom: -20%;
+    margin-bottom: -50%;
     top: 10px;
   }
   .hero-content{
@@ -1722,6 +1722,7 @@ footer {
   }
 }
 /*========================== FIN ESPACIO TIENDA ==========================*/
+
 
 
 

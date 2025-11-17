@@ -259,7 +259,7 @@ main{
     gap: 30px;
     width: 100%;
     padding-bottom: 60px; /* asegura que el último bloque tenga espacio debajo */
-    margin-top: 360px;    
+    margin-top: 660px;    
   }
 
   .hero-item {
@@ -1719,5 +1719,6 @@ footer {
   }
 }
 /*========================== FIN ESPACIO TIENDA ==========================*/
+
 
 

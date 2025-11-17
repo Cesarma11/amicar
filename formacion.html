@@ -90,6 +90,13 @@
   pointer-events: auto;
 
 }
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
 .contenedor1{
   margin-top: -40px;
 }
@@ -112,7 +119,11 @@
 @media (max-width: 768px) {
   .box1 {
     width: 48%;   /* 2 cajas por fila, casi la mitad del contenedor */
-  }
+  }.tooltiptext.show {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
 }
 
 /* Móvil pequeño: 1 caja */
@@ -124,11 +135,6 @@
 
 
 </style>
-
-
-
-
-
 <body>
   <!-- =================== ENCABEZADO PÁGINA =================== -->
   <header>
@@ -316,11 +322,11 @@
 
    <!-- =================== SEGUNDO BLOQUE DE CURSOS =================== -->
       <div class="contenedor1" style="margin-top: 30px; position: relative; overflow: visible;">
-
         <!-- CARRETILLA ELEVADORA -->
         <div class="boxf">  
           <div class="tooltip">
-            <img src="image/carretilla.png" alt="Imagen CARRETILLA ELEVADORA">
+            <h3>CARRETILLA ELEVADORA</h3>
+            <img  src="image/carretilla.png" alt="Imagen CARRETILLA ELEVADORA">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
                 <center><strong>CARRETILLA ELEVADORA</strong></center><br>
@@ -339,12 +345,12 @@
                 ONLINE/PRESENCIAL 10H + PRÁCTICAS
             </div>
           </div>
-          <h3>CARRETILLA ELEVADORA</h3>
         </div>
 
         <!-- ITC MINERA -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>ITC MINERA</h3>
             <img src="image/itcMineria.jpg" alt="Imagen ITC MINERA">
             <div class="tooltiptext">
                 <center><h2>formación Am¡car</h2></center><br>
@@ -363,12 +369,12 @@
                 Presencial 20H
             </div>
           </div>
-          <h3>ITC MINERA</h3>
         </div>
 
         <!-- ITC SILICE Y POLVO -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>ITC SILICE Y POLVO</h3>  
             <img src="image/itcSilice.png" alt="Imagen ITC SILICE Y POLVO">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -387,7 +393,6 @@
                 10 HORAS
             </div>
           </div>
-          <h3>ITC SILICE Y POLVO</h3>
         </div> 
 
       </div>
@@ -398,6 +403,7 @@
         <!-- OPERADOR RETROEXCAVADORA Y PALA -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>OPERADOR DE RETROEXCAVADORA Y PALA CARGADORA</h3>
             <img src="image/retroexcabadora.png" alt="Imagen OPERADOR RETROEXCAVADORA">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -413,12 +419,12 @@
                 ONLINE/PRESENCIAL 10H + PRÁCTICAS
             </div>
           </div>
-          <h3>OPERADOR DE RETROEXCAVADORA Y PALA CARGADORA</h3>
         </div>
 
         <!-- GRÚA PLUMA -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>GRÚA PLUMA</h3>
             <img src="image/gruaPluma.png" alt="Imagen GRÚA PLUMA">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -438,12 +444,13 @@
                 ONLINE/E-LEARNING 12H + PRÁCTICAS
             </div>
           </div>
-          <h3>GRÚA PLUMA</h3>
+
         </div>
 
         <!-- PLATAFORMAS MÓVILES -->
         <div class="boxf">  
-          <div class="tooltip">
+          <div class="tooltip">          
+            <h3>OPERADOR PLATAFORMAS MÓVILES</h3>
             <img src="image/plataformaMovil.png" alt="Imagen OPERADOR PLATAFORMAS MÓVILES">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -459,7 +466,7 @@
                 ONLINE/E-LEARNING 12H + PRÁCTICAS
             </div>
           </div>
-          <h3>OPERADOR PLATAFORMAS MÓVILES</h3>
+
         </div>
       </div>
       <!-- =================== FIN SEGUNDO BLOQUE DE CURSOS =================== -->
@@ -468,7 +475,8 @@
       <div class="contenedor1" style="margin-top: 30px; position: relative; overflow: visible;"> 
         <!-- CARRETILLA TELESCÓPICA MANITOU -->
         <div class="boxf">  
-          <div class="tooltip">
+          <div class="tooltip">         
+            <h3>OPERADOR DE CARRETILLA TELESCÓPICA (MANITOU)</h3>
             <img src="image/telescopicaManitou.png" alt="Imagen OPERADOR CARRETILLA TELESCÓPICA">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -491,12 +499,13 @@
                 ONLINE/E-LEARNING 10H + PRÁCTICAS
             </div>
           </div>
-          <h3>OPERADOR DE CARRETILLA TELESCÓPICA (MANITOU)</h3>
+ 
         </div>
 
         <!-- PRL MOVIMIENTOS DE TIERRA -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>PRL MOVIMIENTOS DE TIERRA (MINI PALA Y ORUGA)</h3>
             <img src="image/miniPalaOruga.png" alt="Imagen PRL MOVIMIENTOS DE TIERRA">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -514,12 +523,13 @@
                 ONLINE/E-LEARNING 20H + PRÁCTICAS
             </div>
           </div>
-          <h3>PRL MOVIMIENTOS DE TIERRA (MINI PALA Y ORUGA)</h3>
+          
         </div>
 
         <!-- CONDUCCIÓN EFICIENTE VEHÍCULOS INDUSTRIALES -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>CONDUCCIÓN EFICIENTE EN VEHÍCULOS INDUSTRIALES</h3>
             <img src="image/conduccionEficiente.jpg" alt="Imagen CONDUCCIÓN EFICIENTE INDUSTRIA">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -535,7 +545,7 @@
                 ONLINE/E-LEARNING 30H + PRÁCTICAS
             </div>
           </div>
-          <h3>CONDUCCIÓN EFICIENTE EN VEHÍCULOS INDUSTRIALES</h3>
+          
         </div>
       </div>
       <!-- =================== FIN TERCER BLOQUE DE CURSOS =================== -->
@@ -545,6 +555,7 @@
         <!-- CONDUCCIÓN EFICIENTE -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>CONDUCCIÓN EFICIENTE</h3>
             <img src="image/conduccionEfice.jpg" alt="Imagen CONDUCCIÓN EFICIENTE">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -559,12 +570,13 @@
                 ONLINE/E-LEARNING 12H + PRÁCTICAS
             </div>
           </div>
-          <h3>CONDUCCIÓN EFICIENTE</h3>
+          
         </div>
 
         <!-- CAPACITACIÓN TRANSPORTISTA -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>CAPACITACIÓN TRANSPORTISTA</h3>
             <img src="image/capacitacionTransporte.png" alt="Imagen CAPACITACIÓN TRANSPORTISTA">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -583,12 +595,13 @@
                 ONLINE/MIXTO 100H
             </div>
           </div>
-          <h3>CAPACITACIÓN TRANSPORTISTA</h3>
+          
         </div>
 
         <!-- PRL MAQUINARIA AGRÍCOLA -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>PRL MAQUINARIA AGRÍCOLA</h3>
             <img src="image/agricola.jpg" alt="Imagen PRL MAQUINARIA AGRÍCOLA">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -606,7 +619,7 @@
                ONLINE 20H
             </div>
           </div>
-          <h3>PRL MAQUINARIA AGRÍCOLA</h3>
+          
         </div>
       </div>
       <!-- =================== FIN CUARTO BLOQUE DE CURSOS =================== -->
@@ -616,6 +629,7 @@
         <!-- PRL GENÉRICO -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>PRL GENÉRICO</h3>
             <img src="image/PRLGenerico.png" alt="Imagen PRL GENÉRICO">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center> <br>
@@ -632,12 +646,13 @@
                PRESENCIAL/ONLINE 60H
             </div>
           </div>
-          <h3>PRL GENÉRICO</h3>
+          
         </div>
 
         <!-- EQUIPOS DE PROTECCIÓN INDIVIDUAL -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>EQUIPOS PROTECCIÓN INDIVIDUAL</h3>
             <img src="image/epis.jpg" alt="Imagen EPI">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>
@@ -654,12 +669,13 @@
               ONLINE 10H
             </div>
           </div>
-          <h3>EQUIPOS PROTECCIÓN INDIVIDUAL</h3>
+          
         </div>
 
         <!-- MANIPULADOR DE ALIMENTOS -->
         <div class="boxf">  
           <div class="tooltip">
+            <h3>MANIPULADOR DE ALIMENTOS</h3>
             <img src="image/manipuladorAlimentos.png" alt="Imagen MANIPULADOR DE ALIMENTOS">
             <div class="tooltiptext">
                 <center><h2>Formación Am¡car</h2></center><br>                
@@ -677,7 +693,7 @@
               <strong>MODALIDAD:</strong> ONLINE 10H
             </div>
           </div>
-          <h3>MANIPULADOR DE ALIMENTOS</h3>
+          
         </div>
       </div>
       <!-- =================== FIN QUINTO BLOQUE DE CURSOS =================== -->
@@ -687,7 +703,7 @@
 
 <!----------------------------------------------ZONA SCRIPTS--------------------------------------------------->
   <script>
-    // Tooltips, despliegue de informacion escritorio + móvil
+    // Tooltips, despliegue de informacion escritorio + móvil de los CAP Y ADR TRES Y DOS VENTANAS
     document.querySelectorAll('.tooltip-trigger').forEach(img => {
       const tooltip = img.nextElementSibling;
       let timeout;
@@ -717,6 +733,24 @@
       });
     });
   </script>
+  <script>// SCRIP DE DESPLIEGE DE TOOLTIPS RESTO DE FORMACION
+    document.querySelectorAll('.tooltip').forEach(tooltip => {
+      
+      const content = tooltip.querySelector('.tooltiptext');
+
+      // Toggle por clic
+      tooltip.addEventListener('click', (e) => {
+        e.stopPropagation(); // evita que el body cierre inmediatamente
+        content.classList.toggle('show');
+      });
+
+      // Cerrar al hacer clic fuera
+      document.addEventListener('click', () => {
+        content.classList.remove('show');
+      });
+    });
+</script>
+
 
 </body>
 </html>

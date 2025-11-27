@@ -182,7 +182,13 @@
       align-items: flex-start;
       padding: 10px 15px;
       height: 28%;
+      position: sticky; /* o fixed si quieres */
+      top: 0;
+      z-index: 99999;   /* suficiente para estar encima de todo */
+      background-color: white; /* importante: tapa lo que esté debajo */      
     }
+
+
     /* Menú hamburguesa visible */
     .hamburger {
       display: block;
@@ -200,6 +206,7 @@
       background-color: #004080;
       text-align: center;
       padding: 10px 0;
+      z-index: 9999;
     }
     nav.active {
       display: flex;
@@ -228,24 +235,7 @@
       font-size: 22px;
       margin-left: -25px;
     }
-    /* Enlace superior 
-    .titles2 {
-      top: 10px;
-      right: 80px;
-      padding: 10px 15px;
-      border-bottom-left-radius: 15px;
-      animation: moveGradient 6s ease infinite, slideInMobile 1s ease forwards;
-      width: 75%;
-    }
-    .titles2 img {
-      display: none;
-    }
-    .titles2 a {
-      font-size: 1rem;/* más pequeño para móviles 
-      white-space: nowrap;/* que no se divida en varias líneas 
 
-      
-    }*/
     .l-icon {
       width: 40px; /* más pequeña en pantallas pequeñas */
       margin-left: 10px;
@@ -309,7 +299,7 @@
     background: rgba(0, 64, 128, 0.95);
     padding: 15px;
     border-radius: 0 0 8px 8px;
-    z-index: 1000;
+    z-index: 1500;
     width: 250px;           /* ancho deseado */
     margin: 0 auto;         /* centra el menú horizontalmente */
     border-radius: 8px;
@@ -499,7 +489,7 @@
         <div class="truck-cab"><img style="width: 180px;"  src="./image/camionAmicar.png" alt=""></div>
          <div class="truck-cab2">🚛</div>
         <div class="truck-trailer">
-            <a href="permisos.html">¡¡Permiso de residencia para extranjeros!!</a>
+            <a target="_blank" href="https://www.dgt.es/comunicacion/notas-de-prensa/20250520-dgt-servicio-de-canje-digital-de-permisos-de-conduccion/">¡¡Permiso de residencia para extranjeros!!</a>
             <img src="./image/españa3.png" alt="España">
         </div>
     </div>

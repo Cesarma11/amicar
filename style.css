@@ -508,6 +508,9 @@ footer {
   font-size: 14px;
   opacity: 0.8;
 }
+.footer-bottom a{
+  color: yellow;
+}
 .footer-links a {
   color: #e62424; /* rojo para contraste sobre azul */
   text-decoration: none;

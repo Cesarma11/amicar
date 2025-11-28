@@ -511,6 +511,11 @@ footer {
 .footer-bottom a{
   color: yellow;
 }
+.footer-bottom a:hover{
+  color: red; /* rojo al pasar el ratón */
+  transform: translateX(7px); /* pequeño movimiento elegante */
+  transform: scale(1.14);
+}
 .footer-links a {
   color: #e62424; /* rojo para contraste sobre azul */
   text-decoration: none;
